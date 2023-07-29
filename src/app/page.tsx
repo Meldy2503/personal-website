@@ -21,7 +21,6 @@ export default function Home() {
         my=".8rem"
         gap="2rem"
         className="scroll-bar"
-        // maxW="1200px"
       >
         <Sidebar />
         <Box w="full" h="200rem">
