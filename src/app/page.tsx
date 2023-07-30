@@ -11,15 +11,14 @@ import Sidebar from "./components/sidebar";
 
 export default function Home() {
   return (
-    <Box bg="brand.750" h="100%">
+    <Box h="100%">
       <Flex
         w="95%"
         h={{ base: "98vh", md: "96.5vh" }}
         m="auto"
-        bg="brand.800"
+        bg="brand.550"
         overflow={"auto"}
         my=".8rem"
-        gap="2rem"
         className="scroll-bar"
       >
         <Sidebar />
