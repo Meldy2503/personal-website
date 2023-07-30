@@ -1,11 +1,17 @@
 // 1. import `extendTheme` function
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import { Poppins, Roboto } from "@next/font/google";
 
-// 2. Add your color mode config
+// 2. Add your color modeRoboto config
 const config: ThemeConfig = {
   initialColorMode: "system",
   useSystemColorMode: true,
 };
+
+const nextFont = Poppins({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 // 3. extend the theme
 const theme = extendTheme({
@@ -29,11 +35,13 @@ const theme = extendTheme({
       750: "#191923",
       800: "#ffc107",
       850: "#f46258",
+      900: "#cacace",
+      950: "#363643",
     },
   },
   fonts: {
-    body: "Poppins, sans-serif",
-    heading: "Ubuntu, sans-serif",
+    body: nextFont.style.fontFamily,
+    heading: nextFont.style.fontFamily,
   },
 });
 

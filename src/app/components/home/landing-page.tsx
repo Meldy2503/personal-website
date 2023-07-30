@@ -47,7 +47,7 @@ const LandingPage = () => {
                 <Box py="4rem" px="3.5rem" w={{ base: "100%", xl: "60%" }}>
                   <Heading
                     color="brand.100"
-                    fontWeight={800}
+                    fontWeight={"900"}
                     fontSize={"2.7rem"}
                   >
                     Discover my Amazing Art Space!
