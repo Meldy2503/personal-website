@@ -22,12 +22,12 @@ export default function Home() {
         className="scroll-bar"
       >
         <Sidebar />
-        <Box w="full" h="200rem">
+        <Box w="full">
           <LandingPage />
           <Services />
-          <TechStacks />
+          {/* <TechStacks /> */}
           <Projects />
-          <Recommendations />
+          {/* <Recommendations /> */}
           <ContactMe />
         </Box>
       </Flex>

@@ -13,7 +13,7 @@ import {
   ListIcon,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { stack } from "./utils/constants";
+import { stackData } from "./utils/constants";
 import { BsCheckLg } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
 import {
@@ -24,7 +24,6 @@ import {
 } from "react-icons/ai";
 
 const Sidebar = () => {
-  const progressColor = "brand.800";
   return (
     <Box
       w="23rem"
@@ -45,7 +44,7 @@ const Sidebar = () => {
         justify="center"
         color="brand.350"
         py="1.5rem"
-        fontSize={".8rem"}
+        fontSize={".9rem"}
         textAlign={"center"}
       >
         <Image
@@ -60,7 +59,13 @@ const Sidebar = () => {
             backgroundSize: "cover",
           }}
         />
-        <Heading color="brand.150" fontSize={"1rem"} mt="1rem" mb=".6rem">
+        <Heading
+          color="brand.150"
+          fontSize={"1.1rem"}
+          mt="1rem"
+          mb=".6rem"
+          letterSpacing={".1rem"}
+        >
           Emelder Okafor
         </Heading>
         <Text>
@@ -68,9 +73,9 @@ const Sidebar = () => {
           UI/UX Designer
         </Text>
       </Flex>
-      <Box color="brand.900" fontSize={".8rem"} px="1.5rem" mt="1.5rem">
+      <Box color="brand.900" fontSize={".9rem"} px="1.5rem" mt="1rem">
         <Box>
-          {stack.map((item, index) => {
+          {stackData.map((item, index) => {
             return (
               <Flex key={index} rowGap={".5rem"} direction={"column"} mt="1rem">
                 <HStack justifyContent={"space-between"}>
@@ -104,7 +109,7 @@ const Sidebar = () => {
           </ListItem>
         </List>
         <HStack color="brand.350" py="1rem">
-          <Text letterSpacing={".1rem"} fontWeight={"bold"}>
+          <Text letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
             DOWNLOAD CV
           </Text>
           <FaDownload />

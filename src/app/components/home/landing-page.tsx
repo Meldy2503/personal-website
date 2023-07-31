@@ -10,7 +10,6 @@ const LandingPage = () => {
     <>
       <Box
         bgImage="/assets/bg.jpg"
-        // h="fit-content"
         h="25rem"
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
@@ -31,9 +30,9 @@ const LandingPage = () => {
             bgSize={"cover"}
             bgPosition={"center"}
             position="absolute"
-            top="50px"
-            left="50px"
-            right="50px"
+            top="40px"
+            left="40px"
+            right="40px"
             bottom="0px"
           >
             <Box
