@@ -1,6 +1,6 @@
 // 1. import `extendTheme` function
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
-import { Poppins, Roboto } from "@next/font/google";
+import { Poppins } from "@next/font/google";
 
 // 2. Add your color modeRoboto config
 const config: ThemeConfig = {
@@ -18,7 +18,6 @@ const theme = extendTheme({
   config,
   colors: {
     brand: {
-      // background: linear-gradient(159deg,#252532 0%,#23232d 100%);
       100: "#fff",
       150: "#fafafc",
       200: "rgba(255,255,255,1)",

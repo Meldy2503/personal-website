@@ -29,32 +29,7 @@ export const stackData = [
     value: 95,
   },
 ];
-export const projectData = [
-  {
-    id: 1,
-    img: "/assets/bg.jpg",
-  },
-  {
-    id: 2,
-    img: "/assets/bg.jpg",
-  },
-  {
-    id: 3,
-    img: "/assets/bg.jpg",
-  },
-  {
-    id: 4,
-    img: "/assets/bg.jpg",
-  },
-  {
-    id: 5,
-    img: "/assets/bg.jpg",
-  },
-  {
-    id: 6,
-    img: "/assets/bg.jpg",
-  },
-];
+
 export const servicesData = [
   {
     id: 1,
@@ -91,5 +66,56 @@ export const servicesData = [
     icon: TbSpeakerphone,
     heading: "Branding",
     text: "Each design is uniquely customized to suit the clients' requirements and needs",
+  },
+];
+
+export const projectData = [
+  {
+    id: 1,
+    category: "NEXTJS",
+    img: "/assets/bg.jpg",
+    heading: "Next Trainer UI Card",
+    description:
+      "Next is a fitness trainer UI card built with Reactjs and Chakra UI description description",
+  },
+  {
+    id: 2,
+    category: "NEXTJS",
+    img: "/assets/bg.jpg",
+    heading: "Next Trainer UI Card",
+    description:
+      " Next job is simple and sophisticated, so it is possible to describe",
+  },
+  {
+    id: 3,
+    category: "REACTJS",
+    img: "/assets/bg.jpg",
+    heading: "React Trainer UI Card",
+    description:
+      "React and sophisticated, so it is possible to describe  My job is simple and sophisticated, so it is possible to describe",
+  },
+  {
+    id: 4,
+    category: "JAVASCRIPT",
+    img: "/assets/bg.jpg",
+    heading: "Javascript Trainer UI Card",
+    description:
+      "Javascript so it is possible to describe  My job is simple and sophisticated, so it is possible to describe",
+  },
+  {
+    id: 5,
+    category: "VUEJS",
+    img: "/assets/bg.jpg",
+    heading: "Vue Trainer UI Card",
+    description:
+      "Vue job is simple and sophisticated, so it is possible to describe simple and sophisticated",
+  },
+  {
+    id: 6,
+    category: "VUEJS",
+    img: "/assets/bg.jpg",
+    heading: "Vue Trainer UI Card",
+    description:
+      "Vue job is simple and sophisticated, so it is possible to describe simple and sophisticated",
   },
 ];

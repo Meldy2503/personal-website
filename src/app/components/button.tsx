@@ -16,7 +16,7 @@ const Button = ({ href, hoverBg, hoverColor, children }: Props) => {
       <Box
         textAlign="center"
         fontSize=".8rem"
-        fontWeight={600}
+        fontWeight={"600"}
         px="1rem"
         py=".9rem"
         w="11rem"

@@ -1,7 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Box, Flex, HStack, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  List,
+  ListItem,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { projectData } from "../utils/constants";
 import Link from "next/link";
@@ -9,6 +18,8 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Projects = () => {
   const [showDetails, setShowDetails] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("ALL CATEGORIES");
+  const activeColorScheme = useColorModeValue("brand.150", "brand.350");
 
   const handleMouseEnter = (index: any) => {
     setShowDetails(index);
@@ -17,6 +28,15 @@ const Projects = () => {
   const handleMouseLeave = () => {
     setShowDetails(null);
   };
+
+  const handleSelectedCategory = (category: string) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredProjects =
+    selectedCategory === "ALL CATEGORIES"
+      ? projectData
+      : projectData.filter((project) => project.category === selectedCategory);
 
   return (
     <Box px="2.5rem">
@@ -29,15 +49,53 @@ const Projects = () => {
       >
         My Projects
       </Heading>
-      <Flex flexWrap={"wrap"} justify={"space-between"} rowGap={"1.5rem"}>
-        {projectData.map((project, index) => {
+
+      <List
+        as={Flex}
+        color="brand.350"
+        rowGap=".5rem"
+        columnGap="1.2rem"
+        letterSpacing={".1rem"}
+        fontWeight={"bold"}
+        fontSize={".8rem"}
+        flexWrap={"wrap"}
+        pb="1.5rem"
+        pt=".5rem"
+      >
+        <ListItem
+          onClick={() => handleSelectedCategory("ALL CATEGORIES")}
+          color={
+            selectedCategory === "ALL CATEGORIES"
+              ? activeColorScheme
+              : undefined
+          }
+        >
+          <Link href="/">ALL CATEGORIES</Link>
+        </ListItem>
+        {Array.from(
+          new Set(projectData.map((project) => project.category))
+        ).map((category) => (
+          <ListItem
+            key={category}
+            color={
+              selectedCategory === category ? activeColorScheme : undefined
+            }
+            onClick={() => handleSelectedCategory(category)}
+          >
+            <Link href="/">{category}</Link>
+          </ListItem>
+        ))}
+      </List>
+
+      <Flex flexWrap={"wrap"} gap={"1.5rem"} justify={"space-between"}>
+        {filteredProjects.map((project: any, index: any) => {
           return (
             <Box
               key={project.id}
-              w={{ base: "100%", md: "46%", lg: "31%" }}
               position="relative"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
+              w={{ base: "100%", md: "47%", lg: "31.5%" }}
             >
               <Image
                 src={project.img}
@@ -65,11 +123,10 @@ const Projects = () => {
                   }}
                 >
                   <Heading color="brand.150" fontSize={".9rem"}>
-                    Fitness Trainer UI Card
+                    {project.heading}
                   </Heading>
                   <Text color="brand.350" my="1rem">
-                    My job is simple and sophisticated, so it is possible to
-                    describe.
+                    {project.description}
                   </Text>
                   <HStack
                     color="brand.800"
