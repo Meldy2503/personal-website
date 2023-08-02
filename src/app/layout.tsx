@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Providers } from "../app/providers";
+import Wrapper from "./components/wrapper";
 
 export const metadata: Metadata = {
   title: "Emelder Okafor",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Wrapper>{children}</Wrapper>
+        </Providers>
       </body>
     </html>
   );

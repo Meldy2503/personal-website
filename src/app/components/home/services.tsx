@@ -4,7 +4,7 @@ import { servicesData } from "../utils/constants";
 
 const Services = () => {
   return (
-    <Box color="brand.350" px="2.5rem">
+    <Box color="brand.350" px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}>
       <Heading
         color="brand.100"
         fontWeight={"600"}
@@ -19,7 +19,7 @@ const Services = () => {
           return (
             <Box
               key={item.id}
-              w={{ base: "100%", md: "46%", lg: "31.5%" }}
+              w={{ base: "100%", md: "48%", xl: "31.5%" }}
               bg="brand.650"
             >
               <Box px="2rem" py="2.5rem">

@@ -7,30 +7,16 @@ import ContactMe from "./components/home/contact-me";
 import Recommendations from "./components/home/recommendations";
 import TechStacks from "./components/home/tech-stacks";
 import { Box, Flex } from "@chakra-ui/react";
-import Sidebar from "./components/sidebar";
 
 export default function Home() {
   return (
-    <Box h="100%">
-      <Flex
-        w="95%"
-        h={{ base: "98vh", md: "96.5vh" }}
-        m="auto"
-        bg="brand.550"
-        overflow={"auto"}
-        my=".8rem"
-        className="scroll-bar"
-      >
-        <Sidebar />
-        <Box w="full">
-          <LandingPage />
-          <Services />
-          {/* <TechStacks /> */}
-          <Projects />
-          {/* <Recommendations /> */}
-          <ContactMe />
-        </Box>
-      </Flex>
+    <Box w="full">
+      <LandingPage />
+      <Services />
+      {/* <TechStacks /> */}
+      <Projects />
+      {/* <Recommendations /> */}
+      <ContactMe>Get in touch</ContactMe>
     </Box>
   );
 }

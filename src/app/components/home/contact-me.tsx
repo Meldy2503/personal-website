@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import {
   Box,
   Heading,
@@ -12,9 +12,9 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
 import Button from "../button";
 
-const ContactMe = () => {
+const ContactMe = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Box px="2.5rem">
+    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }} pb="1rem">
       <Heading
         color="brand.100"
         fontWeight={"600"}
@@ -22,10 +22,10 @@ const ContactMe = () => {
         mt="3rem"
         mb="2rem"
       >
-        Get in Touch
+        {children}
       </Heading>
       <Box
-        px="2rem"
+        px={{ base: ".7rem", sm: "1.3rem", md: "2rem" }}
         py="2.5rem"
         shadow={"lg"}
         style={{

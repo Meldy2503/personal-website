@@ -71,51 +71,86 @@ export const servicesData = [
 
 export const projectData = [
   {
-    id: 1,
+    id: "1",
     category: "NEXTJS",
     img: "/assets/bg.jpg",
     heading: "Next Trainer UI Card",
-    description:
+    brief:
       "Next is a fitness trainer UI card built with Reactjs and Chakra UI description description",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "completed",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
   },
   {
-    id: 2,
+    id: "2",
     category: "NEXTJS",
     img: "/assets/bg.jpg",
     heading: "Next Trainer UI Card",
-    description:
+    brief:
       " Next job is simple and sophisticated, so it is possible to describe",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "completed",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
+    client: "octo-Africa",
   },
   {
-    id: 3,
+    id: "3",
     category: "REACTJS",
     img: "/assets/bg.jpg",
     heading: "React Trainer UI Card",
-    description:
+    brief:
       "React and sophisticated, so it is possible to describe  My job is simple and sophisticated, so it is possible to describe",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "In progress",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
+    client: "octo-Africa",
   },
   {
-    id: 4,
+    id: "4",
     category: "JAVASCRIPT",
     img: "/assets/bg.jpg",
     heading: "Javascript Trainer UI Card",
-    description:
+    brief:
       "Javascript so it is possible to describe  My job is simple and sophisticated, so it is possible to describe",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "In progress",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
+    client: "octo-Africa",
   },
   {
-    id: 5,
+    id: "5",
     category: "VUEJS",
     img: "/assets/bg.jpg",
     heading: "Vue Trainer UI Card",
-    description:
+    brief:
       "Vue job is simple and sophisticated, so it is possible to describe simple and sophisticated",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "In progress",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
+    client: "octo-Africa",
   },
   {
-    id: 6,
+    id: "6",
     category: "VUEJS",
     img: "/assets/bg.jpg",
     heading: "Vue Trainer UI Card",
-    description:
+    brief:
       "Vue job is simple and sophisticated, so it is possible to describe simple and sophisticated",
+    description:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit Labore nobis fugit neque ut dignissimos corporis blanditiis, cum tenetur reprehenderit qui corrupti nisi atque, eius fugiat tempora suscipit eaque dolorem perferendis, porro sunt laborum odio dolore earum. Illo consectetur tempore repellat maxime repudiandae, ex magnam nulla dolor libero laboriosam, porro fuga! Quisquam, quibusdam.",
+    status: "In progress",
+    gitlink: "https://next-trainer.vercel.app/",
+    live: "https://next-trainer.vercel.app/",
+    client: "octo-Africa",
   },
 ];

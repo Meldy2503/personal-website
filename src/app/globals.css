@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -26,7 +28,7 @@ a {
   scrollbar-color: transparent transparent; /* For Firefox */
 
   &::-webkit-scrollbar {
-    width: 6px; /* For Chrome, Safari, and Opera */
+    width: 0px; /* For Chrome, Safari, and Opera */
   }
 
   &::-webkit-scrollbar-thumb {

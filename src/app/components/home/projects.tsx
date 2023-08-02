@@ -39,7 +39,7 @@ const Projects = () => {
       : projectData.filter((project) => project.category === selectedCategory);
 
   return (
-    <Box px="2.5rem">
+    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}>
       <Heading
         color="brand.100"
         fontWeight={"600"}
@@ -53,14 +53,15 @@ const Projects = () => {
       <List
         as={Flex}
         color="brand.350"
-        rowGap=".5rem"
-        columnGap="1.2rem"
+        rowGap=".7rem"
+        columnGap="1.5rem"
         letterSpacing={".1rem"}
         fontWeight={"bold"}
         fontSize={".8rem"}
         flexWrap={"wrap"}
         pb="1.5rem"
         pt=".5rem"
+        cursor={"pointer"}
       >
         <ListItem
           onClick={() => handleSelectedCategory("ALL CATEGORIES")}
@@ -70,7 +71,7 @@ const Projects = () => {
               : undefined
           }
         >
-          <Link href="/">ALL CATEGORIES</Link>
+          ALL CATEGORIES
         </ListItem>
         {Array.from(
           new Set(projectData.map((project) => project.category))
@@ -82,12 +83,12 @@ const Projects = () => {
             }
             onClick={() => handleSelectedCategory(category)}
           >
-            <Link href="/">{category}</Link>
+            {category}
           </ListItem>
         ))}
       </List>
 
-      <Flex flexWrap={"wrap"} gap={"1.5rem"} justify={"space-between"}>
+      <Flex flexWrap={"wrap"} justify={"space-between"} rowGap="1.5rem">
         {filteredProjects.map((project: any, index: any) => {
           return (
             <Box
@@ -95,17 +96,18 @@ const Projects = () => {
               position="relative"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
-              w={{ base: "100%", md: "47%", lg: "31.5%" }}
+              w={{ base: "100%", md: "48%", xl: "31.5%" }}
             >
               <Image
                 src={project.img}
                 height={500}
-                width={500}
+                width={800}
                 alt="picture of this project"
                 style={{
                   objectFit: "cover",
                   objectPosition: "center",
-                  height: "300px",
+                  height: "280px",
+                  maxWidth: "100%",
                   backgroundImage:
                     "linear-gradient(159deg,rgba(45,45,58,.98) 0%,rgba(43,43,53,.98) 100%)",
                 }}
@@ -126,7 +128,7 @@ const Projects = () => {
                     {project.heading}
                   </Heading>
                   <Text color="brand.350" my="1rem">
-                    {project.description}
+                    {project.brief}
                   </Text>
                   <HStack
                     color="brand.800"
@@ -134,7 +136,8 @@ const Projects = () => {
                     fontWeight={"bold"}
                     fontSize={".8rem"}
                   >
-                    <Link href="/">READ MORE </Link>
+                    <Link href={`/pages/${project.id}`}> READ MORE </Link>
+
                     <FaAngleDoubleRight />
                   </HStack>
                 </Box>
