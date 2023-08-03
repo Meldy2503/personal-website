@@ -6,7 +6,44 @@ import {
 import { TbSpeakerphone } from "react-icons/tb";
 import { HiUserGroup } from "react-icons/hi";
 import { GiCutDiamond } from "react-icons/gi";
+import { AiFillHome } from "react-icons/ai";
+import { MdDesignServices, MdWork } from "react-icons/md";
+import { BsFillPersonVcardFill } from "react-icons/bs";
+import { GrStackOverflow } from "react-icons/gr";
+import { GoCodeReview } from "react-icons/go";
 
+export const menuData = [
+  {
+    name: "Home",
+    icon: AiFillHome,
+    id: "#home",
+  },
+  {
+    name: "Services",
+    icon: MdDesignServices,
+    id: "#services",
+  },
+  {
+    name: "Tech stacks",
+    icon: GrStackOverflow,
+    id: "#stacks",
+  },
+  {
+    name: "Projects",
+    icon: MdWork,
+    id: "#projects",
+  },
+  {
+    name: "Reviews",
+    icon: GoCodeReview,
+    id: "#reviews",
+  },
+  {
+    name: "Contact me",
+    icon: BsFillPersonVcardFill,
+    id: "#contact",
+  },
+];
 export const stackData = [
   {
     name: "Reactjs",

@@ -15,11 +15,14 @@ import Image from "next/image";
 import { projectData } from "../utils/constants";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { Back, Title } from "../utils/funcs";
+import { usePathname } from "next/navigation";
 
 const Projects = () => {
   const [showDetails, setShowDetails] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("ALL CATEGORIES");
   const activeColorScheme = useColorModeValue("brand.150", "brand.350");
+  const path = usePathname();
 
   const handleMouseEnter = (index: any) => {
     setShowDetails(index);
@@ -39,16 +42,11 @@ const Projects = () => {
       : projectData.filter((project) => project.category === selectedCategory);
 
   return (
-    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}>
-      <Heading
-        color="brand.100"
-        fontWeight={"600"}
-        fontSize={"1.3rem"}
-        mt="3rem"
-        mb="2rem"
-      >
-        My Projects
-      </Heading>
+    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }} id="projects">
+      <Flex align="center" gap="2rem">
+        {path?.includes("projects") && <Back />}
+        <Title>My Projects</Title>
+      </Flex>
 
       <List
         as={Flex}
@@ -68,7 +66,7 @@ const Projects = () => {
           color={
             selectedCategory === "ALL CATEGORIES"
               ? activeColorScheme
-              : undefined
+              : "brand.350"
           }
         >
           ALL CATEGORIES

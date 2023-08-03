@@ -4,6 +4,7 @@ import React from "react";
 import { Box, Flex, useMediaQuery } from "@chakra-ui/react";
 import Sidebar from "./sidebar";
 import { DesktopNav, MobileNav } from "./navbar";
+import Footer from "./footer";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
@@ -19,8 +20,11 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
         my=".8rem"
         className="scroll-bar"
       >
-        {!isMobile && <Sidebar />} {children}
-        {!isMobile && <DesktopNav />}{" "}
+        {!isMobile && (
+          <Sidebar w="23rem" h="100%" position="sticky" top="0px" />
+        )}{" "}
+        {children}
+        {!isMobile && <DesktopNav />}
       </Flex>
     </Box>
   );

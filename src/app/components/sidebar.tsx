@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   Box,
@@ -23,15 +21,22 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 
-const Sidebar = () => {
+interface Props {
+  w?: string;
+  h?: string;
+  position?: string | any;
+  top?: string;
+}
+
+const Sidebar = ({ w, h, position, top }: Props) => {
   return (
     <>
       <Box
-        w="23rem"
+        w={w}
         bg="brand.600"
-        h="100%"
-        position="sticky"
-        top="0px"
+        h={h}
+        position={position}
+        top={top}
         className="scroll-bar"
         shadow={"md"}
       >

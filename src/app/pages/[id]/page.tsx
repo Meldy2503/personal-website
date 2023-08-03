@@ -6,6 +6,8 @@ import { Box, Flex, HStack, Heading, Text } from "@chakra-ui/react";
 import { useParams } from "next/navigation";
 import ContactMe from "@/app/components/home/contact-me";
 import Link from "next/link";
+import Footer from "@/app/components/footer";
+import { Back, Title } from "@/app/components/utils/funcs";
 
 const ProjectId = () => {
   const { id } = useParams();
@@ -37,17 +39,11 @@ const ProjectId = () => {
               py="1rem"
               px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
             >
-              <Heading
-                color="brand.100"
-                fontWeight={"600"}
-                fontSize={"1.3rem"}
-                my="1rem"
-              >
-                {item.heading}
-              </Heading>
-              <Flex justify={"space-between"} my="2rem">
-                <Box h="15rem" w="20rem" bg="brand.800"></Box>
+              <Flex align="center" gap="2rem">
+                <Back />
+                <Title>{item.heading}</Title>
               </Flex>
+              <Box h="15rem" w="20rem" bg="brand.800"></Box>
               <Heading
                 color="brand.100"
                 fontSize={"1rem"}
@@ -125,14 +121,17 @@ const ProjectId = () => {
           bg="brand.450"
           py="1.5rem"
           justify={"center"}
-          color="brand.350"
+          color="brand.800"
+          // color="brand.350"
           letterSpacing={".1rem"}
           mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
-          fontSize={".85rem"}
+          fontSize={".83rem"}
           fontWeight={"bold"}
+          mt="1rem"
         >
           <Link href="/pages/all-projects">VIEW ALL PROJECTS</Link>
         </Flex>
+        <Footer />
       </Box>
     </Box>
   );

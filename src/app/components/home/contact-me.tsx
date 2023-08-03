@@ -11,19 +11,17 @@ import { BiMessageDots } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
 import Button from "../button";
+import { Title } from "../utils/funcs";
 
 const ContactMe = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }} pb="1rem">
-      <Heading
-        color="brand.100"
-        fontWeight={"600"}
-        fontSize={"1.3rem"}
-        mt="3rem"
-        mb="2rem"
-      >
-        {children}
-      </Heading>
+    <Box
+      id="contact"
+      px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
+      pb="1rem"
+    >
+      <Title>{children}</Title>
+
       <Box
         px={{ base: ".7rem", sm: "1.3rem", md: "2rem" }}
         py="2.5rem"

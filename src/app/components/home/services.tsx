@@ -1,19 +1,16 @@
 import React from "react";
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { servicesData } from "../utils/constants";
+import { Title } from "../utils/funcs";
 
 const Services = () => {
   return (
-    <Box color="brand.350" px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}>
-      <Heading
-        color="brand.100"
-        fontWeight={"600"}
-        fontSize={"1.3rem"}
-        mt="3rem"
-        mb="2rem"
-      >
-        My Services
-      </Heading>
+    <Box
+      color="brand.350"
+      px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
+      id="services"
+    >
+      <Title>My Services</Title>
       <Flex justify={"space-between"} flexWrap={"wrap"} rowGap={"1.5rem"}>
         {servicesData.map((item) => {
           return (

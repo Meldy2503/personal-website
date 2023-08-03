@@ -8,6 +8,7 @@ import Button from "../button";
 const LandingPage = () => {
   return (
     <Box
+      id="home"
       bgImage="/assets/bg.jpg"
       h="25rem"
       bgRepeat={"no-repeat"}
