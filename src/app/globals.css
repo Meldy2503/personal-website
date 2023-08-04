@@ -37,3 +37,37 @@ a {
     border-radius: 3px;
   }
 }
+
+.scroll-container {
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: inherit;
+  width: inherit;
+}
+
+.primary {
+  animation: primary 30s linear infinite;
+}
+.secondary {
+  animation: secondary 30s linear infinite;
+}
+
+@keyframes primary {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes secondary {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

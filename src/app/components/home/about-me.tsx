@@ -5,9 +5,9 @@ import { Box, Flex, HStack, Heading, Text } from "@chakra-ui/react";
 const AboutMe = () => {
   return (
     <Box
+      id="about"
       color="brand.350"
       px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
-      id="services"
       mt={{ base: "2rem", md: "5rem" }}
     >
       <Flex justify={"space-between"} direction={{ base: "column", md: "row" }}>

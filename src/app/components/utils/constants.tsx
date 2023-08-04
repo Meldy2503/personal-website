@@ -111,6 +111,21 @@ export const servicesData = [
   },
 ];
 
+export const TechStackData = [
+  { src: "/assets/ts.svg", caption: "Typescript" },
+  { src: "/assets/github.svg", caption: "Git" },
+  { src: "/assets/chakra.svg", caption: "Chakra" },
+  { src: "/assets/css.svg", caption: "CSS" },
+  { src: "/assets/html.svg", caption: "HTML" },
+  { src: "/assets/js.svg", caption: "JS" },
+  { src: "/assets/nextjs.svg", caption: "Nextjs" },
+  { src: "/assets/react.svg", caption: "React" },
+  { src: "/assets/sass.svg", caption: "SASS" },
+  { src: "/assets/sc.svg", caption: "SC" },
+  { src: "/assets/tailwind.svg", caption: "Tailwind" },
+  { src: "/assets/vue.svg", caption: "Vue" },
+];
+
 export const projectData = [
   {
     id: "1",

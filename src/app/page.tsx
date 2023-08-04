@@ -16,7 +16,7 @@ export default function Home() {
       <LandingPage />
       <AboutMe />
       <Services />
-      {/* <TechStacks /> */}
+      <TechStacks />
       <Projects />
       {/* <Recommendations /> */}
       <ContactMe
