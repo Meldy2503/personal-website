@@ -8,7 +8,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { GiCutDiamond } from "react-icons/gi";
 import { AiFillHome } from "react-icons/ai";
 import { MdDesignServices, MdWork } from "react-icons/md";
-import { BsFillPersonVcardFill } from "react-icons/bs";
+import { BsFillPersonVcardFill, BsFillPersonFill } from "react-icons/bs";
 import { GrStackOverflow } from "react-icons/gr";
 import { GoCodeReview } from "react-icons/go";
 
@@ -17,6 +17,11 @@ export const menuData = [
     name: "Home",
     icon: AiFillHome,
     id: "#home",
+  },
+  {
+    name: "About me",
+    icon: BsFillPersonFill,
+    id: "#about",
   },
   {
     name: "Services",

@@ -23,7 +23,7 @@ export const Title = ({ children }: { children: React.ReactNode }) => {
       color="brand.100"
       fontWeight={"600"}
       fontSize={"1.3rem"}
-      mt="3rem"
+      mt={{ base: "3rem", md: "6rem" }}
       mb="2rem"
     >
       {children}
