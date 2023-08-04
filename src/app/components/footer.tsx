@@ -16,8 +16,9 @@ const Footer = () => {
       direction="column"
       mt="2rem"
       gap=".2rem"
+      textAlign={"center"}
     >
-      <Text>© 2020 All Rights Reserved.</Text>
+      <Text>© 2023 All Rights Reserved.</Text>
       <Text>Email: emelder.charles25@gmail.com</Text>
     </Flex>
   );

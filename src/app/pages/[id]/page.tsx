@@ -2,15 +2,28 @@
 "use client";
 import React from "react";
 import { projectData } from "@/app/components/utils/constants";
-import { Box, Flex, HStack, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  Text,
+  useDisclosure,
+  Button,
+  Modal,
+} from "@chakra-ui/react";
 import { useParams } from "next/navigation";
 import ContactMe from "@/app/components/home/contact-me";
 import Link from "next/link";
 import Footer from "@/app/components/footer";
 import { Back, Title } from "@/app/components/utils/funcs";
+// import Button from "@/app/components/button";
+import { ContactModal } from "@/app/components/contact-modal";
 
 const ProjectId = () => {
   const { id } = useParams();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const filteredProject = projectData.filter((item) => {
     return item.id == id;
   });
@@ -54,13 +67,14 @@ const ProjectId = () => {
               </Heading>
               <Flex
                 justify={"space-between"}
-                fontSize={".95rem"}
                 direction={{ base: "column", xl: "row" }}
                 rowGap={"1rem"}
               >
                 <Text
                   bg="brand.650"
-                  p={{ base: "1rem", sm: "1.5rem" }}
+                  py="2rem"
+                  fontSize={".95rem"}
+                  px={{ base: "1rem", sm: "1.5rem" }}
                   w={{ base: "100%", xl: "67%" }}
                   lineHeight={1.8}
                 >
@@ -68,10 +82,12 @@ const ProjectId = () => {
                 </Text>
                 <Flex
                   bg="brand.650"
-                  p={{ base: "1rem", sm: "1.5rem" }}
+                  py="2rem"
+                  px={{ base: "1rem", sm: "1.5rem" }}
                   w={{ base: "100%", xl: "30%" }}
                   direction={"column"}
                   rowGap={".6rem"}
+                  fontSize={".9rem"}
                 >
                   <HStack justify={"space-between"} columnGap={"1rem"}>
                     <Text color="brand.150">Github:</Text>
@@ -111,18 +127,64 @@ const ProjectId = () => {
             </Box>
           );
         })}
-        <ContactMe>
-          <Text>Ready to Order your Projects?</Text>
-          <Text fontSize={"1rem"} fontWeight={400} color="brand.800" mt="1rem">
-            Let's Work Together!
-          </Text>
-        </ContactMe>
+
+        <Box
+          bgImage="/assets/img2.jpg"
+          h="20rem"
+          bgRepeat={"no-repeat"}
+          bgSize={"cover"}
+          bgPosition={"bottom"}
+          mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
+          my="2rem"
+        >
+          <Flex
+            h="100%"
+            w="100%"
+            align={"center"}
+            justify={"center"}
+            direction="column"
+            color="brand.150"
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg,rgba(45,45,58,.9) 15%,rgba(45,45,58,.7) 50%,rgba(43,43,53,.7) 100%)",
+            }}
+          >
+            <Heading
+              fontSize={"2.5rem"}
+              fontWeight={"900"}
+              textAlign={"center"}
+            >
+              Ready to Order your Projects?
+            </Heading>
+
+            <Text my="1.5rem">Let's Work Together!</Text>
+            <Button
+              onClick={onOpen}
+              borderRadius={"0px"}
+              fontSize=".8rem"
+              bg="brand.800"
+              letterSpacing={".1rem"}
+              px="2rem"
+            >
+              CONTACT ME
+            </Button>
+            <Modal
+              isCentered
+              size="lg"
+              onClose={onClose}
+              isOpen={isOpen}
+              motionPreset="slideInBottom"
+            >
+              <ContactModal />
+            </Modal>
+          </Flex>
+        </Box>
+
         <Flex
           bg="brand.450"
           py="1.5rem"
           justify={"center"}
           color="brand.800"
-          // color="brand.350"
           letterSpacing={".1rem"}
           mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
           fontSize={".83rem"}

@@ -81,6 +81,7 @@ export const DesktopNav = () => {
     </Box>
   );
 };
+
 export const MobileNav = () => {
   const {
     isOpen: isProfileOpen,

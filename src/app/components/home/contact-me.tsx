@@ -13,19 +13,22 @@ import { AiTwotoneMail } from "react-icons/ai";
 import Button from "../button";
 import { Title } from "../utils/funcs";
 
-const ContactMe = ({ children }: { children: React.ReactNode }) => {
+interface Props {
+  children?: React.ReactNode;
+  px?: string | any;
+  py?: string;
+  shadow?: string;
+}
+
+const ContactMe = ({ children, px, py, shadow }: Props) => {
   return (
-    <Box
-      id="contact"
-      px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
-      pb="1rem"
-    >
+    <Box id="contact" px={px} pb="1rem">
       <Title>{children}</Title>
 
       <Box
         px={{ base: ".7rem", sm: "1.3rem", md: "2rem" }}
-        py="2.5rem"
-        shadow={"lg"}
+        py={py}
+        shadow={shadow}
         style={{
           backgroundImage: "linear-gradient(159deg,#2d2d3a 0%,#2b2b35 100%)",
         }}

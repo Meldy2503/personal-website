@@ -4,6 +4,7 @@ import React from "react";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Button from "../button";
+import Typewriter from "typewriter-effect";
 
 const LandingPage = () => {
   return (
@@ -59,7 +60,21 @@ const LandingPage = () => {
                 >
                   Discover my Amazing Art Space!
                 </Heading>
-                <Text my="1.5rem">I build.....</Text>
+                <Flex my="1.5rem" color="brand.150">
+                  <Text color="brand.800">{"<>"}</Text>
+                  <Typewriter
+                    options={{
+                      strings: [
+                        " I build visually appealing websites",
+                        "I develop dynamic, scalable web applications",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                  <Text color="brand.800">{"</>"}</Text>
+                </Flex>
+                {/* <Text my="1.5rem">I build.....</Text> */}
                 <Button href="/">Explore now</Button>
               </Box>
               <Box w="40%" display={{ base: "none", xl: "block" }}>

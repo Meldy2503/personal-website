@@ -34,9 +34,10 @@ const Sidebar = ({ w, h, position, top }: Props) => {
       <Box
         w={w}
         bg="brand.600"
-        h={h}
-        position={position}
-        top={top}
+        h="100%"
+        position="sticky"
+        top="0px"
+        overflow={"auto"}
         className="scroll-bar"
         shadow={"md"}
       >
@@ -52,6 +53,9 @@ const Sidebar = ({ w, h, position, top }: Props) => {
           py="1.5rem"
           fontSize={".9rem"}
           textAlign={"center"}
+          position="sticky"
+          top="0px"
+          zIndex={"100"}
         >
           <Image
             src="/assets/face-1.jpg"
@@ -119,7 +123,7 @@ const Sidebar = ({ w, h, position, top }: Props) => {
               Git/Github knowledge{" "}
             </ListItem>
           </List>
-          <HStack color="brand.350" py="1rem">
+          <HStack color="brand.350" py="1rem" mb="2rem">
             <Text
               letterSpacing={".1rem"}
               fontWeight={"bold"}
@@ -140,7 +144,7 @@ const Sidebar = ({ w, h, position, top }: Props) => {
           color="brand.350"
           py=".9rem"
           gap={".6rem"}
-          position={"absolute"}
+          position={"sticky"}
           w="100%"
           bottom="0px"
         >
