@@ -1,26 +1,28 @@
 import React from "react";
-import { Box, Icon, Heading } from "@chakra-ui/react";
+import { Box, Icon, Heading, useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
 export const Back = () => {
   const router = useRouter();
+  const { colorMode } = useColorMode();
 
   return (
-    <Box onClick={() => router.back()} mt="1.2rem" cursor="pointer">
+    <Box onClick={() => router.back()} mt=".3rem" cursor="pointer">
       <Icon
         as={BsArrowLeftSquare}
         boxSize={6}
-        color="brand.150"
-        _hover={{ color: "brand.800" }}
+        color={colorMode === "dark" ? "brand.150" : "brand.450"}
+        _hover={{ color: colorMode === "dark" ? "brand.800" : "brand.850" }}
       />
     </Box>
   );
 };
 export const Title = ({ children }: { children: React.ReactNode }) => {
+  const { colorMode } = useColorMode();
   return (
     <Heading
-      color="brand.100"
+      color={colorMode === "dark" ? "brand.100" : "brand.450"}
       fontWeight={"600"}
       fontSize={"1.3rem"}
       mt={{ base: "3rem", md: "6rem" }}

@@ -9,19 +9,20 @@ import {
   List,
   ListItem,
   Text,
-  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { projectData } from "../utils/constants";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import { Back, Title } from "../utils/funcs";
 import { usePathname } from "next/navigation";
 
 const Projects = () => {
   const [showDetails, setShowDetails] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("ALL CATEGORIES");
-  const activeColorScheme = useColorModeValue("brand.150", "brand.350");
+  const { colorMode } = useColorMode();
+  const activeColorScheme = colorMode === "dark" ? "brand.150" : "brand.600";
+
   const path = usePathname();
 
   const handleMouseEnter = (index: any) => {
@@ -42,19 +43,14 @@ const Projects = () => {
       : projectData.filter((project) => project.category === selectedCategory);
 
   return (
-    <Box px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }} id="projects">
-      <Flex align="center" gap="2rem">
-        {path?.includes("projects") && <Back />}
-        <Title>My Projects</Title>
-      </Flex>
-
+    <Box id="projects" bg={colorMode === "dark" ? "brand.960" : "brand.300"}>
       <List
         as={Flex}
         color="brand.350"
         rowGap=".7rem"
         columnGap="1.5rem"
         letterSpacing={".1rem"}
-        fontWeight={"bold"}
+        fontWeight={"700"}
         fontSize={".8rem"}
         flexWrap={"wrap"}
         pb="1.5rem"
@@ -106,8 +102,6 @@ const Projects = () => {
                   objectPosition: "center",
                   height: "280px",
                   maxWidth: "100%",
-                  backgroundImage:
-                    "linear-gradient(159deg,rgba(45,45,58,.98) 0%,rgba(43,43,53,.98) 100%)",
                 }}
               />
               {showDetails === index && (
@@ -117,19 +111,22 @@ const Projects = () => {
                   bottom={"0"}
                   px="1.5rem"
                   py="2rem"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(159deg,rgba(45,45,58,.98) 0%,rgba(43,43,53,.98) 100%)",
-                  }}
+                  bg={colorMode === "dark" ? "brand.720" : "brand.150"}
                 >
-                  <Heading color="brand.150" fontSize={".9rem"}>
+                  <Heading
+                    color={colorMode === "dark" ? "brand.150" : "brand.600"}
+                    fontSize={".9rem"}
+                  >
                     {project.heading}
                   </Heading>
-                  <Text color="brand.350" my="1rem">
+                  <Text
+                    color={colorMode === "dark" ? "brand.350" : "brand.380"}
+                    my="1rem"
+                  >
                     {project.brief}
                   </Text>
                   <HStack
-                    color="brand.800"
+                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
                     letterSpacing={".1rem"}
                     fontWeight={"bold"}
                     fontSize={".8rem"}

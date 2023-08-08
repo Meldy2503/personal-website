@@ -1,18 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { Box, Flex, HStack, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 
 const AboutMe = () => {
+  const { colorMode } = useColorMode();
   return (
     <Box
       id="about"
-      color="brand.350"
-      px={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
+      color={colorMode === "dark" ? "brand.350" : "brand.380"}
       mt={{ base: "2rem", md: "5rem" }}
     >
       <Flex justify={"space-between"} direction={{ base: "column", md: "row" }}>
         <Box w={{ base: "100%", md: "40%" }}>
-          <Heading fontSize={"1.3rem"} color="brand.100">
+          <Heading
+            fontSize={"1.3rem"}
+            color={colorMode === "dark" ? "brand.100" : "brand.450"}
+          >
             Any Type of Question & Discussion
           </Heading>
           <HStack
@@ -22,14 +32,17 @@ const AboutMe = () => {
           >
             <Text w="fit-content">Let's Talk</Text>
             <Box
-              bgColor="brand.800"
-              color="brand.800"
+              bgColor={colorMode === "dark" ? "brand.800" : "brand.850"}
               h=".2rem"
               w={{ base: "50%", lg: "55%" }}
               borderRadius={"1rem"}
             />
           </HStack>
-          <Heading fontSize={"1.1rem"} color="brand.800" fontWeight={"700"}>
+          <Heading
+            fontSize={"1.1rem"}
+            color={colorMode === "dark" ? "brand.800" : "brand.850"}
+            fontWeight={"700"}
+          >
             emelder.charles25@gmail.com
           </Heading>
           <Text my="1rem">LinkedIn: Emelder Okafor </Text>
@@ -40,11 +53,15 @@ const AboutMe = () => {
             fontSize={"1.3rem"}
             mt={{ base: "3rem", md: "0rem" }}
             mb=".8rem"
-            color="brand.100"
+            color={colorMode === "dark" ? "brand.100" : "brand.450"}
           >
             Get to Know me
           </Heading>
-          <Text color="brand.350" fontSize={".95rem"} lineHeight={1.6}>
+          <Text
+            color={colorMode === "dark" ? "brand.350" : "brand.380"}
+            fontSize={".98rem"}
+            lineHeight={1.6}
+          >
             I'm a success driven and determined frontend developer who loves
             creating maintainable and responsive applcations using React,
             Nextjs, JS(ES6), Typescript and other technologies for developing

@@ -1,29 +1,25 @@
 "use client";
 
 import React from "react";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
-import Button from "../button";
+import { Btn } from "../button";
 import Typewriter from "typewriter-effect";
 
 const LandingPage = () => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box
       id="home"
       bgImage="/assets/bg.jpg"
-      h="25rem"
+      h="24.5rem"
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
       bgPosition={"center"}
       position="relative"
     >
-      <Box
-        h="100%"
-        style={{
-          backgroundImage:
-            "linear-gradient(180deg,rgba(30,30,40,.93) 0%,rgba(30,30,40,.96) 70%,rgba(30,30,40,1) 10%,#1e1e28 100%)",
-        }}
-      >
+      <Box bg={colorMode === "dark" ? "brand.960" : "brand.220"} h="100%">
         <Box
           m="auto"
           bgImage="/assets/bg.jpg"
@@ -32,18 +28,12 @@ const LandingPage = () => {
           bgPosition={"center"}
           position="absolute"
           top={{ base: "20px", md: "40px" }}
-          left={{ base: "10px", sm: "24px", xl: "40px" }}
-          right={{ base: "10px", sm: "24px", xl: "40px" }}
+          left={{ base: "15px", md: "35px" }}
+          right={{ base: "15px", md: "35px" }}
           bottom="0px"
           h="fit-content"
         >
-          <Box
-            h="100%"
-            style={{
-              backgroundImage:
-                "linear-gradient(90deg,rgba(45,45,58,.9) 15%,rgba(45,45,58,.7) 50%,rgba(43,43,53,.7) 100%)",
-            }}
-          >
+          <Box h="100%" bg={colorMode === "dark" ? "brand.980" : "brand.990"}>
             <Flex
               justify={{ base: "center", xl: "space-between" }}
               align={"center"}
@@ -74,8 +64,7 @@ const LandingPage = () => {
                   />
                   <Text color="brand.800">{"</>"}</Text>
                 </Flex>
-                {/* <Text my="1.5rem">I build.....</Text> */}
-                <Button href="/">Explore now</Button>
+                <Btn href="/">Explore now</Btn>
               </Box>
               <Box w="40%" display={{ base: "none", xl: "block" }}>
                 <Image

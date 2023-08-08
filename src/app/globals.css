@@ -14,9 +14,7 @@ body {
 }
 
 body {
-  color: #000;
   scroll-behavior: smooth;
-  background-color: #191923;
 }
 
 a {
@@ -70,4 +68,32 @@ a {
   100% {
     transform: translateX(0);
   }
+}
+
+.slick-dots li button:before {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  color: #ffc107;
+  /* color: ${({ theme }) => theme.colors.white2}; */
+}
+
+.slick-slide {
+  margin: 0 2rem;
+  height: inherit !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  /* 
+    @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      margin: 0;
+    } */
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+.slick-track {
+  display: flex !important;
+  /* margin: 0 2rem; */
 }

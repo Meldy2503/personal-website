@@ -10,6 +10,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
+  useColorMode,
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillHome, AiOutlineClose } from "react-icons/ai";
@@ -19,9 +20,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BsPersonCircle } from "react-icons/bs";
 import Sidebar from "./sidebar";
+import { ColorModeBtn } from "./button";
 
 export const DesktopNav = () => {
-  const activeColorScheme = useColorModeValue("brand.800", "brand.350");
+  const { colorMode } = useColorMode();
+
+  const activeColorScheme = colorMode === "dark" ? "brand.800" : "brand.850";
+
   const [currentMenu, setCurrentMenu] = useState("#home");
   const path = usePathname();
 
@@ -29,18 +34,20 @@ export const DesktopNav = () => {
     setCurrentMenu(menu);
   };
   return (
-    <Box
-      w="fit-content"
-      bg="brand.600"
+    <Flex
+      bg={colorMode === "dark" ? "brand.500" : "brand.250"}
       h="100%"
       position="sticky"
       top="0px"
       left="10px"
       className="scroll-bar"
       shadow={"md"}
+      direction={"column"}
+      align={"center"}
       py="1rem"
-      px="1.5rem"
+      px=".5rem"
     >
+      <ColorModeBtn />
       {!path.includes("pages") ? (
         <Flex direction="column" rowGap={"2rem"} align={"center"} mt="1.5rem">
           {menuData.map((menu, index) => {
@@ -52,10 +59,14 @@ export const DesktopNav = () => {
                     as={menu.icon}
                     boxSize={4}
                     color={
-                      currentMenu === menu.id ? activeColorScheme : "brand.900"
+                      currentMenu === menu.id
+                        ? activeColorScheme
+                        : colorMode === "dark"
+                        ? "brand.900"
+                        : "brand.400"
                     }
                     _hover={{
-                      color: "brand.800",
+                      color: colorMode === "dark" ? "brand.800" : "brand.850",
                     }}
                   />
                 </Link>
@@ -69,20 +80,22 @@ export const DesktopNav = () => {
             <Icon
               as={AiFillHome}
               boxSize={5}
-              color="brand.800"
+              color={colorMode === "dark" ? "brand.800" : "brand.850"}
               mt="1.5rem"
               _hover={{
-                color: "brand.900",
+                color: "brand.350",
               }}
             />
           </Link>
         </Tooltip>
       )}
-    </Box>
+    </Flex>
   );
 };
 
 export const MobileNav = () => {
+  const { colorMode } = useColorMode();
+
   const {
     isOpen: isProfileOpen,
     onOpen: onProfileOpen,
@@ -109,15 +122,20 @@ export const MobileNav = () => {
         zIndex="100"
         px="1.2rem"
         py="1rem"
-        bg="brand.600"
+        bg={colorMode === "dark" ? "brand.600" : "brand.250"}
         position="sticky"
         top="0px"
         shadow={"md"}
+        align={"center"}
       >
         {/* to open profile on mobile */}
         <>
           <Box onClick={onProfileOpen}>
-            <Icon as={BsPersonCircle} boxSize={5} color="brand.900" />
+            <Icon
+              as={BsPersonCircle}
+              boxSize={5}
+              color={colorMode === "dark" ? "brand.900" : "brand.600"}
+            />
           </Box>
           <Drawer
             placement="left"
@@ -128,11 +146,14 @@ export const MobileNav = () => {
             <DrawerContent bg="brand.600">
               <Box
                 onClick={onProfileClose}
-                bg="brand.500"
+                bg={colorMode === "dark" ? "brand.500" : "brand.100"}
                 px="1.7rem"
                 py="1rem"
               >
-                <Icon as={AiOutlineClose} color="brand.900" />
+                <Icon
+                  as={AiOutlineClose}
+                  color={colorMode === "dark" ? "brand.900" : "brand.600"}
+                />
               </Box>
               <DrawerBody p="0">
                 <Sidebar />
@@ -141,17 +162,33 @@ export const MobileNav = () => {
           </Drawer>
         </>
 
+        <ColorModeBtn />
+
         {/* to open the menu on mobile */}
 
         <>
           <Box onClick={onMenuOpen}>
-            <Icon as={GiHamburgerMenu} boxSize={5} color="brand.900" />
+            <Icon
+              as={GiHamburgerMenu}
+              boxSize={5}
+              color={colorMode === "dark" ? "brand.900" : "brand.600"}
+            />
           </Box>
           <Drawer placement="right" onClose={onMenuClose} isOpen={isMenuOpen}>
             <DrawerOverlay />
-            <DrawerContent bg="brand.600">
-              <Box onClick={onMenuClose} bg="brand.500" px="1.7rem" py="1rem">
-                <Icon as={AiOutlineClose} color="brand.900" />
+            <DrawerContent
+              bg={colorMode === "dark" ? "brand.600" : "brand.250"}
+            >
+              <Box
+                onClick={onMenuClose}
+                bg={colorMode === "dark" ? "brand.500" : "brand.100"}
+                px="1.7rem"
+                py="1rem"
+              >
+                <Icon
+                  as={AiOutlineClose}
+                  color={colorMode === "dark" ? "brand.900" : "brand.600"}
+                />
               </Box>
               <DrawerBody>
                 {!path.includes("pages") ? (
@@ -163,7 +200,12 @@ export const MobileNav = () => {
                   >
                     {menuData.map((menu, index) => {
                       return (
-                        <Box color="brand.900" key={index}>
+                        <Box
+                          color={
+                            colorMode === "dark" ? "brand.900" : "brand.600"
+                          }
+                          key={index}
+                        >
                           <Link
                             href={menu.id}
                             onClick={() => {
@@ -178,7 +220,10 @@ export const MobileNav = () => {
                     })}
                   </Flex>
                 ) : (
-                  <Box color="brand.900" mt="1.5rem">
+                  <Box
+                    color={colorMode === "dark" ? "brand.900" : "brand.600"}
+                    mt="1.5rem"
+                  >
                     <Link href="/" onClick={onMenuClose}>
                       Home
                     </Link>

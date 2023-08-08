@@ -6,11 +6,12 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  useColorMode,
 } from "@chakra-ui/react";
 import { BiMessageDots } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { AiTwotoneMail } from "react-icons/ai";
-import Button from "../button";
+import { Btn } from "../button";
 import { Title } from "../utils/funcs";
 
 interface Props {
@@ -21,6 +22,8 @@ interface Props {
 }
 
 const ContactMe = ({ children, px, py, shadow }: Props) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box id="contact" px={px} pb="1rem">
       <Title>{children}</Title>
@@ -29,20 +32,22 @@ const ContactMe = ({ children, px, py, shadow }: Props) => {
         px={{ base: ".7rem", sm: "1.3rem", md: "2rem" }}
         py={py}
         shadow={shadow}
-        style={{
-          backgroundImage: "linear-gradient(159deg,#2d2d3a 0%,#2b2b35 100%)",
-        }}
+        bg={colorMode === "dark" ? "brand.650" : "brand.100"}
       >
         <form action="">
-          <InputGroup color="brand.350" mb="2rem">
-            <InputLeftElement pointerEvents="none" bg="brand.550" py="1.6rem">
-              <BsFillPersonFill color="gray.300" />
+          <InputGroup
+            color={colorMode === "dark" ? "brand.350" : "brand.380"}
+            mb="2rem"
+          >
+            <InputLeftElement
+              pointerEvents="none"
+              bg={colorMode === "dark" ? "brand.550" : "brand.320"}
+              py="1.6rem"
+            >
+              <BsFillPersonFill />
             </InputLeftElement>
             <Input
-              style={{
-                backgroundImage:
-                  "linear-gradient(159deg,#252532 0%,#23232d 100%)",
-              }}
+              bg={colorMode === "dark" ? "brand.700" : "brand.250"}
               border={"none"}
               focusBorderColor="transparent"
               type="text"
@@ -51,17 +56,22 @@ const ContactMe = ({ children, px, py, shadow }: Props) => {
               pl="3.5rem"
               py="1.6rem"
               fontSize={".95rem"}
+              shadow={"md"}
             />
           </InputGroup>
-          <InputGroup color="brand.350" mb="2rem">
-            <InputLeftElement pointerEvents="none" bg="brand.550" py="1.6rem">
-              <AiTwotoneMail color="gray.300" />
+          <InputGroup
+            color={colorMode === "dark" ? "brand.350" : "brand.380"}
+            mb="2rem"
+          >
+            <InputLeftElement
+              pointerEvents="none"
+              py="1.6rem"
+              bg={colorMode === "dark" ? "brand.550" : "brand.320"}
+            >
+              <AiTwotoneMail />
             </InputLeftElement>
             <Input
-              style={{
-                backgroundImage:
-                  "linear-gradient(159deg,#252532 0%,#23232d 100%)",
-              }}
+              bg={colorMode === "dark" ? "brand.700" : "brand.250"}
               border={"none"}
               focusBorderColor="transparent"
               type="email"
@@ -70,19 +80,24 @@ const ContactMe = ({ children, px, py, shadow }: Props) => {
               pl="3.5rem"
               py="1.6rem"
               fontSize={".95rem"}
+              shadow={"md"}
             />
           </InputGroup>
-          <InputGroup color="brand.350" mb="2rem">
-            <InputLeftElement pointerEvents="none" bg="brand.550" h="full">
+          <InputGroup
+            color={colorMode === "dark" ? "brand.350" : "brand.380"}
+            mb="2rem"
+          >
+            <InputLeftElement
+              pointerEvents="none"
+              bg={colorMode === "dark" ? "brand.550" : "brand.320"}
+              h="full"
+            >
               <Box mt="-6.4rem">
-                <BiMessageDots color="gray.300" />
+                <BiMessageDots />
               </Box>
             </InputLeftElement>
             <Textarea
-              style={{
-                backgroundImage:
-                  "linear-gradient(159deg,#252532 0%,#23232d 100%)",
-              }}
+              bg={colorMode === "dark" ? "brand.700" : "brand.250"}
               border={"none"}
               placeholder="Message"
               _placeholder={{ color: "brand.350", fontSize: ".95rem" }}
@@ -92,10 +107,11 @@ const ContactMe = ({ children, px, py, shadow }: Props) => {
               h="10rem"
               py="1.1rem"
               fontSize={".95rem"}
+              shadow={"md"}
             />
           </InputGroup>
           <Box my="2rem">
-            <Button href="/">send message</Button>
+            <Btn href="/">send message</Btn>
           </Box>
         </form>
       </Box>

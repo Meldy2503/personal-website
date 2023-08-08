@@ -8,7 +8,9 @@ const TechStacks = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
   return (
-    <Box mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}>
+    <Box
+    //  mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
+    >
       <Title>Tech Stack</Title>
       <Box overflow={"hidden"} id="stacks" position="relative" h="10rem">
         <Box className="scroll-container primary">
@@ -16,7 +18,7 @@ const TechStacks = () => {
             <Flex
               key={index}
               direction={"column"}
-              w="7rem"
+              w="6rem"
               mx="1.5rem"
               cursor="pointer"
               onMouseEnter={() => setHoveredIndex(index)}
@@ -28,7 +30,7 @@ const TechStacks = () => {
                 height={300}
                 width={300}
                 style={{
-                  width: "200px",
+                  width: "150px",
                   filter:
                     index === hoveredIndex ? "saturate(1)" : "saturate(0)",
                 }}
@@ -44,7 +46,7 @@ const TechStacks = () => {
             <Flex
               key={index}
               direction={"column"}
-              w="7rem"
+              w="6rem"
               mx="1.5rem"
               cursor="pointer"
               onMouseEnter={() => setHoveredIndex(index)}
@@ -56,7 +58,7 @@ const TechStacks = () => {
                 height={300}
                 width={300}
                 style={{
-                  width: "200px",
+                  width: "150px",
                   filter:
                     index === hoveredIndex ? "saturate(1)" : "saturate(0)",
                 }}

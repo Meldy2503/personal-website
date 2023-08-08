@@ -1,22 +1,23 @@
 "use-client";
 
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useColorMode } from "@chakra-ui/react";
 
 const Footer = () => {
+  const { colorMode } = useColorMode();
   return (
     <Flex
-      bg="brand.450"
+      bg={colorMode === "dark" ? "brand.450" : "brand.100"}
       py="1rem"
       justify={"center"}
       align={"center"}
-      color="brand.350"
-      mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
-      fontSize={".85rem"}
+      color={colorMode === "dark" ? "brand.350" : "brand.380"}
+      fontSize={".9rem"}
       direction="column"
       mt="2rem"
       gap=".2rem"
       textAlign={"center"}
+      shadow={"md"}
     >
       <Text>© 2023 All Rights Reserved.</Text>
       <Text>Email: emelder.charles25@gmail.com</Text>

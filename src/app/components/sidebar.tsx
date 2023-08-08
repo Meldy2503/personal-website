@@ -9,6 +9,8 @@ import {
   ListItem,
   List,
   ListIcon,
+  useColorMode,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { stackData } from "./utils/constants";
@@ -23,39 +25,35 @@ import {
 
 interface Props {
   w?: string;
-  h?: string;
-  position?: string | any;
-  top?: string;
 }
 
-const Sidebar = ({ w, h, position, top }: Props) => {
+const Sidebar = ({ w }: Props) => {
+  const { colorMode } = useColorMode();
+
   return (
     <>
       <Box
         w={w}
-        bg="brand.600"
+        bg={colorMode === "dark" ? "brand.600" : "brand.250"}
         h="100%"
         position="sticky"
         top="0px"
         overflow={"auto"}
         className="scroll-bar"
         shadow={"md"}
+        color={colorMode === "dark" ? "brand.350" : "brand.400"}
       >
         <Flex
-          style={{
-            backgroundImage:
-              "linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%)",
-          }}
           direction={"column"}
           align={"center"}
           justify="center"
-          color="brand.350"
           py="1.5rem"
-          fontSize={".9rem"}
+          fontSize={"0.9rem"}
           textAlign={"center"}
           position="sticky"
           top="0px"
           zIndex={"100"}
+          bg={colorMode === "dark" ? "brand.500" : "brand.100"}
         >
           <Image
             src="/assets/face-1.jpg"
@@ -70,7 +68,7 @@ const Sidebar = ({ w, h, position, top }: Props) => {
             }}
           />
           <Heading
-            color="brand.150"
+            color={colorMode === "dark" ? "brand.150" : "brand.600"}
             fontSize={"1.1rem"}
             mt="1rem"
             mb=".6rem"
@@ -83,7 +81,12 @@ const Sidebar = ({ w, h, position, top }: Props) => {
             UI/UX Designer
           </Text>
         </Flex>
-        <Box color="brand.900" fontSize={".9rem"} px="1.5rem" mt="1rem">
+        <Box
+          color={colorMode === "dark" ? "brand.900" : "brand.400"}
+          fontSize={".9rem"}
+          px="1.5rem"
+          mt="1rem"
+        >
           <Box>
             {stackData.map((item, index) => {
               return (
@@ -98,7 +101,7 @@ const Sidebar = ({ w, h, position, top }: Props) => {
                     <Text>{item.value}%</Text>
                   </HStack>
                   <Progress
-                    bgColor="brand.750"
+                    bgColor={colorMode === "dark" ? "brand.750" : "brand.900"}
                     colorScheme="yellow"
                     size="xs"
                     value={item.value}
@@ -109,21 +112,33 @@ const Sidebar = ({ w, h, position, top }: Props) => {
           </Box>
           <List
             spacing={3}
-            borderY="1px solid #363643"
+            borderY={`1px solid ${
+              colorMode === "dark" ? "#363643" : "#cacaca"
+            }`}
             py="1rem"
             mt="2rem"
-            color="brand.350"
+            color={colorMode === "dark" ? "brand.350" : "brand.400"}
           >
             <ListItem>
-              <ListIcon as={BsCheckLg} color="brand.800" />
+              <ListIcon
+                as={BsCheckLg}
+                color={colorMode === "dark" ? "brand.800" : "brand.850"}
+              />
               Figma, Zeplin
             </ListItem>
             <ListItem>
-              <ListIcon as={BsCheckLg} color="brand.800" />
+              <ListIcon
+                as={BsCheckLg}
+                color={colorMode === "dark" ? "brand.800" : "brand.850"}
+              />
               Git/Github knowledge{" "}
             </ListItem>
           </List>
-          <HStack color="brand.350" py="1rem" mb="2rem">
+          <HStack
+            py="1rem"
+            mb="2rem"
+            color={colorMode === "dark" ? "brand.350" : "brand.400"}
+          >
             <Text
               letterSpacing={".1rem"}
               fontWeight={"bold"}
@@ -135,16 +150,12 @@ const Sidebar = ({ w, h, position, top }: Props) => {
           </HStack>
         </Box>
         <Flex
-          style={{
-            backgroundImage:
-              "linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%)",
-          }}
+          bg={colorMode === "dark" ? "brand.500" : "brand.100"}
           align={"center"}
           justify="center"
-          color="brand.350"
           py=".9rem"
           gap={".6rem"}
-          position={"sticky"}
+          position="sticky"
           w="100%"
           bottom="0px"
         >
