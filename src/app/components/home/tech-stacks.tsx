@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
 import { Title } from "../utils/funcs";
 import { TechStackData } from "../utils/constants";
 import Image from "next/image";
 
 const TechStacks = () => {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
+  const { colorMode } = useColorMode();
 
   return (
-    <Box
-    //  mx={{ base: ".7rem", sm: "1.5rem", xl: "2.5rem" }}
-    >
+    <Box>
       <Title>Tech Stack</Title>
-      <Box overflow={"hidden"} id="stacks" position="relative" h="10rem">
+      <Box overflow={"hidden"} id="stacks" position="relative" h="8.5rem">
         <Box className="scroll-container primary">
           {TechStackData.map((item, index) => (
             <Flex
               key={index}
               direction={"column"}
-              w="6rem"
+              w="5.5rem"
               mx="1.5rem"
               cursor="pointer"
               onMouseEnter={() => setHoveredIndex(index)}
@@ -32,10 +31,16 @@ const TechStacks = () => {
                 style={{
                   width: "150px",
                   filter:
-                    index === hoveredIndex ? "saturate(1)" : "saturate(0)",
+                    index === hoveredIndex
+                      ? "saturate(1)"
+                      : "saturate(0) contrast(130%)",
                 }}
               />
-              <Text textAlign={"center"} color={"brand.900"} mt="1rem">
+              <Text
+                textAlign={"center"}
+                mt="1rem"
+                color={colorMode === "light" ? "brand.600" : "brand.900"}
+              >
                 {item.caption}
               </Text>{" "}
             </Flex>
@@ -46,7 +51,7 @@ const TechStacks = () => {
             <Flex
               key={index}
               direction={"column"}
-              w="6rem"
+              w="5.5rem"
               mx="1.5rem"
               cursor="pointer"
               onMouseEnter={() => setHoveredIndex(index)}
@@ -60,10 +65,16 @@ const TechStacks = () => {
                 style={{
                   width: "150px",
                   filter:
-                    index === hoveredIndex ? "saturate(1)" : "saturate(0)",
+                    index === hoveredIndex
+                      ? "saturate(1) contrast(10px)"
+                      : "saturate(0) contrast(130%)",
                 }}
               />
-              <Text textAlign={"center"} color={"brand.900"} mt="1rem">
+              <Text
+                textAlign={"center"}
+                color={colorMode === "light" ? "brand.600" : "brand.900"}
+                mt="1rem"
+              >
                 {item.caption}
               </Text>
             </Flex>

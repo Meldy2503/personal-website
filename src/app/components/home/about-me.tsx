@@ -39,14 +39,38 @@ const AboutMe = () => {
             />
           </HStack>
           <Heading
-            fontSize={"1.1rem"}
+            fontSize={{ base: "1rem", sm: "1.1rem" }}
             color={colorMode === "dark" ? "brand.800" : "brand.850"}
             fontWeight={"700"}
           >
-            emelder.charles25@gmail.com
+            <a
+              href="mailto:emelder.charles25@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              emelder.charles25@gmail.com
+            </a>
           </Heading>
-          <Text my="1rem">LinkedIn: Emelder Okafor </Text>
-          <Text>Github: Meldy2503</Text>
+          <HStack my="1rem">
+            <Text>LinkedIn:</Text>
+            <a
+              href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Emelder Okafor{" "}
+            </a>
+          </HStack>
+          <HStack>
+            <Text>Github:</Text>
+            <a
+              href="https://github.com/Meldy2503 "
+              target="_blank"
+              rel="noreferrer"
+            >
+              Meldy2503
+            </a>
+          </HStack>
         </Box>
         <Box w={{ base: "100%", md: "56%" }}>
           <Heading

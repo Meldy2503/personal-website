@@ -48,23 +48,36 @@ const LandingPage = () => {
                   fontWeight={"900"}
                   fontSize={{ base: "2.3rem", sm: "2.5rem", md: "2.7rem" }}
                 >
-                  Discover my Amazing Art Space!
+                  Elevating Designs with Code Mastery
+                  {/* "Code and Creativity Converged: Portfolio" */}
                 </Heading>
                 <Flex my="1.5rem" color="brand.150">
-                  <Text color="brand.800">{"<>"}</Text>
+                  <Text
+                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
+                  >
+                    {"<>"}
+                  </Text>
                   <Typewriter
                     options={{
                       strings: [
-                        " I build visually appealing websites",
-                        "I develop dynamic, scalable web applications",
+                        "I Develop Dynamic",
+                        "Scalable",
+                        "User Friendly",
+                        "Responsive",
+                        "And Maintainable",
+                        " Web Applications",
                       ],
                       autoStart: true,
                       loop: true,
                     }}
                   />
-                  <Text color="brand.800">{"</>"}</Text>
+                  <Text
+                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
+                  >
+                    {"</>"}
+                  </Text>
                 </Flex>
-                <Btn href="/">Explore now</Btn>
+                <Btn href="/pages/all-projects">View Projects</Btn>
               </Box>
               <Box w="40%" display={{ base: "none", xl: "block" }}>
                 <Image

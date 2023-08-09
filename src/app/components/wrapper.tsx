@@ -10,11 +10,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box
-      h="100%"
-      bg={colorMode === "light" ? "brand.320" : "brand.750"}
-      py=".8rem"
-    >
+    <Box bg={colorMode === "light" ? "brand.320" : "brand.750"} py=".8rem">
       {isMobile && <MobileNav />}
       <Flex
         w="95%"

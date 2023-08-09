@@ -10,7 +10,6 @@ import {
   List,
   ListIcon,
   useColorMode,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { stackData } from "./utils/constants";
@@ -159,10 +158,35 @@ const Sidebar = ({ w }: Props) => {
           w="100%"
           bottom="0px"
         >
-          <AiFillLinkedin />
-          <AiOutlineTwitter />
-          <AiOutlineMail />
-          <AiFillGithub />
+          <a
+            href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillLinkedin />
+          </a>
+          <a
+            href="mailto:emelder.charles25@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiOutlineMail />
+          </a>
+          <a
+            href="https://www.twitter.com/EmelderOkafor"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiOutlineTwitter />
+          </a>
+
+          <a
+            href="https://github.com/Meldy2503 "
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillGithub />
+          </a>
         </Flex>
       </Box>
     </>

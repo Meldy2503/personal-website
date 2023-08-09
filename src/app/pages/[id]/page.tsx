@@ -74,29 +74,48 @@ const ProjectId = () => {
                 >
                   Project Details
                 </Heading>
+                <Text
+                  bg={colorMode === "dark" ? "brand.650" : "brand.100"}
+                  py="2rem"
+                  fontSize={"1rem"}
+                  px={{ base: "1rem", sm: "1.5rem" }}
+                  lineHeight={1.8}
+                  shadow={"md"}
+                  mb="1.5rem"
+                >
+                  {item.description}
+                </Text>
                 <Flex
                   justify={"space-between"}
                   direction={{ base: "column", xl: "row" }}
-                  rowGap={"1rem"}
+                  rowGap={"1.5rem"}
                 >
-                  <Text
+                  <Box
                     bg={colorMode === "dark" ? "brand.650" : "brand.100"}
                     py="2rem"
-                    fontSize={".95rem"}
+                    fontSize={"1rem"}
                     px={{ base: "1rem", sm: "1.5rem" }}
                     w={{ base: "100%", xl: "67%" }}
                     lineHeight={1.8}
                     shadow={"md"}
                   >
-                    {item.description}
-                  </Text>
+                    <Heading
+                      color={colorMode === "dark" ? "brand.100" : "brand.450"}
+                      fontSize={"1.1rem"}
+                      mb=".5rem"
+                      fontWeight={"700"}
+                    >
+                      Features
+                    </Heading>
+                    <Text>{item.features}</Text>
+                  </Box>
                   <Flex
                     bg={colorMode === "dark" ? "brand.650" : "brand.100"}
                     py="2rem"
                     px={{ base: "1rem", sm: "1.5rem" }}
                     w={{ base: "100%", xl: "30%" }}
                     direction={"column"}
-                    rowGap={".6rem"}
+                    rowGap={"1rem"}
                     fontSize={".9rem"}
                     color={colorMode === "dark" ? "brand.150" : "brand.600"}
                     shadow={"md"}
@@ -132,14 +151,6 @@ const ProjectId = () => {
                         color={colorMode === "dark" ? "brand.350" : "brand.380"}
                       >
                         {item.status}
-                      </Text>
-                    </HStack>
-                    <HStack justify={"space-between"} columnGap={"1rem"}>
-                      <Text>Client:</Text>
-                      <Text
-                        color={colorMode === "dark" ? "brand.350" : "brand.380"}
-                      >
-                        {item.client}
                       </Text>
                     </HStack>
                   </Flex>

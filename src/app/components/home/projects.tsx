@@ -1,29 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Box,
-  Flex,
-  HStack,
-  Heading,
-  List,
-  ListItem,
-  Text,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Box, Flex, List, ListItem, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import { projectData } from "../utils/constants";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import { usePathname } from "next/navigation";
+import ShowDetails from "../show-details";
 
 const Projects = () => {
   const [showDetails, setShowDetails] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("ALL CATEGORIES");
   const { colorMode } = useColorMode();
   const activeColorScheme = colorMode === "dark" ? "brand.150" : "brand.600";
-
-  const path = usePathname();
 
   const handleMouseEnter = (index: any) => {
     setShowDetails(index);
@@ -53,7 +42,7 @@ const Projects = () => {
         fontWeight={"700"}
         fontSize={".8rem"}
         flexWrap={"wrap"}
-        pb="1.5rem"
+        pb="2rem"
         pt=".5rem"
         cursor={"pointer"}
       >
@@ -82,8 +71,8 @@ const Projects = () => {
         ))}
       </List>
 
-      <Flex flexWrap={"wrap"} justify={"space-between"} rowGap="1.5rem">
-        {filteredProjects.map((project: any, index: any) => {
+      <Flex flexWrap={"wrap"} columnGap={"1.3rem"} rowGap="1.5rem">
+        {filteredProjects.map((project, index) => {
           return (
             <Box
               key={project.id}
@@ -91,6 +80,8 @@ const Projects = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
               w={{ base: "100%", md: "48%", xl: "31.5%" }}
+              shadow={"md"}
+              bg={colorMode === "dark" ? "brand.450" : "brand.100"}
             >
               <Image
                 src={project.img}
@@ -99,43 +90,19 @@ const Projects = () => {
                 alt="picture of this project"
                 style={{
                   objectFit: "cover",
-                  objectPosition: "center",
-                  height: "280px",
+                  objectPosition: "top",
+                  height: "300px",
+                  width: "100%",
                   maxWidth: "100%",
+                  padding: "1rem",
                 }}
               />
               {showDetails === index && (
-                <Box
-                  fontSize={".9rem"}
-                  position={"absolute"}
-                  bottom={"0"}
-                  px="1.5rem"
-                  py="2rem"
-                  bg={colorMode === "dark" ? "brand.720" : "brand.150"}
-                >
-                  <Heading
-                    color={colorMode === "dark" ? "brand.150" : "brand.600"}
-                    fontSize={".9rem"}
-                  >
-                    {project.heading}
-                  </Heading>
-                  <Text
-                    color={colorMode === "dark" ? "brand.350" : "brand.380"}
-                    my="1rem"
-                  >
-                    {project.brief}
-                  </Text>
-                  <HStack
-                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
-                    letterSpacing={".1rem"}
-                    fontWeight={"bold"}
-                    fontSize={".8rem"}
-                  >
-                    <Link href={`/pages/${project.id}`}> READ MORE </Link>
+                <ShowDetails heading={project.heading} brief={project.brief}>
+                  <Link href={`/pages/${project.id}`}> READ MORE </Link>
 
-                    <FaAngleDoubleRight />
-                  </HStack>
-                </Box>
+                  <FaAngleDoubleRight />
+                </ShowDetails>
               )}
             </Box>
           );
