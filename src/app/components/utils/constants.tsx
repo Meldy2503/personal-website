@@ -177,6 +177,11 @@ export const projectData = [
     status: "In progress",
     gitlink: "https://github.com/Meldy2503/foodie-app",
     live: "https://online-foodie.netlify.app/",
+    carousel: [
+      "/assets/react4.png",
+      "/assets/react5.png",
+      "/assets/react6.png",
+    ],
   },
   {
     id: "3",
@@ -192,7 +197,7 @@ export const projectData = [
     status: "Completed",
     gitlink: "https://github.com/Meldy2503/vue-quiz-app",
     live: "https://simple-vue-quiz-app.netlify.app/",
-    carousel: ["/assets/vue1.png", "/assets/vue2.png", "/assets/vue2.png"],
+    carousel: ["/assets/vue0.png", "/assets/vue2.png", "/assets/vue3.png"],
   },
   {
     id: "4",
@@ -224,6 +229,11 @@ export const projectData = [
     status: "In progress",
     gitlink: "https://github.com/Meldy2503/nail-boutique",
     live: "https://nail-boutique.netlify.app/",
+    carousel: [
+      "/assets/react1.png",
+      "/assets/react2.png",
+      "/assets/react3.png",
+    ],
   },
 
   {
@@ -240,7 +250,7 @@ export const projectData = [
     status: "Completed",
     gitlink: "https://github.com/Meldy2503/vue-github-profile",
     live: "https://vue-github-profile.vercel.app/",
-    carousel: ["/assets/vue4.png", "/assets/vue5.png", "/assets/vue6.png"],
+    carousel: ["/assets/vue7.png", "/assets/vue8.png", "/assets/vue9.png"],
   },
 ];
 
@@ -300,5 +310,36 @@ export const otherProjects = [
       "An innovative web application for exploring GitHub Profiles built with Reactjs and Tailwind CSS framwork.",
     gitlink: "https://github.com/Meldy2503/github-profile",
     live: "https://altschool-github-profile.netlify.app/",
+  },
+];
+
+export const reviewData = [
+  {
+    image: "/assets/face4.jpg",
+    name: "Angel Smith",
+    occupation: "Product",
+    comment:
+      "Emelder's expertise in front-end development truly shines through in every project. Her attention to detail and creative approach to projects results in seamless user experiences. It's a pleasure working with someone so dedicated and skilled.",
+  },
+  {
+    image: "/assets/face2.jpg",
+    name: "Mark Edward",
+    occupation: "Product Manager",
+    comment:
+      "Emelder has consistently delivered outstanding front-end solutions for our company. Her understanding of UI/UX principles, attention to details and commitment to deadlines makes her a valuable asset to any development team.",
+  },
+  {
+    image: "/assets/face1.jpg",
+    name: "Enabong Pius",
+    occupation: "Full-Stack Developer",
+    comment:
+      "I was amazed by the quality of Emelder's work as a front-end developer. Her ability to transform complex ideas into user-friendly interfaces is exceptional. Her code is clean and well-organized, making collaboration smooth and efficient.",
+  },
+  {
+    image: "/assets/face3.jpg",
+    name: "Elizabeth Eneh",
+    occupation: "Software Engineer",
+    comment:
+      "As a fellow developer, I've had the privilege of collaborating with Emelder on several projects. Her proficiency in front-end technologies is top-notch and her willingness to share knowledge and collaborate makes her a true team player.",
   },
 ];

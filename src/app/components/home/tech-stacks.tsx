@@ -17,8 +17,12 @@ const TechStacks = () => {
             <Flex
               key={index}
               direction={"column"}
-              w="5.5rem"
-              mx="1.5rem"
+              w="10rem"
+              px="3rem"
+              py="1rem"
+              shadow={"md"}
+              bg={colorMode === "dark" ? "brand.650" : "brand.100"}
+              mx="1rem"
               cursor="pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -31,9 +35,7 @@ const TechStacks = () => {
                 style={{
                   width: "150px",
                   filter:
-                    index === hoveredIndex
-                      ? "saturate(1)"
-                      : "saturate(0) contrast(130%)",
+                    index === hoveredIndex ? "saturate(0)" : "saturate(1)",
                 }}
               />
               <Text
@@ -51,9 +53,12 @@ const TechStacks = () => {
             <Flex
               key={index}
               direction={"column"}
-              w="5.5rem"
-              mx="1.5rem"
-              cursor="pointer"
+              shadow={"md"}
+              w="10rem"
+              px="3rem"
+              py="1rem"
+              bg={colorMode === "dark" ? "brand.650" : "brand.100"}
+              mx="1rem"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -65,9 +70,7 @@ const TechStacks = () => {
                 style={{
                   width: "150px",
                   filter:
-                    index === hoveredIndex
-                      ? "saturate(1) contrast(10px)"
-                      : "saturate(0) contrast(130%)",
+                    index === hoveredIndex ? "saturate(0)" : "saturate(1)",
                 }}
               />
               <Text

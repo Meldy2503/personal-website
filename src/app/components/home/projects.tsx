@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Box, Flex, List, ListItem, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  List,
+  ListItem,
+  useColorMode,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { projectData } from "../utils/constants";
 import Link from "next/link";
@@ -81,7 +88,7 @@ const Projects = () => {
               onMouseLeave={handleMouseLeave}
               w={{ base: "100%", md: "48%", xl: "31.5%" }}
               shadow={"md"}
-              bg={colorMode === "dark" ? "brand.450" : "brand.100"}
+              bg={colorMode === "dark" ? "brand.450" : "brand.150"}
             >
               <Image
                 src={project.img}
@@ -89,6 +96,7 @@ const Projects = () => {
                 width={800}
                 alt="picture of this project"
                 style={{
+                  position: "relative",
                   objectFit: "cover",
                   objectPosition: "top",
                   height: "300px",
@@ -96,6 +104,17 @@ const Projects = () => {
                   maxWidth: "100%",
                   padding: "1rem",
                 }}
+              />
+              <Box
+                h="90%"
+                w={{ base: "93%", sm: "96%", md: "90%" }}
+                mx="auto"
+                position={"absolute"}
+                top="1rem"
+                bottom="1rem"
+                left={{ base: ".6rem", md: "1rem" }}
+                right={{ base: "1rem", md: "1rem" }}
+                bg="brand.970"
               />
               {showDetails === index && (
                 <ShowDetails heading={project.heading} brief={project.brief}>

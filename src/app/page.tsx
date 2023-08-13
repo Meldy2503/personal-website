@@ -21,7 +21,8 @@ export default function Home() {
         direction="column"
         color="rgb(240, 240, 246)"
         style={{ scrollBehavior: "smooth" }}
-        px={{ base: "15px", md: "35px" }}
+        position={"relative"}
+        px={{ base: "15px", md: "30px" }}
         bg={colorMode === "dark" ? "brand.960" : "brand.300"}
       >
         <AboutMe />
@@ -31,7 +32,7 @@ export default function Home() {
           <Title>My Projects</Title>
           <Projects />
         </Box>
-        {/* <Recommendations /> */}
+        <Recommendations />
         <ContactMe py="2.5rem" shadow="md">
           Get in touch
         </ContactMe>

@@ -52,7 +52,9 @@ const AboutMe = () => {
             </a>
           </Heading>
           <HStack my="1rem">
-            <Text>LinkedIn:</Text>
+            <Text color={colorMode === "dark" ? "brand.220" : "brand.450"}>
+              LinkedIn:
+            </Text>
             <a
               href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"
               target="_blank"
@@ -62,7 +64,9 @@ const AboutMe = () => {
             </a>
           </HStack>
           <HStack>
-            <Text>Github:</Text>
+            <Text color={colorMode === "dark" ? "brand.220" : "brand.450"}>
+              Github:
+            </Text>
             <a
               href="https://github.com/Meldy2503 "
               target="_blank"

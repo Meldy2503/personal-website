@@ -28,8 +28,8 @@ const LandingPage = () => {
           bgPosition={"center"}
           position="absolute"
           top={{ base: "20px", md: "40px" }}
-          left={{ base: "15px", md: "35px" }}
-          right={{ base: "15px", md: "35px" }}
+          left={{ base: "15px", md: "30px" }}
+          right={{ base: "15px", md: "30px" }}
           bottom="0px"
           h="fit-content"
         >

@@ -25,8 +25,8 @@ export const Title = ({ children }: { children: React.ReactNode }) => {
       color={colorMode === "dark" ? "brand.100" : "brand.450"}
       fontWeight={"600"}
       fontSize={"1.3rem"}
-      mt={{ base: "3rem", md: "6rem" }}
-      mb="2rem"
+      mt={{ base: "3rem", md: "5rem" }}
+      mb="1rem"
     >
       {children}
     </Heading>

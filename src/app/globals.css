@@ -47,10 +47,10 @@ a {
 }
 
 .primary {
-  animation: primary 30s linear infinite;
+  animation: primary 50s linear infinite;
 }
 .secondary {
-  animation: secondary 30s linear infinite;
+  animation: secondary 50s linear infinite;
 }
 
 @keyframes primary {
@@ -70,11 +70,10 @@ a {
   }
 }
 
-.slick-dots li button:before {
+/* .slick-dots li button:before {
   font-size: 1.5rem;
   padding: 1.5rem 0;
   color: #ffc107;
-  /* color: ${({ theme }) => theme.colors.white2}; */
 }
 
 .slick-slide {
@@ -83,10 +82,6 @@ a {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  /* 
-    @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      margin: 0;
-    } */
 }
 
 .slick-slide > div {
@@ -95,5 +90,24 @@ a {
 
 .slick-track {
   display: flex !important;
-  /* margin: 0 2rem; */
+} */
+
+/* carousel */
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  justify-content: space-between;
+}
+
+.slide {
+  flex: 0 0 100%;
+  /* height: 300px; */
+  display: flex;
+  /* font-size: 24px; */
+  /* color: white; */
 }

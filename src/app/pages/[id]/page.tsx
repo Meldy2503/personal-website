@@ -1,6 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { projectData } from "@/app/components/utils/constants";
 import {
   Box,
@@ -8,26 +7,46 @@ import {
   HStack,
   Heading,
   Text,
-  useDisclosure,
-  Button,
-  Modal,
   useColorMode,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Footer from "@/app/components/footer";
-import { Back, Title } from "@/app/components/utils/funcs";
+import { Back } from "@/app/components/utils/funcs";
 import { ContactModal } from "@/app/components/contact-modal";
+import Carousel from "@/app/components/carousel";
+import Image from "next/image";
 
 const ProjectId = () => {
   const { id } = useParams();
   const { colorMode } = useColorMode();
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const [isTablet] = useMediaQuery("(max-width: 468px)");
 
   const filteredProject = projectData.filter((item) => {
     return item.id == id;
   });
+  const carouselContent = filteredProject[0]?.carousel || [];
+  const duplicatedItems = [...carouselContent, carouselContent[0]];
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex: any) =>
+      prevIndex === 0 ? carouselContent.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex: any) =>
+      prevIndex === carouselContent.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Box bg={colorMode === "dark" ? "brand.550" : "brand.300"} w="full">
@@ -41,7 +60,7 @@ const ProjectId = () => {
         <Box
           h="24rem"
           bg={colorMode === "dark" ? "brand.960" : "brand.220"}
-          px={{ base: "15px", md: "35px" }}
+          px={{ base: "15px", md: "30px" }}
         >
           {filteredProject.map((item) => {
             return (
@@ -64,7 +83,41 @@ const ProjectId = () => {
                     {item.heading}{" "}
                   </Heading>
                 </Flex>
-                <Box h="16.8rem" w="20rem" bg="brand.800"></Box>
+
+                <Carousel
+                  onClickNext={nextSlide}
+                  onClickPrev={prevSlide}
+                  style={{
+                    transform: `translateX(-${
+                      ((currentIndex - 1 + carouselContent.length) %
+                        carouselContent.length) *
+                      100
+                    }%)`,
+                  }}
+                >
+                  {duplicatedItems.map((list, index) => (
+                    <Flex
+                      key={index}
+                      className="slide"
+                      justify={"space-between"}
+                      w="100%"
+                    >
+                      <Image
+                        src={list}
+                        alt="Picture of the project"
+                        height={800}
+                        width={1000}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "top",
+                          maxWidth: "100%",
+                          width: isMobile ? "100%" : "95%",
+                          height: isTablet ? "300px" : "350px",
+                        }}
+                      />
+                    </Flex>
+                  ))}
+                </Carousel>
                 <Heading
                   color={colorMode === "dark" ? "brand.100" : "brand.450"}
                   fontSize={"1.1rem"}
@@ -158,77 +211,24 @@ const ProjectId = () => {
               </Box>
             );
           })}
-
-          <Box bg={colorMode === "dark" ? "brand.550" : "brand.300"}>
-            <Box
-              bgImage="/assets/img2.jpg"
-              h="20rem"
-              bgRepeat={"no-repeat"}
-              bgSize={"cover"}
-              bgPosition={"bottom"}
-              my="2rem"
-            >
-              <Flex
-                h="100%"
-                w="100%"
-                align={"center"}
-                justify={"center"}
-                direction="column"
-                color="brand.150"
-                bg="brand.990"
-              >
-                <Heading
-                  fontSize={"2.5rem"}
-                  fontWeight={"900"}
-                  textAlign={"center"}
-                >
-                  Ready to Order your Projects?
-                </Heading>
-
-                <Text my="1.5rem">Let's Work Together!</Text>
-                <Button
-                  onClick={onOpen}
-                  borderRadius={"0px"}
-                  fontSize=".8rem"
-                  color="brand.600"
-                  bg={colorMode === "dark" ? "brand.800" : "brand.850"}
-                  letterSpacing={".1rem"}
-                  px="2rem"
-                  _hover={{ backgroundColor: "brand.900" }}
-                >
-                  CONTACT ME
-                </Button>
-                <Modal
-                  isCentered
-                  size="lg"
-                  onClose={onClose}
-                  isOpen={isOpen}
-                  motionPreset="slideInBottom"
-                >
-                  <ContactModal />
-                </Modal>
-              </Flex>
-            </Box>
-
-            <Flex
-              py="1.5rem"
-              justify={"center"}
-              color={colorMode === "dark" ? "brand.800" : "brand.850"}
-              bg={colorMode === "dark" ? "brand.450" : "brand.100"}
-              letterSpacing={".1rem"}
-              fontSize={".83rem"}
-              fontWeight={"bold"}
-              mt="1rem"
-              shadow={"md"}
-            >
-              <Link href="/pages/all-projects">VIEW ALL PROJECTS</Link>
-            </Flex>
-            <Footer />
-          </Box>
+          <ContactModal />
+          <Flex
+            py="1.5rem"
+            justify={"center"}
+            color={colorMode === "dark" ? "brand.800" : "brand.850"}
+            bg={colorMode === "dark" ? "brand.450" : "brand.100"}
+            letterSpacing={".1rem"}
+            fontSize={".83rem"}
+            fontWeight={"bold"}
+            mt="1rem"
+            shadow={"md"}
+          >
+            <Link href="/pages/all-projects">VIEW ALL PROJECTS</Link>
+          </Flex>
+          <Footer />
         </Box>
       </Box>
     </Box>
   );
 };
-
 export default ProjectId;

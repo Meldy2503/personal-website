@@ -8,6 +8,7 @@ import { Back } from "@/app/components/utils/funcs";
 import { otherProjects } from "@/app/components/utils/constants";
 import Image from "next/image";
 import ShowDetails from "@/app/components/show-details";
+import { ContactModal } from "@/app/components/contact-modal";
 
 const AllProjects = () => {
   const { colorMode } = useColorMode();
@@ -23,7 +24,7 @@ const AllProjects = () => {
   return (
     <Box
       w="full"
-      px={{ base: "15px", md: "35px" }}
+      px={{ base: "15px", md: "30px" }}
       bg={colorMode === "dark" ? "brand.960" : "brand.300"}
     >
       <Flex align="center" gap="2rem" my={{ base: "1.5rem", md: "2rem" }}>
@@ -73,6 +74,17 @@ const AllProjects = () => {
                     padding: "1rem",
                   }}
                 />
+                <Box
+                  h="90%"
+                  w={{ base: "93%", sm: "96%", md: "90%" }}
+                  mx="auto"
+                  position={"absolute"}
+                  top="1rem"
+                  bottom="1rem"
+                  left={{ base: ".6rem", md: "1rem" }}
+                  right={{ base: "1rem", md: "1rem" }}
+                  bg="brand.970"
+                />
                 {showDetails === index && (
                   <ShowDetails
                     heading={list.heading}
@@ -94,6 +106,8 @@ const AllProjects = () => {
           })}
         </Flex>
       </Box>
+      <ContactModal />
+
       <Footer />
     </Box>
   );

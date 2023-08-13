@@ -52,6 +52,7 @@ const Sidebar = ({ w }: Props) => {
           position="sticky"
           top="0px"
           zIndex={"100"}
+          shadow={"md"}
           bg={colorMode === "dark" ? "brand.500" : "brand.100"}
         >
           <Image
@@ -157,6 +158,7 @@ const Sidebar = ({ w }: Props) => {
           position="sticky"
           w="100%"
           bottom="0px"
+          shadow={"md"}
         >
           <a
             href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"

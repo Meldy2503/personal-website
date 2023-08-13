@@ -24,9 +24,9 @@ export const Btn = ({ href, hoverBg, hoverColor, children }: Props) => {
         py=".9rem"
         w="11rem"
         bg={colorMode === "dark" ? "brand.800" : "brand.850"}
+        color={colorMode === "dark" ? "brand.600" : "brand.150"}
         letterSpacing={".1rem"}
         textTransform={"uppercase"}
-        color="brand.600"
         _hover={{
           textDecoration: "none",
           bg: hoverBg,

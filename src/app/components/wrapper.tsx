@@ -11,18 +11,20 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <Box bg={colorMode === "light" ? "brand.320" : "brand.750"} py=".8rem">
-      {isMobile && <MobileNav />}
-      <Flex
-        w="95%"
-        h={{ base: "98vh", md: "96.5vh" }}
-        m="auto"
-        bg={colorMode === "dark" ? "brand.960" : "brand.300"}
-        overflow="auto"
-        className="scroll-bar"
-      >
-        {!isMobile && <Sidebar w="23rem" />} {children}
-        {!isMobile && <DesktopNav />}
-      </Flex>
+      <Box maxW="1440px" mx="auto">
+        {isMobile && <MobileNav />}
+        <Flex
+          w="95%"
+          h={{ base: "98vh", md: "96.5vh" }}
+          m="auto"
+          bg={colorMode === "dark" ? "brand.960" : "brand.300"}
+          overflow="auto"
+          className="scroll-bar"
+        >
+          {!isMobile && <Sidebar w="25rem" />} {children}
+          {!isMobile && <DesktopNav />}
+        </Flex>
+      </Box>
     </Box>
   );
 };

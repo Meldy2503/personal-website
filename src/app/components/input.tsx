@@ -48,7 +48,7 @@ const InputElement = ({
         bg={colorMode === "dark" ? "brand.700" : "brand.250"}
         border={"none"}
         placeholder={placeholder}
-        _placeholder={{ color: "brand.350", fontSize: ".95rem" }}
+        _placeholder={{ color: "brand.350", fontSize: ".95rem", mt: "-2rem" }}
         size="lg"
         type={type}
         focusBorderColor="transparent"
