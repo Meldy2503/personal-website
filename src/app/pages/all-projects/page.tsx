@@ -56,6 +56,7 @@ const AllProjects = () => {
                 position="relative"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
+                overflow={"hidden"}
                 w={{ base: "100%", md: "48%", xl: "31.5%" }}
                 shadow={"md"}
                 bg={colorMode === "dark" ? "brand.450" : "brand.100"}
@@ -85,22 +86,21 @@ const AllProjects = () => {
                   right={{ base: "1rem", md: "1rem" }}
                   bg="brand.970"
                 />
-                {showDetails === index && (
-                  <ShowDetails
-                    heading={list.heading}
-                    brief={list.brief}
-                    justify="space-between"
-                  >
-                    <a href={list.gitlink} target="_blank" rel="noreferrer">
-                      {" "}
-                      GITHUB{" "}
-                    </a>
-                    <a href={list.live} target="_blank" rel="noreferrer">
-                      {" "}
-                      PREVIEW{" "}
-                    </a>
-                  </ShowDetails>
-                )}
+                <ShowDetails
+                  heading={list.heading}
+                  brief={list.brief}
+                  className={showDetails === index ? "slide-in" : "slide-down"}
+                  justify="space-between"
+                >
+                  <a href={list.gitlink} target="_blank" rel="noreferrer">
+                    {" "}
+                    GITHUB{" "}
+                  </a>
+                  <a href={list.live} target="_blank" rel="noreferrer">
+                    {" "}
+                    PREVIEW{" "}
+                  </a>
+                </ShowDetails>
               </Box>
             );
           })}

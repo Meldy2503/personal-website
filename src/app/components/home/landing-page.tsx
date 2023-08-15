@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
-import Image from "next/image";
 import { Btn } from "../button";
 import Typewriter from "typewriter-effect";
 
@@ -34,65 +33,43 @@ const LandingPage = () => {
           h="fit-content"
         >
           <Box h="100%" bg={colorMode === "dark" ? "brand.980" : "brand.990"}>
-            <Flex
-              justify={{ base: "center", xl: "space-between" }}
-              align={"center"}
+            <Box
+              py={{ base: "2.5rem", sm: "3rem", md: "4rem" }}
+              px={{ base: "1rem", sm: "2rem", md: "3.5rem" }}
+              w={{ base: "100%", xl: "60%" }}
             >
-              <Box
-                py={{ base: "2.5rem", sm: "3rem", md: "4rem" }}
-                px={{ base: "1rem", sm: "2rem", md: "3.5rem" }}
-                w={{ base: "100%", xl: "60%" }}
+              <Heading
+                color="brand.100"
+                fontWeight={"900"}
+                fontSize={{ base: "2.3rem", sm: "2.5rem", md: "2.7rem" }}
               >
-                <Heading
-                  color="brand.100"
-                  fontWeight={"900"}
-                  fontSize={{ base: "2.3rem", sm: "2.5rem", md: "2.7rem" }}
-                >
-                  Elevating Designs with Code Mastery
-                  {/* "Code and Creativity Converged: Portfolio" */}
-                </Heading>
-                <Flex my="1.5rem" color="brand.150">
-                  <Text
-                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
-                  >
-                    {"<>"}
-                  </Text>
-                  <Typewriter
-                    options={{
-                      strings: [
-                        "I Develop Dynamic",
-                        "Scalable",
-                        "User Friendly",
-                        "Responsive",
-                        "And Maintainable",
-                        " Web Applications",
-                      ],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                  <Text
-                    color={colorMode === "dark" ? "brand.800" : "brand.850"}
-                  >
-                    {"</>"}
-                  </Text>
-                </Flex>
-                <Btn href="/pages/all-projects">View Projects</Btn>
-              </Box>
-              <Box w="40%" display={{ base: "none", xl: "block" }}>
-                <Image
-                  src="/assets/face-2.png"
-                  alt="Picture of the author"
-                  height={380}
-                  width={380}
-                  style={{
-                    position: "absolute",
-                    right: "0px",
-                    bottom: "0px",
+                Elevating Designs with Code Mastery
+                {/* "Code and Creativity Converged: Portfolio" */}
+              </Heading>
+              <Flex my="1.5rem" color="brand.150">
+                <Text color={colorMode === "dark" ? "brand.800" : "brand.850"}>
+                  {"<>"}
+                </Text>
+                <Typewriter
+                  options={{
+                    strings: [
+                      "I Develop Dynamic",
+                      "Scalable",
+                      "User Friendly",
+                      "Responsive",
+                      "And Maintainable",
+                      " Web Applications",
+                    ],
+                    autoStart: true,
+                    loop: true,
                   }}
                 />
-              </Box>
-            </Flex>
+                <Text color={colorMode === "dark" ? "brand.800" : "brand.850"}>
+                  {"</>"}
+                </Text>
+              </Flex>
+              <Btn href="/pages/all-projects">View Projects</Btn>
+            </Box>
           </Box>
         </Box>
       </Box>

@@ -319,7 +319,7 @@ export const reviewData = [
     name: "Angel Smith",
     occupation: "Product",
     comment:
-      "Emelder's expertise in front-end development truly shines through in every project. Her attention to detail and creative approach to projects results in seamless user experiences. It's a pleasure working with someone so dedicated and skilled.",
+      "Emelder's expertise in front-end development truly shines through in every project. Her attention to detail and creative approach to projects results in seamless user experiences. It's a pleasure working with someone so dedicated.",
   },
   {
     image: "/assets/face2.jpg",
@@ -333,13 +333,13 @@ export const reviewData = [
     name: "Enabong Pius",
     occupation: "Full-Stack Developer",
     comment:
-      "I was amazed by the quality of Emelder's work as a front-end developer. Her ability to transform complex ideas into user-friendly interfaces is exceptional. Her code is clean and well-organized, making collaboration smooth and efficient.",
+      "I was amazed by the quality of Emelder's work as a front-end developer. Her ability to transform complex ideas into user-friendly interfaces is exceptional. Her code is clean and organized, making collaboration smooth and efficient.",
   },
   {
     image: "/assets/face3.jpg",
     name: "Elizabeth Eneh",
     occupation: "Software Engineer",
     comment:
-      "As a fellow developer, I've had the privilege of collaborating with Emelder on several projects. Her proficiency in front-end technologies is top-notch and her willingness to share knowledge and collaborate makes her a true team player.",
+      "As a fellow developer, I've had the privilege of working with Emelder on several projects. Her proficiency in front-end technologies is top-notch and her ability to share knowledge and collaborate makes her a true team player.",
   },
 ];

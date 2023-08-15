@@ -1,9 +1,18 @@
 import React from "react";
-import { Box, Input, Textarea, useColorMode } from "@chakra-ui/react";
-import { Btn } from "../button";
+import {
+  Box,
+  Input,
+  Modal,
+  Textarea,
+  useColorMode,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { Buttn } from "../button";
 import { Title } from "../utils/funcs";
 import { contactData } from "../utils/constants";
 import InputElement from "../input";
+import { useToast } from "@chakra-ui/react";
+import { Toast } from "../toast";
 
 interface Props {
   children?: React.ReactNode;
@@ -13,10 +22,13 @@ interface Props {
   icon?: any;
   placeholder?: string;
   type?: string;
+  onClose?: any;
 }
 
 const ContactMe = ({ children, px, py, shadow }: Props) => {
   const { colorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const inputLeftElementBg = colorMode === "dark" ? "brand.550" : "brand.320";
 
   const inputLeftElementBgColor =
@@ -68,7 +80,7 @@ const ContactMe = ({ children, px, py, shadow }: Props) => {
           })}
 
           <Box my="2rem">
-            <Btn href="/">send message</Btn>
+            <Toast />
           </Box>
         </form>
       </Box>

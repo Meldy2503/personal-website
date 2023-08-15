@@ -6,18 +6,25 @@ interface Props {
   brief?: any;
   justify?: string;
   children: React.ReactNode;
+  className?: any;
 }
-const ShowDetails = ({ heading, brief, justify, children }: Props) => {
+const ShowDetails = ({
+  heading,
+  brief,
+  justify,
+  children,
+  className,
+}: Props) => {
   const { colorMode } = useColorMode();
 
   return (
     <Box
+      className={className}
       fontSize={".9rem"}
       position={"absolute"}
       bottom={"0"}
       px="1.5rem"
       py="2rem"
-      w="fit-content"
       bg={colorMode === "dark" ? "brand.450" : "brand.300"}
       shadow="md"
     >

@@ -10,11 +10,11 @@ import {
   Box,
   Flex,
   Heading,
-  Button,
   Modal,
   useDisclosure,
 } from "@chakra-ui/react";
 import ContactMe from "./home/contact-me";
+import { Buttn } from "./button";
 
 export function ContactModal() {
   const { colorMode } = useColorMode();
@@ -49,18 +49,7 @@ export function ContactModal() {
             </Heading>
 
             <Text my="1.5rem">Let's Work Together!</Text>
-            <Button
-              onClick={onOpen}
-              borderRadius={"0px"}
-              fontSize=".8rem"
-              color={colorMode === "dark" ? "brand.600" : "brand.150"}
-              bg={colorMode === "dark" ? "brand.800" : "brand.850"}
-              letterSpacing={".1rem"}
-              px="2rem"
-              _hover={{ backgroundColor: "brand.900" }}
-            >
-              CONTACT ME
-            </Button>
+            <Buttn onClick={onOpen}>CONTACT ME</Buttn>
             <Modal
               isCentered
               size="lg"

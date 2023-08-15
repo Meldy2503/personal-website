@@ -8,6 +8,8 @@ import {
   List,
   ListItem,
   useColorMode,
+  Slide,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { projectData } from "../utils/constants";
@@ -17,6 +19,7 @@ import ShowDetails from "../show-details";
 
 const Projects = () => {
   const [showDetails, setShowDetails] = useState(null);
+
   const [selectedCategory, setSelectedCategory] = useState("ALL CATEGORIES");
   const { colorMode } = useColorMode();
   const activeColorScheme = colorMode === "dark" ? "brand.150" : "brand.600";
@@ -88,8 +91,10 @@ const Projects = () => {
               onMouseLeave={handleMouseLeave}
               w={{ base: "100%", md: "48%", xl: "31.5%" }}
               shadow={"md"}
+              overflow={"hidden"}
               bg={colorMode === "dark" ? "brand.450" : "brand.150"}
             >
+              {/* <Box className={showDetails === index ? "zoom-in" : "zoom-out"}> */}
               <Image
                 src={project.img}
                 height={500}
@@ -116,13 +121,16 @@ const Projects = () => {
                 right={{ base: "1rem", md: "1rem" }}
                 bg="brand.970"
               />
-              {showDetails === index && (
-                <ShowDetails heading={project.heading} brief={project.brief}>
-                  <Link href={`/pages/${project.id}`}> READ MORE </Link>
+              {/* </Box> */}
+              <ShowDetails
+                heading={project.heading}
+                brief={project.brief}
+                className={showDetails === index ? "slide-in" : "slide-down"}
+              >
+                <Link href={`/pages/${project.id}`}> READ MORE </Link>
 
-                  <FaAngleDoubleRight />
-                </ShowDetails>
-              )}
+                <FaAngleDoubleRight />
+              </ShowDetails>
             </Box>
           );
         })}

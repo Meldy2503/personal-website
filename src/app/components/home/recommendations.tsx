@@ -40,12 +40,19 @@ const Recommendations = () => {
           }%)`,
         }}
         minH={{
-          base: "350px",
+          base: "380px",
           sm: "280px",
           md: "350px",
           lg: "400px",
           xl: "320px",
         }}
+        // minH={{
+        //   base: "350px",
+        //   sm: "280px",
+        //   md: "350px",
+        //   lg: "400px",
+        //   xl: "320px",
+        // }}
       >
         {duplicatedItems.map((item, index) => (
           <Flex
@@ -61,12 +68,13 @@ const Recommendations = () => {
               left={"0px"}
               shadow={"md"}
               color={colorMode === "dark" ? "brand.350" : "brand.380"}
-              bg={colorMode === "dark" ? "brand.650" : "brand.100"}
             >
               <Box
+                bg={colorMode === "dark" ? "brand.650" : "brand.100"}
                 py="2rem"
                 px={{ base: "1rem", md: "1.5rem", lg: "2rem" }}
                 fontSize={".93rem"}
+                minH={{ base: "400px", sm: "350px", md: "400px", lg: "400px" }}
               >
                 <Box>
                   <Image

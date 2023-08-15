@@ -10,6 +10,7 @@ import {
   List,
   ListIcon,
   useColorMode,
+  Tooltip,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { stackData } from "./utils/constants";
@@ -56,7 +57,7 @@ const Sidebar = ({ w }: Props) => {
           bg={colorMode === "dark" ? "brand.500" : "brand.100"}
         >
           <Image
-            src="/assets/face-1.jpg"
+            src="/assets/meldy.jpg"
             alt="Picture of the author"
             height={200}
             width={200}

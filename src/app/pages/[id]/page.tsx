@@ -54,11 +54,9 @@ const ProjectId = () => {
         bgImage="/assets/bg.jpg"
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
-        bgPosition={"center"}
-        h="24rem"
+        bgPosition={"top"}
       >
         <Box
-          h="24rem"
           bg={colorMode === "dark" ? "brand.960" : "brand.220"}
           px={{ base: "15px", md: "30px" }}
         >

@@ -38,7 +38,6 @@ const Carousel = ({
           align={"space-between"}
           justify={"space-between"}
           w={isMobile ? "100%" : "52%"}
-          //   width={{ base: "100%", lg: "52%" }}
           pt={pt}
         >
           {children}
@@ -52,9 +51,9 @@ const Carousel = ({
             bottom={"0rem"}
             right={"3rem"}
             position={"absolute"}
+            shadow="md"
             p=".8rem"
             borderRadius="50%"
-            shadow="md"
             backgroundColor={colorMode === "dark" ? "brand.950" : "brand.320"}
           >
             <FaAngleLeft />
@@ -63,11 +62,11 @@ const Carousel = ({
             onClick={onClickNext}
             position={"absolute"}
             bottom={"0rem"}
+            shadow="md"
             right={"0rem"}
             p=".8rem"
             borderRadius="50%"
             backgroundColor={colorMode === "dark" ? "brand.950" : "brand.320"}
-            shadow="md"
           >
             <FaAngleRight />
           </Box>

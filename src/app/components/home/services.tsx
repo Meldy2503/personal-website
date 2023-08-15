@@ -15,6 +15,8 @@ const Services = () => {
               key={item.id}
               shadow={"md"}
               w={{ base: "100%", md: "48%", xl: "31.5%" }}
+              _hover={{ transform: "scale(1.05)" }}
+              transition={"0.3s"}
               bg={colorMode === "dark" ? "brand.650" : "brand.100"}
             >
               <Box px="2rem" py="2.5rem">
