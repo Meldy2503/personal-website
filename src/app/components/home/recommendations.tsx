@@ -28,7 +28,7 @@ const Recommendations = () => {
   }, []);
 
   return (
-    <Box id="reviews">
+    <Box id="recommendations">
       <Title>Recommendations</Title>
       <Carousel
         onClickNext={nextSlide}

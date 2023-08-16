@@ -17,6 +17,7 @@ import { Back } from "@/app/components/utils/funcs";
 import { ContactModal } from "@/app/components/contact-modal";
 import Carousel from "@/app/components/carousel";
 import Image from "next/image";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const ProjectId = () => {
   const { id } = useParams();
@@ -220,8 +221,15 @@ const ProjectId = () => {
             fontWeight={"bold"}
             mt="1rem"
             shadow={"md"}
+            _hover={{ color: colorMode === "dark" ? "brand.150" : "brand.400" }}
           >
-            <Link href="/pages/all-projects">VIEW ALL PROJECTS</Link>
+            <Link href="/pages/all-projects">
+              <HStack>
+                <FaAngleDoubleLeft />
+                <Text>VIEW ALL PROJECTS</Text>
+                <FaAngleDoubleRight />
+              </HStack>
+            </Link>
           </Flex>
           <Footer />
         </Box>

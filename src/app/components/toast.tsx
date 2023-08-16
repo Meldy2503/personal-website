@@ -16,7 +16,7 @@ export function Toast() {
                 title: "Message sent Successfully",
                 position: "top-right",
                 status: "success",
-                variant: "left-accent",
+                variant: "solid",
                 isClosable: true,
               });
             }

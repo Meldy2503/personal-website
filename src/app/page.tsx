@@ -15,7 +15,11 @@ export default function Home() {
   const { colorMode } = useColorMode();
 
   return (
-    <Box w="fit-content">
+    <Box
+      w="fit-content"
+      className="scroll-bar"
+      style={{ overflowY: "auto", scrollBehavior: "smooth" }}
+    >
       <LandingPage />
       <Flex
         direction="column"
@@ -28,7 +32,7 @@ export default function Home() {
         <AboutMe />
         <Services />
         <TechStacks />
-        <Box>
+        <Box id="projects">
           <Title>My Projects</Title>
           <Projects />
         </Box>

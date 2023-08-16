@@ -42,7 +42,7 @@ const Projects = () => {
       : projectData.filter((project) => project.category === selectedCategory);
 
   return (
-    <Box id="projects" bg={colorMode === "dark" ? "brand.960" : "brand.300"}>
+    <Box bg={colorMode === "dark" ? "brand.960" : "brand.300"}>
       <List
         as={Flex}
         color="brand.350"
@@ -94,7 +94,6 @@ const Projects = () => {
               overflow={"hidden"}
               bg={colorMode === "dark" ? "brand.450" : "brand.150"}
             >
-              {/* <Box className={showDetails === index ? "zoom-in" : "zoom-out"}> */}
               <Image
                 src={project.img}
                 height={500}
@@ -121,7 +120,6 @@ const Projects = () => {
                 right={{ base: "1rem", md: "1rem" }}
                 bg="brand.970"
               />
-              {/* </Box> */}
               <ShowDetails
                 heading={project.heading}
                 brief={project.brief}

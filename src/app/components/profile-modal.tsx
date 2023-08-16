@@ -12,6 +12,7 @@ import {
   Modal,
   useDisclosure,
   Icon,
+  Heading,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { links } from "./utils/constants";
@@ -82,15 +83,21 @@ export function ProfileModal() {
                     border: "10px solid #000",
                   }}
                 />
-                <Text my="1rem">I'm available to work!</Text>
-                <Text
-                  pb="1rem"
-                  fontSize={"1.2rem"}
-                  fontWeight={600}
+                <Text my="1rem" textAlign={"center"}>
+                  Need a Responsive, Interactive and <br />
+                  User Friendly Website?
+                </Text>
+                <Heading
                   color={colorMode === "dark" ? "brand.800" : "brand.850"}
+                  textAlign={"center"}
+                  pt="1rem"
+                  pb="1rem"
+                  fontSize={"1.5rem"}
+                  fontWeight={700}
+                  letterSpacing={".1rem"}
                 >
                   LET'S GET IT STARTED
-                </Text>
+                </Heading>
               </Flex>
               <Flex
                 align="flex-end"

@@ -47,9 +47,9 @@ export const menuData = [
     id: "#projects",
   },
   {
-    name: "Reviews",
+    name: "Recommendations",
     icon: GoCodeReview,
-    id: "#reviews",
+    id: "#recommendations",
   },
   {
     name: "Contact me",

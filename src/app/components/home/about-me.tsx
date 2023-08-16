@@ -12,12 +12,12 @@ import {
 const AboutMe = () => {
   const { colorMode } = useColorMode();
   return (
-    <Box
-      id="about"
-      color={colorMode === "dark" ? "brand.350" : "brand.380"}
-      mt={{ base: "2rem", md: "5rem" }}
-    >
-      <Flex justify={"space-between"} direction={{ base: "column", md: "row" }}>
+    <Box id="about" color={colorMode === "dark" ? "brand.350" : "brand.380"}>
+      <Flex
+        justify={"space-between"}
+        direction={{ base: "column", md: "row" }}
+        mt={{ base: "2rem", md: "5rem" }}
+      >
         <Box w={{ base: "100%", md: "40%" }}>
           <Heading
             fontSize={"1.3rem"}

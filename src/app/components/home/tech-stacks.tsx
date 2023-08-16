@@ -9,10 +9,10 @@ const TechStacks = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box>
-      <Title>Tech Stack</Title>
-      <Box overflow={"hidden"} id="stacks" position="relative" h="8.5rem">
-        <Box className="scroll-container primary">
+    <Box id="stacks">
+      <Title>Tech Stacks</Title>
+      <Box overflow={"hidden"} position="relative" h="9.5rem">
+        <Box className="scroll-container primary" pt=".7rem">
           {TechStackData.map((item, index) => (
             <Flex
               key={index}
@@ -48,7 +48,7 @@ const TechStacks = () => {
             </Flex>
           ))}
         </Box>
-        <Box className="scroll-container secondary">
+        <Box className="scroll-container secondary" pt=".7rem">
           {TechStackData.map((item, index) => (
             <Flex
               key={index}
