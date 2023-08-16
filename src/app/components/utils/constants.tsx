@@ -13,6 +13,12 @@ import { GrStackOverflow } from "react-icons/gr";
 import { GoCodeReview } from "react-icons/go";
 import { BiMessageDots } from "react-icons/bi";
 import { AiTwotoneMail } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiOutlineMail,
+} from "react-icons/ai";
 
 export const menuData = [
   {
@@ -251,6 +257,29 @@ export const projectData = [
     gitlink: "https://github.com/Meldy2503/vue-github-profile",
     live: "https://vue-github-profile.vercel.app/",
     carousel: ["/assets/vue7.png", "/assets/vue8.png", "/assets/vue9.png"],
+  },
+];
+
+export const links = [
+  {
+    href: "https://www.linkedin.com/in/emelder-okafor-67b22122b/",
+    icon: AiFillLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "mailto:emelder.charles25@gmail.com",
+    icon: AiOutlineMail,
+    label: "Email",
+  },
+  {
+    href: "https://github.com/Meldy2503 ",
+    icon: AiFillGithub,
+    label: "Github",
+  },
+  {
+    href: "https://www.twitter.com/EmelderOkafor",
+    icon: AiOutlineTwitter,
+    label: "Twitter",
   },
 ];
 

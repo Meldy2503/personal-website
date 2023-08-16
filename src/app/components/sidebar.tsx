@@ -11,17 +11,12 @@ import {
   ListIcon,
   useColorMode,
   Tooltip,
+  Icon,
 } from "@chakra-ui/react";
-import Image from "next/image";
-import { stackData } from "./utils/constants";
+import { links, stackData } from "./utils/constants";
 import { BsCheckLg } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { ProfileModal } from "./profile-modal";
 
 interface Props {
   w?: string;
@@ -56,18 +51,7 @@ const Sidebar = ({ w }: Props) => {
           shadow={"md"}
           bg={colorMode === "dark" ? "brand.500" : "brand.100"}
         >
-          <Image
-            src="/assets/meldy.jpg"
-            alt="Picture of the author"
-            height={200}
-            width={200}
-            style={{
-              borderRadius: "50%",
-              height: "80px",
-              width: "80px",
-              backgroundSize: "cover",
-            }}
-          />
+          <ProfileModal />
           <Heading
             color={colorMode === "dark" ? "brand.150" : "brand.600"}
             fontSize={"1.1rem"}
@@ -136,9 +120,13 @@ const Sidebar = ({ w }: Props) => {
             </ListItem>
           </List>
           <HStack
-            py="1rem"
+            my="1rem"
             mb="2rem"
-            color={colorMode === "dark" ? "brand.350" : "brand.400"}
+            py=".8rem"
+            color={colorMode === "dark" ? "brand.800" : "brand.850"}
+            bg={colorMode === "dark" ? "brand.450" : "brand.320"}
+            align={"center"}
+            justify="center"
           >
             <Text
               letterSpacing={".1rem"}
@@ -155,41 +143,26 @@ const Sidebar = ({ w }: Props) => {
           align={"center"}
           justify="center"
           py=".9rem"
-          gap={".6rem"}
+          columnGap={"1.2rem"}
           position="sticky"
           w="100%"
           bottom="0px"
           shadow={"md"}
         >
-          <a
-            href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin />
-          </a>
-          <a
-            href="mailto:emelder.charles25@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiOutlineMail />
-          </a>
-          <a
-            href="https://www.twitter.com/EmelderOkafor"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiOutlineTwitter />
-          </a>
-
-          <a
-            href="https://github.com/Meldy2503 "
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillGithub />
-          </a>
+          {links.map((link, index) => {
+            return (
+              <Tooltip key={index} label={link.label}>
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  <Icon
+                    as={link.icon}
+                    _hover={{
+                      color: colorMode === "dark" ? "brand.800" : "brand.850",
+                    }}
+                  />
+                </a>
+              </Tooltip>
+            );
+          })}
         </Flex>
       </Box>
     </>

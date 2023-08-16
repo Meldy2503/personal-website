@@ -4,7 +4,6 @@ import {
   Flex,
   Icon,
   Tooltip,
-  useColorModeValue,
   Drawer,
   DrawerBody,
   DrawerOverlay,
@@ -21,6 +20,7 @@ import { usePathname } from "next/navigation";
 import { BsPersonCircle } from "react-icons/bs";
 import Sidebar from "./sidebar";
 import { ColorModeBtn } from "./button";
+import Image from "next/image";
 
 export const DesktopNav = () => {
   const { colorMode } = useColorMode();
@@ -131,10 +131,18 @@ export const MobileNav = () => {
         {/* to open profile on mobile */}
         <>
           <Box onClick={onProfileOpen}>
-            <Icon
-              as={BsPersonCircle}
-              boxSize={5}
-              color={colorMode === "dark" ? "brand.900" : "brand.600"}
+            <Image
+              src="/assets/meldy2.jpg"
+              alt="Picture of the author"
+              height={500}
+              width={500}
+              style={{
+                borderRadius: "50%",
+                height: "35px",
+                width: "35px",
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+              }}
             />
           </Box>
           <Drawer

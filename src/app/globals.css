@@ -114,12 +114,19 @@ a {
   }
 }
 
+.profile {
+  transition: 0.25s;
+  animation: pulse 1s infinite;
+  box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
+}
+
 .pulse {
   transition: 0.25s;
 }
 
 .pulse:hover,
-.pulse:focus {
+.pulse:focus,
+.pulse:active {
   animation: pulse 1s;
   box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
 }
