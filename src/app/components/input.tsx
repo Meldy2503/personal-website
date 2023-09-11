@@ -16,12 +16,14 @@ interface Props {
   onClick?: any;
   onChange?: any;
   as?: any;
+  name?: string;
 }
 
 const InputElement = ({
   icon,
   placeholder,
   type,
+  name,
   bg,
   color,
   onClick,
@@ -48,9 +50,11 @@ const InputElement = ({
         bg={colorMode === "dark" ? "brand.700" : "brand.250"}
         border={"none"}
         placeholder={placeholder}
+        name={name}
         _placeholder={{ color: "brand.350", fontSize: ".95rem", mt: "-2rem" }}
         size="lg"
         type={type}
+        required
         focusBorderColor="transparent"
         pl="3.5rem"
         py="1.6rem"

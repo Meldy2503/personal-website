@@ -226,7 +226,7 @@ const ProjectId = () => {
             <Link href="/pages/all-projects">
               <HStack>
                 <FaAngleDoubleLeft />
-                <Text>VIEW ALL PROJECTS</Text>
+                <Text>VIEW MORE PROJECTS</Text>
                 <FaAngleDoubleRight />
               </HStack>
             </Link>

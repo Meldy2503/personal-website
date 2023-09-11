@@ -85,16 +85,19 @@ export const contactData = [
     icon: BsFillPersonFill,
     placeholder: "Full name",
     type: "text",
+    name: "fullName",
   },
   {
     icon: AiTwotoneMail,
     placeholder: "Email",
     type: "email",
+    name: "email",
   },
   {
     icon: BiMessageDots,
     placeholder: "Message",
     type: "textarea",
+    name: "message",
   },
 ];
 

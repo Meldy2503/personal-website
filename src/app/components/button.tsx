@@ -10,7 +10,9 @@ interface Props {
 }
 interface BtnProps {
   children: React.ReactNode;
-  onClick: () => void;
+  type?: any;
+  loading?: boolean;
+  onClick?: () => void;
 }
 
 export const Btn = ({ href, children }: Props) => {
@@ -34,13 +36,14 @@ export const Btn = ({ href, children }: Props) => {
           textDecoration: "none",
           bg: colorMode === "dark" ? "yellow.500" : "orange.600",
         }}
+        _active={{ transform: "translateY(1px)" }}
       >
         {children}
       </Box>
     </Link>
   );
 };
-export const Buttn = ({ children, onClick }: BtnProps) => {
+export const Buttn = ({ children, onClick, type, loading }: BtnProps) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -51,9 +54,11 @@ export const Buttn = ({ children, onClick }: BtnProps) => {
       fontWeight={"600"}
       borderRadius={"0px"}
       transition={"all .3s ease-in"}
+      isLoading={loading}
       px="1rem"
       py=".9rem"
       w="11rem"
+      type={type}
       onClick={onClick}
       bg={colorMode === "dark" ? "brand.800" : "brand.850"}
       color={colorMode === "dark" ? "brand.600" : "brand.150"}
@@ -63,6 +68,7 @@ export const Buttn = ({ children, onClick }: BtnProps) => {
         textDecoration: "none",
         bg: colorMode === "dark" ? "yellow.500" : "orange.600",
       }}
+      _active={{ transform: "translateY(1px)" }}
     >
       {children}
     </Button>
@@ -77,6 +83,7 @@ export const ColorModeBtn = () => {
       aria-label="Toggle Color Mode"
       onClick={toggleColorMode}
       _focus={{ boxShadow: "none" }}
+      _active={{ transform: "translateY(1px)" }}
       w="fit-content"
       bg="transparent"
     >

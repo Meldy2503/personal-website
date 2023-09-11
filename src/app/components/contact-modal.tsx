@@ -65,7 +65,7 @@ export function ContactModal() {
                   color={colorMode === "dark" ? "brand.150" : "brand.600"}
                 />
                 <ModalBody p="0">
-                  <ContactMe>
+                  <ContactMe onClose={onClose}>
                     <Text px="1.9rem">Get in Touch</Text>{" "}
                   </ContactMe>
                 </ModalBody>
