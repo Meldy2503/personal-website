@@ -37,24 +37,9 @@ const LandingPage = () => {
             <Box
               py={{ base: "2.5rem", sm: "3rem", md: "4rem" }}
               px={{ base: "1rem", sm: "2rem", md: "3.5rem" }}
-              w={{ base: "100%", xl: "60%" }}
+              w={{ base: "100%", xl: "80%" }}
             >
               <MainHeading />
-
-              {/* <Heading
-                color="brand.100"
-                fontWeight={"900"}
-                fontSize={{ base: "2.3rem", sm: "2.5rem", md: "2.7rem" }}
-                className="heading"
-              >
-                <span>Elevating </span>
-                <span>Designs </span>
-                <span>with </span>
-                <span>Code </span>
-                <span>Mastery </span>
-
-                Elevating Designs with Code Mastery
-              </Heading> */}
               <Flex my="1.5rem" color="brand.150">
                 <Text color={colorMode === "dark" ? "brand.800" : "brand.850"}>
                   {"<>"}

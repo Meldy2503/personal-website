@@ -6,41 +6,14 @@ const MainHeading = () => {
     <Heading
       color="brand.100"
       fontWeight={"900"}
-      fontSize={{ base: "2.3rem", sm: "2.5rem", md: "2.7rem" }}
+      fontSize={{ base: "2.3rem", sm: "2.6rem", md: "3rem" }}
       className="heading"
     >
-      <span>E</span>
-      <span>l</span>
-      <span>e</span>
-      <span>v</span>
-      <span>a</span>
-      <span>t</span>
-      <span>i</span>
-      <span>n</span>
-      <span>g</span>
-      <span>D</span>
-      <span>e</span>
-      <span>s</span>
-      <span>i</span>
-      <span>g</span>
-      <span>n</span>
-      <span>s</span>
-      <span>W</span>
-      <span>i</span>
-      <span>t</span>
-      <span>h</span>
-      <span>C</span>
-      <span>o</span>
-      <span>d</span>
-      <span>e</span>
-      <span>M</span>
-      <span>a</span>
-      <span>s</span>
-      <span>t</span>
-      <span>e</span>
-      <span>r</span>
-      <span>y</span>
-      {/* Elevating Designs with Code Mastery */}
+      <span>Elevating&nbsp;</span>
+      <span>Designs&nbsp;</span>
+      <span>With&nbsp;</span>
+      <span>Code&nbsp;</span>
+      <span>Mastery&nbsp;</span>
     </Heading>
   );
 };
