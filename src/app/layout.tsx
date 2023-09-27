@@ -5,7 +5,7 @@ import Wrapper from "./components/wrapper";
 
 export const metadata: Metadata = {
   title: "Emelder Okafor",
-  description: "My Portfolio",
+  description: "Emelder Okafor",
 };
 
 export default function RootLayout({

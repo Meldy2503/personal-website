@@ -46,13 +46,7 @@ const Recommendations = () => {
           lg: "400px",
           xl: "320px",
         }}
-        // minH={{
-        //   base: "350px",
-        //   sm: "280px",
-        //   md: "350px",
-        //   lg: "400px",
-        //   xl: "320px",
-        // }}
+      
       >
         {duplicatedItems.map((item, index) => (
           <Flex
