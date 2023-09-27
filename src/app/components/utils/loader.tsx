@@ -13,17 +13,7 @@ const LoadingIcon = () => {
         mx="auto"
         px="2rem"
       >
-        <Text
-          textAlign="center"
-          color="whitesmoke"
-          mt={6}
-          fontSize="lg"
-          mb="2rem"
-          fontWeight={"light"}
-        >
-          &#128525;Hello..., I&apos;m delighted to have you here.
-        </Text>
-
+    
         <Box>
           <Box className="ring">
             Loading

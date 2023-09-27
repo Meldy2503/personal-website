@@ -5,7 +5,7 @@ import { Poppins } from "@next/font/google";
 // 2. Add your color modeRoboto config
 const config: ThemeConfig = {
   initialColorMode: "dark",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 };
 
 const nextFont = Poppins({
