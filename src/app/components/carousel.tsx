@@ -3,8 +3,8 @@ import { Box, Flex, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 interface Props {
-  onClickNext: () => void;
-  onClickPrev: () => void;
+  onClickNext?: () => void;
+  onClickPrev?: () => void;
   minH?: any;
   children?: React.ReactNode;
   style?: any;
@@ -42,10 +42,10 @@ const Carousel = ({
         >
           {children}
         </Flex>
-        <Box
+{  onClickPrev && onClickNext  && <Box
           zIndex={1}
           color={colorMode === "dark" ? "brand.150" : "brand.450"}
-        >
+         >
           <Box
             onClick={onClickPrev}
             bottom={"0rem"}
@@ -70,7 +70,7 @@ const Carousel = ({
           >
             <FaAngleRight />
           </Box>
-        </Box>
+        </Box>}
       </Flex>
     </Box>
   );

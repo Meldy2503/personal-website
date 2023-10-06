@@ -84,8 +84,6 @@ const ProjectId = () => {
                 </Flex>
 
                 <Carousel
-                  onClickNext={nextSlide}
-                  onClickPrev={prevSlide}
                   style={{
                     transform: `translateX(-${
                       ((currentIndex - 1 + carouselContent.length) %
@@ -178,7 +176,7 @@ const ProjectId = () => {
                         href={item.gitlink}
                         target="_blank"
                         style={{
-                          color: "blue",
+                          color: "#7d7de3",
                         }}
                       >
                         View on Github

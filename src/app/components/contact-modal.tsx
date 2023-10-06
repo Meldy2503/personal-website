@@ -39,11 +39,12 @@ export function ContactModal() {
             direction="column"
             color="brand.150"
             bg="brand.990"
-          >
+           >
             <Heading
-              fontSize={"2.5rem"}
+              fontSize={{base: "2rem", md:"2.5rem"}}
               fontWeight={"900"}
               textAlign={"center"}
+              px="1rem"
             >
               Ready to Order your Projects?
             </Heading>
