@@ -50,12 +50,13 @@ const ProjectId = () => {
   }, []);
 
   return (
-    <Box bg={colorMode === "dark" ? "brand.550" : "brand.300"} w="full">
+    <Box bg={colorMode === "dark" ? "brand.550" : "brand.300"} w="full" mt={{base: "4rem", lg: "0rem"}}>
       <Box
         bgImage="/assets/bg.jpg"
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
         bgPosition={"top"}
+        
       >
         <Box
           bg={colorMode === "dark" ? "brand.960" : "brand.220"}

@@ -1,13 +1,17 @@
 "use client";
 
 import React from "react";
-import { Box, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import { Btn } from "../button";
 import Typewriter from "typewriter-effect";
 import MainHeading from "../heading";
 
 const LandingPage = () => {
   const { colorMode } = useColorMode();
+  const [isMobile] = useMediaQuery("(max-width: 1024px)");
+
+
+
 
   return (
     <Box
@@ -18,6 +22,7 @@ const LandingPage = () => {
       bgSize={"cover"}
       bgPosition={"center"}
       position="relative"
+      mt={isMobile ? "4rem" : "0rem"}
     >
       <Box bg={colorMode === "dark" ? "brand.960" : "brand.220"} h="100%">
         <Box

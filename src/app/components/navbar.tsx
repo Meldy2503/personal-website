@@ -35,17 +35,17 @@ export const DesktopNav = () => {
   };
   return (
     <Flex
-      bg={colorMode === "dark" ? "brand.500" : "brand.250"}
-      h="100%"
-      position="sticky"
+       bg={colorMode === "dark" ? "brand.500" : "brand.250"}
+      minH={"100vh"}
+        position="sticky"
       top="0px"
-      left="10px"
-      className="scroll-bar"
+      right="0rem"
       shadow={"md"}
       direction={"column"}
       align={"center"}
       py="1rem"
       px=".5rem"
+      zIndex={"500"}
     >
       <ColorModeBtn />
       {!path.includes("pages") ? (
@@ -118,12 +118,12 @@ export const MobileNav = () => {
     <>
       <Flex
         justify={"space-between"}
-        w="100%"
+       w="100%"
         zIndex="100"
         px="1.2rem"
         py="1rem"
-        bg={colorMode === "dark" ? "brand.600" : "brand.250"}
-        position="sticky"
+         bg={colorMode === "dark" ? "brand.600" : "brand.250"}
+       position="fixed"
         top="0px"
         shadow={"md"}
         align={"center"}

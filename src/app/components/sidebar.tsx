@@ -12,6 +12,7 @@ import {
   useColorMode,
   Tooltip,
   Icon,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { links, stackData } from "./utils/constants";
 import { BsCheckLg } from "react-icons/bs";
@@ -19,24 +20,26 @@ import { FaDownload } from "react-icons/fa";
 import { ProfileModal } from "./profile-modal";
 
 interface Props {
-  w?: string;
+  w?: any;
 }
 
 const Sidebar = ({ w }: Props) => {
+  const [isMobile] = useMediaQuery("(max-width: 960px)");
+
   const { colorMode } = useColorMode();
 
   return (
     <Box
       w={w}
       bg={colorMode === "dark" ? "brand.600" : "brand.250"}
-      h="100%"
-      position="sticky"
-      top="0px"
-      overflow={"auto"}
-      className="scroll-bar"
+      position= {isMobile ? "sticky" : "fixed"}
+      minH={"100vh"}
+      zIndex={"500"}
+      top="10px"
+       overflow={"auto"}
       shadow={"md"}
       color={colorMode === "dark" ? "brand.350" : "brand.400"}
-    >
+     >
       <Flex
         direction={"column"}
         align={"center"}
@@ -137,6 +140,7 @@ const Sidebar = ({ w }: Props) => {
         w="100%"
         bottom="0px"
         shadow={"md"}
+        h="100%"
       >
         <HStack
           py=".9rem"

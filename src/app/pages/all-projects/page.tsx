@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Projects from "@/app/components/home/projects";
-import { Box, Flex, Heading, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Heading, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import Footer from "@/app/components/footer";
 import { Back } from "@/app/components/utils/funcs";
 import { otherProjects } from "@/app/components/utils/constants";
@@ -12,6 +12,7 @@ import { ContactModal } from "@/app/components/contact-modal";
 
 const AllProjects = () => {
   const { colorMode } = useColorMode();
+  const [isMobile] = useMediaQuery("(max-width: 1024px)");
   const [showDetails, setShowDetails] = useState(null);
   const handleMouseEnter = (index: any) => {
     setShowDetails(index);
@@ -24,6 +25,9 @@ const AllProjects = () => {
   return (
     <Box
       w="full"
+       mt={isMobile ? "4.5rem" : "0rem"}
+      pt="1rem"
+
       px={{ base: "15px", md: "30px" }}
       bg={colorMode === "dark" ? "brand.960" : "brand.300"}
     >

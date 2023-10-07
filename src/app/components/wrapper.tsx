@@ -1,31 +1,33 @@
 "use client";
 
+import { Box, Flex, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
-import { Box, Flex, useMediaQuery, useColorMode } from "@chakra-ui/react";
-import Sidebar from "./sidebar";
 import { DesktopNav, MobileNav } from "./navbar";
+import Sidebar from "./sidebar";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
-  const [isMobile] = useMediaQuery("(max-width: 960px)");
-  const { colorMode } = useColorMode();
+  const [isMobile] = useMediaQuery("(max-width: 1024px)");
+  const [isTablet] = useMediaQuery("(max-width: 1250px)");
 
   return (
-    <Box bg={colorMode === "light" ? "brand.320" : "brand.750"} py=".8rem">
-      <Box maxW="1440px" mx="auto">
-        {isMobile && <MobileNav />}
-        <Flex
-          w="95%"
-          h={{ base: "98vh", md: "96.5vh" }}
-          m="auto"
-          bg={colorMode === "dark" ? "brand.960" : "brand.300"}
-          overflow="auto"
-          className="scroll-bar"
-        >
-          {!isMobile && <Sidebar w="25rem" />} {children}
-          {!isMobile && <DesktopNav />}
-        </Flex>
-      </Box>
-    </Box>
+    <Flex py=".8rem" maxW="1440px" mx="auto" position={"relative"}>
+      <Flex position={"absolute"} w={isMobile ? "100%" : "30%"}>
+        <Box w={isMobile ? "100%" : ""}>{isMobile && <MobileNav />}</Box>
+        <Box>
+          {!isMobile && (
+            <Sidebar w={isMobile ? "100%" : isTablet ? "16rem" : "19rem"} />
+          )}
+        </Box>
+      </Flex>
+      <Flex
+        w={isMobile ? "100%" : isTablet ? "77%" : "77%"}
+        position={"absolute"}
+        right="0px"
+      >
+        <Box>{children}</Box>
+        <Box w="10rem">{!isMobile && <DesktopNav />}</Box>
+      </Flex>
+    </Flex>
   );
 };
 

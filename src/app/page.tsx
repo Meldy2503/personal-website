@@ -6,7 +6,7 @@ import Projects from "./components/home/projects";
 import ContactMe from "./components/home/contact-me";
 import Recommendations from "./components/home/recommendations";
 import TechStacks from "./components/home/tech-stacks";
-import { Box, Flex, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import Footer from "./components/footer";
 import AboutMe from "./components/home/about-me";
 import { Title } from "./components/utils/funcs";
@@ -14,9 +14,11 @@ import { Title } from "./components/utils/funcs";
 export default function Home() {
   const { colorMode } = useColorMode();
 
+
   return (
     <Box
-      w="fit-content"
+        w="fit-content"
+
       className="scroll-bar"
       style={{ overflowY: "auto", scrollBehavior: "smooth" }}
     >
