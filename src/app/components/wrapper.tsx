@@ -10,7 +10,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const [isTablet] = useMediaQuery("(max-width: 1250px)");
 
   return (
-    <Flex py=".8rem" maxW="1440px" mx="auto" position={"relative"}>
+    <Flex py=".8rem" maxW="1440px" position={"relative"} mx="auto">
       <Flex position={"absolute"} w={isMobile ? "100%" : "30%"}>
         <Box w={isMobile ? "100%" : ""}>{isMobile && <MobileNav />}</Box>
         <Box>
@@ -20,12 +20,12 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
         </Box>
       </Flex>
       <Flex
-        w={isMobile ? "100%" : isTablet ? "77%" : "77%"}
+        w={isMobile ? "100%" : "77%"}
         position={"absolute"}
         right="0px"
       >
-        <Box>{children}</Box>
-        <Box w="10rem">{!isMobile && <DesktopNav />}</Box>
+        <Box >{children}</Box>
+        <Box>{!isMobile && <DesktopNav />}</Box>
       </Flex>
     </Flex>
   );

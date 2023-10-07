@@ -140,7 +140,7 @@ const Sidebar = ({ w }: Props) => {
         w="100%"
         bottom="0px"
         shadow={"md"}
-        h="100%"
+        zIndex={"500"}
       >
         <HStack
           py=".9rem"
