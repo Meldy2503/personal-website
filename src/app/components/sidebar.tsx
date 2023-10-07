@@ -112,7 +112,9 @@ const Sidebar = ({ w }: Props) => {
           spacing={3}
           borderY={`1px solid ${colorMode === "dark" ? "#363643" : "#cacaca"}`}
           py="1rem"
-          my="2rem"
+          mt="2rem"
+          mb="2rem"
+        
           color={colorMode === "dark" ? "brand.350" : "brand.400"}
         >
           <ListItem>
@@ -136,11 +138,12 @@ const Sidebar = ({ w }: Props) => {
         align={"center"}
         justify="center"
         columnGap={"1.2rem"}
-        position="sticky"
-        w="100%"
+        position="fixed"
+        w={{base: "100%", lg: "inherit"}}
         bottom="0px"
         shadow={"md"}
         zIndex={"500"}
+        mt="1rem"
       >
         <HStack
           py=".9rem"
