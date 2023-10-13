@@ -151,9 +151,11 @@ const Sidebar = ({ w }: Props) => {
           align={"center"}
           justify="center"
         >
-          <Text letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
-            DOWNLOAD CV
-          </Text>
+            <Box letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
+              <a href="/assets/emelder-okafor.pdf" target="_blank" rel="noreferrer">
+              DOWNLOAD CV
+              </a>
+            </Box>
           <FaDownload />
         </HStack>
       </Flex>
