@@ -9,6 +9,7 @@ interface Props {
   children?: React.ReactNode;
   style?: any;
   pt?: string;
+  pb?: string;
 }
 
 const Carousel = ({
@@ -18,6 +19,7 @@ const Carousel = ({
   children,
   style,
   pt,
+  pb,
 }: Props) => {
   const { colorMode } = useColorMode();
   const [isMobile] = useMediaQuery("(max-width: 769px)");
@@ -39,6 +41,7 @@ const Carousel = ({
           justify={"space-between"}
           w={isMobile ? "100%" : "52%"}
           pt={pt}
+          pb={pb}
         >
           {children}
         </Flex>

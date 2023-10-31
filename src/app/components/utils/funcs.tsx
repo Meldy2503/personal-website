@@ -22,10 +22,10 @@ export const Title = ({ children }: { children: React.ReactNode }) => {
   const { colorMode } = useColorMode();
   return (
     <Heading
-      color={colorMode === "dark" ? "brand.100" : "brand.450"}
+      color={colorMode === "dark" ? "brand.220" : "brand.980"}
       fontWeight={"600"}
       fontSize={"1.3rem"}
-      mt={{ base: "3rem", md: "5rem" }}
+      mt={{ base: "5rem", md: "7rem" }}
       mb="1rem"
     >
       {children}

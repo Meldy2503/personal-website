@@ -37,8 +37,8 @@ const Services = () => {
                 </Flex>
                 <Text
                   fontSize={"1rem"}
-                  color={colorMode === "dark" ? "brand.150" : "brand.600"}
-                  fontWeight={"600"}
+                  color={colorMode === "dark" ? "brand.220" : "brand.980"}
+                  fontWeight={colorMode === "dark" ? "500" : "600"}
                   my="1rem"
                 >
                   {item.heading}

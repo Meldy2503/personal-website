@@ -50,13 +50,16 @@ const ProjectId = () => {
   }, []);
 
   return (
-    <Box bg={colorMode === "dark" ? "brand.550" : "brand.300"} w="full" mt={{base: "4rem", lg: "0rem"}}>
+    <Box
+      bg={colorMode === "dark" ? "brand.550" : "brand.300"}
+      w="full"
+      mt={{ base: "4rem", lg: "0rem" }}
+    >
       <Box
         bgImage="/assets/bg.jpg"
         bgRepeat={"no-repeat"}
         bgSize={"cover"}
         bgPosition={"top"}
-        
       >
         <Box
           bg={colorMode === "dark" ? "brand.960" : "brand.220"}
@@ -117,10 +120,10 @@ const ProjectId = () => {
                   ))}
                 </Carousel>
                 <Heading
-                  color={colorMode === "dark" ? "brand.100" : "brand.450"}
-                  fontSize={"1.1rem"}
+                  color={colorMode === "dark" ? "brand.220" : "brand.980"}
+                  fontSize={"1.2rem"}
                   my="1.5rem"
-                  mt="3rem"
+                  mt="4rem"
                   fontWeight={"700"}
                 >
                   Project Details
@@ -151,7 +154,7 @@ const ProjectId = () => {
                     shadow={"md"}
                   >
                     <Heading
-                      color={colorMode === "dark" ? "brand.100" : "brand.450"}
+                      color={colorMode === "dark" ? "brand.220" : "brand.980"}
                       fontSize={"1.1rem"}
                       mb=".5rem"
                       fontWeight={"700"}

@@ -31,8 +31,6 @@ const Recommendations = () => {
     <Box id="recommendations">
       <Title>Recommendations</Title>
       <Carousel
-        onClickNext={nextSlide}
-        onClickPrev={prevSlide}
         pt="2rem"
         style={{
           transform: `translateX(-${
@@ -40,13 +38,12 @@ const Recommendations = () => {
           }%)`,
         }}
         minH={{
-          base: "380px",
+          base: "350px",
           sm: "280px",
-          md: "350px",
-          lg: "400px",
-          xl: "320px",
+          md: "300px",
+          lg: "320px",
+          xl: "300px",
         }}
-      
       >
         {duplicatedItems.map((item, index) => (
           <Flex

@@ -17,11 +17,11 @@ const AboutMe = () => {
         justify={"space-between"}
         direction={{ base: "column", md: "row" }}
         mt={{ base: "2rem", md: "5rem" }}
-      >
+       >
         <Box w={{ base: "100%", md: "40%" }}>
           <Heading
             fontSize={"1.3rem"}
-            color={colorMode === "dark" ? "brand.100" : "brand.450"}
+            color={colorMode === "dark" ? "brand.220" : "brand.980"}
           >
             Any Type of Question & Discussion
           </Heading>
@@ -39,9 +39,9 @@ const AboutMe = () => {
             />
           </HStack>
           <Heading
-            fontSize={{ base: "1rem", sm: "1.1rem" }}
+            fontSize={{ base: "1rem", sm: "1.05rem" }}
             color={colorMode === "dark" ? "brand.800" : "brand.850"}
-            fontWeight={"700"}
+            fontWeight={"550"}
           >
             <a
               href="mailto:emelder.charles25@gmail.com"
@@ -51,8 +51,8 @@ const AboutMe = () => {
               emelder.charles25@gmail.com
             </a>
           </Heading>
-          <HStack my="1rem">
-            <Text color={colorMode === "dark" ? "brand.220" : "brand.450"}>
+          <HStack my=".7rem">
+            <Text color={colorMode === "dark" ? "brand.220" : "brand.980"}>
               LinkedIn:
             </Text>
             <a
@@ -64,7 +64,7 @@ const AboutMe = () => {
             </a>
           </HStack>
           <HStack>
-            <Text color={colorMode === "dark" ? "brand.220" : "brand.450"}>
+            <Text color={colorMode === "dark" ? "brand.220" : "brand.980"}>
               Github:
             </Text>
             <a
@@ -81,7 +81,7 @@ const AboutMe = () => {
             fontSize={"1.3rem"}
             mt={{ base: "3rem", md: "0rem" }}
             mb=".8rem"
-            color={colorMode === "dark" ? "brand.100" : "brand.450"}
+            color={colorMode === "dark" ? "brand.220" : "brand.980"}
           >
             Get to Know me
           </Heading>

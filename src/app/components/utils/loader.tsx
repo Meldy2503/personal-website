@@ -8,8 +8,8 @@ const LoadingIcon = () => {
     <Center h="100vh">
       <Image
         src="/assets/cube-loader.svg"
-        height={100}
-        width={100}
+        height={50}
+        width={50}
         alt="picture of this project"
       />
     </Center>

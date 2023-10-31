@@ -138,8 +138,8 @@ export const MobileNav = () => {
               width={500}
               style={{
                 borderRadius: "50%",
-                height: "35px",
-                width: "35px",
+                height: "30px",
+                width: "30px",
                 backgroundSize: "cover",
                 backgroundPosition: "top",
               }}

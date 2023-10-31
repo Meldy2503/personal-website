@@ -34,7 +34,7 @@ const AllProjects = () => {
       <Flex align="center" gap="2rem" my={{ base: "1.5rem", md: "2rem" }}>
         <Back />
         <Heading
-          color={colorMode === "dark" ? "brand.100" : "brand.450"}
+          color={colorMode === "dark" ? "brand.220" : "brand.980"}
           fontWeight={"600"}
           fontSize={"1.3rem"}
         >
@@ -44,9 +44,9 @@ const AllProjects = () => {
       <Projects />
       <Box>
         <Heading
-          color={colorMode === "dark" ? "brand.100" : "brand.450"}
+          color={colorMode === "dark" ? "brand.220" : "brand.980"}
           fontWeight={"600"}
-          fontSize={"1.1rem"}
+          fontSize={"1.3rem"}
           mt={{ base: "5rem", md: "7rem" }}
           mb="2rem"
         >
