@@ -108,9 +108,10 @@ const AllProjects = () => {
                         TechStacks:
                       </Text>
 
-                      {list.stacks?.map((stack: any) => {
+                      {list.stacks?.map((stack: any, index) => {
                         return (
                           <Image
+                          key={index}
                             src={stack}
                             height={500}
                             width={800}
