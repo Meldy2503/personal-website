@@ -64,15 +64,15 @@ export const stackData = [
   },
   {
     name: "Nextjs",
-    value: 90,
+    value: 95,
   },
   {
     name: "Vue",
-    value: 60,
+    value: 70,
   },
   {
     name: "Typescript",
-    value: 90,
+    value: 92,
   },
   {
     name: "Javascript",
@@ -158,9 +158,42 @@ export const TechStackData = [
 export const projectData = [
   {
     id: "1",
-    category: "NEXTJS",
-    img: "/assets/next1.png",
+    img: "/assets/octodoc.webp",
+    heading: "OCTODOC",
+    tools: ["React", "TypeScript", "Chakra-UI", "Nextjs", "SWR", "Redux"],
+
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/chakra.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+      "/assets/nextjs.svg",
+    ],
+    brief:
+      "Octodoc is a robust, agile solution built for healthcare institutions which provides an efficient platform for managing hospital information, records and operations.",
+    description:
+      "Octodoc is a robust, agile solution for healthcare institutions developed by Octosoft Technologies which provides an efficient platform for managing hospital information, records and operations. It features an optimized codebase for increased system performance, API integrations  for versatility and various modules like Billing, Admin, EMR, Appointment Scheduling, Laboratory, CRM, etc for flexibility. I worked with a team of developers to ensure continuous maintenance, debugging, and feature enhancements of the product. My primary task was to create a secure and user-friendly application that would provide a seamless experience for both patients and healthcare professionals.",
+    features:
+      "User Management, Account Creation, Authentication Features, Tenant Onboarding Process, Teleconferencing feature.",
+    status: "Completed",
+    overview: "https://octodoc.com/providers/",
+    live: "https://app.octodoc.com/",
+  },
+  {
+    id: "2",
+    img: "/assets/chatter1.webp",
     heading: "Chatter Blog App",
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/chakra.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+      "/assets/nextjs.svg",
+      "/assets/firebase.svg",
+    ],
+    tools: ["React", "TypeScript", "Chakra-UI", "Nextjs", "Firebase"],
     brief:
       "A haven for text-based contents built with Nextjs, TypeScript, Firebase and Chakra-UI",
     description:
@@ -170,86 +203,21 @@ export const projectData = [
     status: "completed",
     gitlink: "https://github.com/Meldy2503/blog-app",
     live: "https://blog-app-two-psi.vercel.app/",
-    carousel: ["/assets/next1.png", "/assets/next3.png", "/assets/next4.png"],
-  },
-  {
-    id: "2",
-    category: "REACTJS",
-    img: "/assets/react4.png",
-    heading: "Foodie App",
-    brief:
-      "A simple commerce solution for restaurants and chefs built with React, JavaScript and Styled-Components.",
-    description:
-      "Welcome to the Food Vendor Platform, an innovative web application crafted using Reactjs, Javascript and Styled Components. I also utilized basic React Features such as dynamic routing using React-Router-DOM. This dynamic platform opens up a world of possibilities for food vendors, allowing them to seamlessly bring their culinary creations to a digital audience. With the Food Vendor Platform, vendors can effortlessly register their stores, showcase their delectable offerings, and engage with a wider customer base in an immersive online environment.",
-    features:
-      "It provides features for store customization, vendors can establish a strong online presence by easily registering their stores on the platform, customer interaction, food showcase, patronage and growth.",
-    status: "In progress",
-    gitlink: "https://github.com/Meldy2503/foodie-app",
-    live: "https://online-foodie.netlify.app/",
-    carousel: [
-      "/assets/react4.png",
-      "/assets/react5.png",
-      "/assets/react6.png",
-    ],
-  },
-  {
-    id: "3",
-    category: "VUEJS",
-    img: "/assets/vue2.png",
-    heading: "Quiz App",
-    brief:
-      "An intuitive app with a thrilling journey of knowledge and quick thinking built with Vuejs",
-    description:
-      "Introducing the Quiz App, a captivating and engaging quiz application meticulously crafted with the power of Vue.js. This intuitive app promises a thrilling journey of knowledge and quick thinking, challenging users to test their wits against a diverse range of questions about Vuejs. With a countdown of 30 seconds per question, users must think fast and choose wisely to secure their place on the leaderboard.",
-    features:
-      "It provides features for interactive quizzing, answer selection, timer and total points display",
-    status: "Completed",
-    gitlink: "https://github.com/Meldy2503/vue-quiz-app",
-    live: "https://simple-vue-quiz-app.netlify.app/",
-    carousel: ["/assets/vue0.png", "/assets/vue2.png", "/assets/vue3.png"],
-  },
-  {
-    id: "4",
-    category: "NEXTJS",
-    img: "/assets/next7.png",
-    heading: "My Portfolio App",
-    brief:
-      "A portfolio built with Nextjs and TypeScript which showcases a collection of projects that highlights my expertise in front-end development.",
-    description:
-      " Welcome to my portfolio built with  Next.js, TypeScript and Chakra-UI, where I showcased a collection of projects that highlights my expertise in front-end development. As you explore this portfolio, you'll find an array of meticulously crafted projects created using Vue, React, and Next.js frameworks.From sleek user interfaces to intricate code structures, each project represents a unique journey of creativity and innovation. The responsive design ensures a seamless experience across various devices, allowing you to immerse yourself in the details of each project from anywhere. You can effortlessly browse through the projects using the interactive UI, sort them based on frameworks and dive into the intricacies of each project. Detailed descriptions provide insights into the technologies employed, design considerations, and key functionalities.  Feel free to reach out if you're interested in collaborating or have any inquiries. Thank you for visiting, and I hope you enjoy your journey through my front-end development portfolio!",
-    features:
-      "Responsive Design, skills highlight, interactive User Interface, sorting projects based on frameworks and switching the display mode from light to dark.",
-    status: "completed",
-    gitlink: "https://github.com/Meldy2503/personal-website",
-    live: "https://next-trainer.vercel.app/",
-    carousel: ["/assets/next7.png", "/assets/next8.png", "/assets/next9.png"],
-  },
-  {
-    id: "5",
-    category: "REACTJS",
-    img: "/assets/react3.png",
-    heading: "Nail Boutique App",
-    brief:
-      "  A beauty brand website built with React, JavaScript and Styled-Components where customers can book and schedule appointments .",
-    description:
-      " Welcome to the Nail Boutique, a stunning beauty brand website built with React, JavaScript and Styled-Components. I also utilized basic React Features such as State Management using Context-API and routing using React-Router-DOM. Immerse yourself in a world of luxurious nail care services, where you can explore a wide array of services, schedule appointments and embark on a journey to pamper yourself. Please note that while the Nail Boutique application provides an immersive experience for exploring services and booking appointments, certain backend functionalities such as confirmation emails, appointment cancellation or rescheduling, and payment processing are not currently operational. The focus of this front-end project is to showcase the visual and interactive aspects of the user experience, inviting you to envision the possibilities of a comprehensive beauty brand platform.",
-    features:
-      "It provides features for selecting branch locations, exploring and selecting a wide range of services, appointment booking, appointment sheduling and viewing the booking summary.",
-    status: "In progress",
-    gitlink: "https://github.com/Meldy2503/nail-boutique",
-    live: "https://nail-boutique.netlify.app/",
-    carousel: [
-      "/assets/react1.png",
-      "/assets/react2.png",
-      "/assets/react3.png",
-    ],
   },
 
   {
-    id: "6",
-    category: "VUEJS",
-    img: "/assets/vue7.png",
+    id: "3",
+    img: "/assets/finder2.webp",
     heading: "GitHub Finder App",
+    tools: ["Vue", "JavaScript", "Tailwind-CSS"],
+
+    stacks: [
+      "/assets/vue.svg",
+      "/assets/js.svg",
+      "/assets/tailwind.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     brief:
       "An innovative web application for exploring GitHub Profiles built with Vuejs and Tailwind CSS framwork.",
     description:
@@ -259,7 +227,75 @@ export const projectData = [
     status: "Completed",
     gitlink: "https://github.com/Meldy2503/vue-github-profile",
     live: "https://vue-github-profile.vercel.app/",
-    carousel: ["/assets/vue7.png", "/assets/vue8.png", "/assets/vue9.png"],
+  },
+  {
+    id: "4",
+    img: "/assets/santa2.webp",
+    heading: "surprise Santa",
+    tools: ["React", "Typescript", "Radix-UI", "Nextjs", "TanStack Query"],
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+      "/assets/nextjs.svg",
+    ],
+    brief:
+      "Surprise Santa is a delightful web application designed to elevate the joy and excitement of Christmas.",
+    description:
+      "Surprise Santa is a delightful web application designed to elevate the joy and excitement of Christmas. I worked with a team of developers to build this exciting platform which allows users to create events and groups, facilitating the exchange of surprise gift items. Through a random assignment process, participants anonymously select and gift one another, adding an extra layer of mystery and anticipation to the festivities. The element of surprise ensures that recipients don't know the identity of their gift giver, adding a touch of magic to the entire experience.",
+    features:
+      " Authentication Features, creating groups and events, email verifications, responsive Design, interactive User Interface",
+    status: "completed",
+    gitlink: "https://github.com/Surprise-Santa/surprise-santa-fe",
+    live: "https://www.surprisesanta.org/",
+  },
+  {
+    id: "5",
+    img: "/assets/nailB1.webp",
+    heading: "Nail Boutique App",
+    tools: ["React", "JavaScript", "Styled-Components", "Context-API"],
+
+    stacks: [
+      "/assets/react.svg",
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
+    brief:
+      "  A beauty brand website built with React, JavaScript and Styled-Components where customers can book and schedule appointments .",
+    description:
+      " Welcome to the Nail Boutique, a stunning beauty brand website built with React, JavaScript and Styled-Components. I also utilized basic React Features such as State Management using Context-API and routing using React-Router-DOM. Immerse yourself in a world of luxurious nail care services, where you can explore a wide array of services, schedule appointments and embark on a journey to pamper yourself. Please note that while the Nail Boutique application provides an immersive experience for exploring services and booking appointments, certain backend functionalities such as confirmation emails, appointment cancellation or rescheduling, and payment processing are not currently operational. The focus of this front-end project is to showcase the visual and interactive aspects of the user experience, inviting you to envision the possibilities of a comprehensive beauty brand platform.",
+    features:
+      "It provides features for selecting branch locations, exploring and selecting a wide range of services, appointment booking, appointment sheduling and viewing the booking summary.",
+    status: "In progress",
+    gitlink: "https://github.com/Meldy2503/nail-boutique",
+    live: "https://nail-boutique.netlify.app/",
+  },
+
+  {
+    id: "6",
+
+    img: "/assets/other3.webp",
+    heading: "Windec Web App",
+    tools: ["React", "JavaScript", "Styled-Components"],
+
+    stacks: [
+      "/assets/react.svg",
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
+    brief:
+      "An innovative web application built with Reactjs and Styled-Components.",
+    description:
+      "Windec is a sophisticated web application tailored for companies specializing in digital products and marketing. This innovative platform is meticulously crafted to meet the unique needs and challenges faced by businesses operating in the dynamic landscape of digital industries.",
+    features: "Responsive Design, interactive User Interface",
+    status: "Completed",
+    gitlink: "https://github.com/Meldy2503/Windec",
+    live: "https://meldy2503.github.io/Windec/",
   },
 ];
 
@@ -289,36 +325,65 @@ export const links = [
 export const otherProjects = [
   {
     id: "1",
-    img: "/assets/crypto.png",
+    img: "/assets/other1.webp",
     heading: "Crypto Web App",
+    stacks: [
+      "/assets/react.svg",
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     brief:
       "A crypto app built with React and CSS. It utilizes a crypto API to display different cryptocurrencies with their symbols, volume, and price.",
     gitlink: "https://github.com/Meldy2503/crypto-app",
     live: "https://coinic-crypto.netlify.app/",
   },
+
   {
     id: "2",
-    img: "/assets/ascen.png",
-    heading: "Ascendancy Web App",
+    img: "/assets/other2.webp",
+    heading: "My Portfolio App",
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/chakra.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+      "/assets/nextjs.svg",
+    ],
     brief:
-      "A website created with Reactjs and Styled Components. It serves as an online learning platform for individuals interested in tech.",
-    gitlink: "https://github.com/Meldy2503/ascendancy",
-    live: "https://ascendancy-website.netlify.app/",
+      "A portfolio built with Nextjs and TypeScript which showcases a collection of projects that highlights my expertise in front-end development.",
+    gitlink: "https://github.com/Meldy2503/personal-website",
+    live: "https://emelder-okafor.vercel.app/",
   },
   {
     id: "3",
-    img: "/assets/windec.png",
-    heading: "Windec Web App",
+    img: "/assets/foodie2.webp",
+    heading: "Foodie App",
+    stacks: [
+      "/assets/react.svg",
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     brief:
-      "An innovative web application built with Reactjs and Styled-Components.",
-    gitlink: "https://github.com/Meldy2503/Windec",
-    live: "https://meldy2503.github.io/Windec/",
+      "A simple commerce solution for restaurants and chefs built with React, JavaScript and Styled-Components.",
+    gitlink: "https://github.com/Meldy2503/foodie-app",
+    live: "https://online-foodie.netlify.app/",
   },
-
+  
   {
     id: "4",
-    img: "/assets/crud.png",
+    img: "/assets/other4.webp",
     heading: "Crud App",
+    stacks: [
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     brief:
       "An web application for creating, viewing, editing and deleting employees in an establishment.",
     gitlink: "https://github.com/Meldy2503/crud-app",
@@ -327,7 +392,14 @@ export const otherProjects = [
 
   {
     id: "5",
-    img: "/assets/calc.png",
+    img: "/assets/other5.webp",
+    stacks: [
+      "/assets/react.svg",
+      "/assets/js.svg",
+      "/assets/sc.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     heading: "Calculator App",
     brief:
       "This is a web application created using Reactjs & Styled Components. It provides a user-friendly interface for performing basic arithmetic calculations.",
@@ -336,12 +408,19 @@ export const otherProjects = [
   },
   {
     id: "6",
-    img: "/assets/profile.png",
-    heading: "GitHub Finder App",
+    img: "/assets/quiz2.webp",
+    heading: "Quiz App",
+    stacks: [
+      "/assets/vue.svg",
+      "/assets/js.svg",
+      "/assets/tailwind.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
     brief:
-      "An innovative web application for exploring GitHub Profiles built with Reactjs and Tailwind CSS framwork.",
-    gitlink: "https://github.com/Meldy2503/github-profile",
-    live: "https://altschool-github-profile.netlify.app/",
+      "An intuitive app with a thrilling journey of knowledge and quick thinking built with Vuejs",
+    gitlink: "https://github.com/Meldy2503/vue-quiz-app",
+    live: "https://simple-vue-quiz-app.netlify.app/",
   },
 ];
 

@@ -1,53 +1,34 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { ContactModal } from "@/app/components/contact-modal";
+import Footer from "@/app/components/footer";
 import { projectData } from "@/app/components/utils/constants";
+import { Back } from "@/app/components/utils/funcs";
 import {
   Box,
   Flex,
   HStack,
   Heading,
+  ListItem,
   Text,
+  UnorderedList,
   useColorMode,
-  useMediaQuery,
+  useMediaQuery
 } from "@chakra-ui/react";
-import { useParams } from "next/navigation";
-import Link from "next/link";
-import Footer from "@/app/components/footer";
-import { Back } from "@/app/components/utils/funcs";
-import { ContactModal } from "@/app/components/contact-modal";
-import Carousel from "@/app/components/carousel";
 import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const ProjectId = () => {
   const { id } = useParams();
   const { colorMode } = useColorMode();
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile] = useMediaQuery("(max-width: 768px)");
-  const [isTablet] = useMediaQuery("(max-width: 468px)");
 
   const filteredProject = projectData.filter((item) => {
     return item.id == id;
   });
-  const carouselContent = filteredProject[0]?.carousel || [];
-  const duplicatedItems = [...carouselContent, carouselContent[0]];
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex: any) =>
-      prevIndex === 0 ? carouselContent.length - 1 : prevIndex - 1
-    );
-  };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex: any) =>
-      prevIndex === carouselContent.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 6000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Box
@@ -87,38 +68,30 @@ const ProjectId = () => {
                   </Heading>
                 </Flex>
 
-                <Carousel
+                <Flex
+                  justify={"space-between"}
+                  w="100%"
+                  _hover={{
+                    transition: "transform 0.3s ease-in-out",
+                    transform: "scale(1.05)",
+                  }}
                   style={{
-                    transform: `translateX(-${
-                      ((currentIndex - 1 + carouselContent.length) %
-                        carouselContent.length) *
-                      100
-                    }%)`,
+                    transition: "transform 0.3s ease-in-out",
                   }}
                 >
-                  {duplicatedItems.map((list, index) => (
-                    <Flex
-                      key={index}
-                      className="slide"
-                      justify={"space-between"}
-                      w="100%"
-                    >
-                      <Image
-                        src={list}
-                        alt="Picture of the project"
-                        height={800}
-                        width={1000}
-                        style={{
-                          objectFit: "cover",
-                          objectPosition: "top",
-                          maxWidth: "100%",
-                          width: isMobile ? "100%" : "95%",
-                          height: isTablet ? "300px" : "350px",
-                        }}
-                      />
-                    </Flex>
-                  ))}
-                </Carousel>
+                  <Image
+                    src={item.img}
+                    alt="Picture of the project"
+                    height={800}
+                    width={1000}
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      maxWidth: "100%",
+                      width: isMobile ? "100%" : "95%",
+                    }}
+                  />
+                </Flex>
                 <Heading
                   color={colorMode === "dark" ? "brand.220" : "brand.980"}
                   fontSize={"1.2rem"}
@@ -128,7 +101,7 @@ const ProjectId = () => {
                 >
                   Project Details
                 </Heading>
-                <Text
+                <Box
                   bg={colorMode === "dark" ? "brand.650" : "brand.100"}
                   py="2rem"
                   fontSize={"1rem"}
@@ -137,8 +110,26 @@ const ProjectId = () => {
                   shadow={"md"}
                   mb="1.5rem"
                 >
-                  {item.description}
-                </Text>
+                  <Text>{item.description}</Text>
+                  <Box mt="2rem">
+                    <Heading
+                      color={colorMode === "dark" ? "brand.220" : "brand.980"}
+                      fontSize={"1.1rem"}
+                      my=".5rem"
+                      mt="2rem"
+                      fontWeight={"700"}
+                    >
+                      Tools
+                    </Heading>
+                    {item.tools.map((tool, index) => {
+                      return (
+                        <UnorderedList key={index}>
+                          <ListItem ml="1rem">{tool}</ListItem>
+                        </UnorderedList>
+                      );
+                    })}
+                  </Box>
+                </Box>
                 <Flex
                   justify={"space-between"}
                   direction={{ base: "column", xl: "row" }}
@@ -174,31 +165,50 @@ const ProjectId = () => {
                     color={colorMode === "dark" ? "brand.150" : "brand.600"}
                     shadow={"md"}
                   >
-                    <HStack justify={"space-between"} columnGap={"1rem"}>
-                      <Text>Github:</Text>
-                      <a
-                        href={item.gitlink}
-                        target="_blank"
-                        style={{
-                          color: "#7d7de3",
-                        }}
-                      >
-                        View on Github
-                      </a>
-                    </HStack>
-                    <HStack justify={"space-between"} columnGap={"1rem"}>
-                      <Text>Live:</Text>
-                      <a
-                        href={item.live}
-                        target="_blank"
-                        style={{
-                          color: "#dd6b21",
-                        }}
-                      >
-                        {" "}
-                        View live Preview
-                      </a>
-                    </HStack>
+                    {item.gitlink && (
+                      <HStack justify={"space-between"} columnGap={"1rem"}>
+                        <Text>Github:</Text>
+                        <a
+                          href={item.gitlink}
+                          target="_blank"
+                          style={{
+                            color: "#7d7de3",
+                          }}
+                        >
+                          View on Github
+                        </a>
+                      </HStack>
+                    )}
+                    {item.live && (
+                      <HStack justify={"space-between"} columnGap={"1rem"}>
+                        <Text>Live:</Text>
+                        <a
+                          href={item.live}
+                          target="_blank"
+                          style={{
+                            color: "#dd6b21",
+                          }}
+                        >
+                          {" "}
+                          View live
+                        </a>
+                      </HStack>
+                    )}
+                    {item.overview && (
+                      <HStack justify={"space-between"} columnGap={"1rem"}>
+                        <Text>Overview:</Text>
+                        <a
+                          href={item.overview}
+                          target="_blank"
+                          style={{
+                            color: "#49dc28",
+                          }}
+                        >
+                          {" "}
+                           Preview
+                        </a>
+                      </HStack>
+                    )}
                     <HStack justify={"space-between"} columnGap={"1rem"}>
                       <Text>Status:</Text>
                       <Text

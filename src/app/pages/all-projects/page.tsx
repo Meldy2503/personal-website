@@ -2,7 +2,14 @@
 
 import React, { useState } from "react";
 import Projects from "@/app/components/home/projects";
-import { Box, Flex, Heading, useColorMode, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useColorMode,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Footer from "@/app/components/footer";
 import { Back } from "@/app/components/utils/funcs";
 import { otherProjects } from "@/app/components/utils/constants";
@@ -25,9 +32,8 @@ const AllProjects = () => {
   return (
     <Box
       w="full"
-       mt={isMobile ? "4.5rem" : "0rem"}
+      mt={isMobile ? "4.5rem" : "0rem"}
       pt="1rem"
-
       px={{ base: "15px", md: "30px" }}
       bg={colorMode === "dark" ? "brand.960" : "brand.300"}
     >
@@ -61,7 +67,7 @@ const AllProjects = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
                 overflow={"hidden"}
-                w={{ base: "100%", md: "48%", xl: "31.5%" }}
+                w={{ base: "100%", md: "48%" }}
                 shadow={"md"}
                 bg={colorMode === "dark" ? "brand.450" : "brand.100"}
               >
@@ -73,21 +79,18 @@ const AllProjects = () => {
                   style={{
                     objectFit: "cover",
                     objectPosition: "top",
-                    height: "300px",
+                    height: "235px",
                     width: "100%",
                     maxWidth: "100%",
-                    padding: "1rem",
+                    padding: ".5rem",
                   }}
                 />
                 <Box
-                  h="90%"
-                  w={{ base: "93%", sm: "96%", md: "90%" }}
+                  h="100%"
+                  w="100%"
                   mx="auto"
                   position={"absolute"}
-                  top="1rem"
-                  bottom="1rem"
-                  left={{ base: ".6rem", md: "1rem" }}
-                  right={{ base: "1rem", md: "1rem" }}
+                  top="0rem"
                   bg="brand.970"
                 />
                 <ShowDetails
@@ -96,21 +99,53 @@ const AllProjects = () => {
                   className={showDetails === index ? "slide-in" : "slide-down"}
                   justify="space-between"
                 >
-                  <a href={list.gitlink} target="_blank" rel="noreferrer">
-                    {" "}
-                    GITHUB{" "}
-                  </a>
-                  <a href={list.live} target="_blank" rel="noreferrer">
-                    {" "}
-                    PREVIEW{" "}
-                  </a>
+                  <Flex direction={'column'} w='100%'>
+                    <Flex align={"center"}>
+                      <Text
+                        fontSize={".9rem"}
+                        color={colorMode === "dark" ? "brand.150" : "brand.600"}
+                      >
+                        TechStacks:
+                      </Text>
+
+                      {list.stacks?.map((stack: any) => {
+                        return (
+                          <Image
+                            src={stack}
+                            height={500}
+                            width={800}
+                            alt="picture of this project"
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: "center",
+                              width: "2.5rem",
+                              maxWidth: "100%",
+                              padding: ".5rem",
+                            }}
+                          />
+                        );
+                      })}
+                    </Flex>
+                    <Flex mt='1rem' justify={'space-between'}>
+                      <a href={list.gitlink} target="_blank" rel="noreferrer">
+                        {" "}
+                        GITHUB{" "}
+                      </a>
+                      <a href={list.live} target="_blank" rel="noreferrer">
+                        {" "}
+                        PREVIEW{" "}
+                      </a>
+                    </Flex>
+                  </Flex>
                 </ShowDetails>
               </Box>
             );
           })}
         </Flex>
       </Box>
-      <ContactModal />
+      <Box mt="7rem">
+        <ContactModal />
+      </Box>
 
       <Footer />
     </Box>

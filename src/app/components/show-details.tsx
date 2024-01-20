@@ -23,14 +23,13 @@ const ShowDetails = ({
       fontSize={".9rem"}
       position={"absolute"}
       bottom={"0"}
-      px="1.5rem"
-      py="2rem"
+      p="1rem"
       bg={colorMode === "dark" ? "brand.450" : "brand.300"}
       shadow="md"
     >
       <Heading
         color={colorMode === "dark" ? "brand.150" : "brand.600"}
-        fontSize={".9rem"}
+        fontSize={"1rem"}
       >
         {heading}
       </Heading>
