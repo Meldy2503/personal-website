@@ -15,6 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/yfavicon.ico" />
+
+      </head>
       <body>
         <Providers>
           <Wrapper>{children}</Wrapper>

@@ -230,28 +230,53 @@ export const projectData = [
   },
   {
     id: "4",
-    img: "/assets/santa2.webp",
-    heading: "surprise Santa",
-    tools: ["React", "Typescript", "Radix-UI", "Nextjs", "TanStack Query"],
+    img: "/assets/mildred-port.webp",
+    heading: "YouTube Portfolio",
+    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
     stacks: [
       "/assets/react.svg",
       "/assets/ts.svg",
       "/assets/css.svg",
-      "/assets/html.svg",
+      "/assets/chakra.svg",
       "/assets/nextjs.svg",
     ],
     brief:
-      "Surprise Santa is a delightful web application designed to elevate the joy and excitement of Christmas.",
+      "This is a delightful web application designed to elevate the viewers entertainment journey.",
     description:
-      "Surprise Santa is a delightful web application designed to elevate the joy and excitement of Christmas. I worked with a team of developers to build this exciting platform which allows users to create events and groups, facilitating the exchange of surprise gift items. Through a random assignment process, participants anonymously select and gift one another, adding an extra layer of mystery and anticipation to the festivities. The element of surprise ensures that recipients don't know the identity of their gift giver, adding a touch of magic to the entire experience.",
+      "This is an official website designed and built for a youtuber.It was crafted with the power of Next.js and Chakra-UI CSS framwork delivering an engaging and user-friendly interface.",
     features:
-      " Authentication Features, creating groups and events, email verifications, responsive Design, interactive User Interface",
+      "SEO optimization, Email configurations, responsive Design, interactive User Interface",
     status: "completed",
-    gitlink: "https://github.com/Surprise-Santa/surprise-santa-fe",
-    live: "https://www.surprisesanta.org/",
+    gitlink: "https://github.com/Meldy2503/mildred-portfolio",
+    live: "https://www.milderdken.com/",
   },
+
+
   {
     id: "5",
+    img: "/assets/dami-port.webp",
+    heading: "Damilola-B",
+    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
+
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/css.svg",
+      "/assets/chakra.svg",
+      "/assets/nextjs.svg",
+    ],
+    brief:
+    "This is a web application which describes the journey of a UI/UX designer, showcasing her prowess and expertise in the world of design.",
+    description:
+    "Damilola-B is an exquisite web application specifically tailored for a UI/UX designer. It serves as a showcase for the creative endeavors of Damilola, a skilled designer. This platform provides a captivating insight into the diverse and innovative projects she has worked on, demonstrating a rich portfolio that spans various digital products. It's a testament to her talent and expertise in the dynamic realm of UI/UX design, offering visitors a delightful journey through the world of captivating and impactful digital creations.",
+    features:
+    "SEO optimization, Email configurations, responsive Design, interactive User Interface",
+    status: "InProgress",
+    gitlink: "https://github.com/Meldy2503/Damilola-portfolio",
+    live: "https://damilola-portfolio.vercel.app/",
+  },
+  {
+    id: "6",
     img: "/assets/nailB1.webp",
     heading: "Nail Boutique App",
     tools: ["React", "JavaScript", "Styled-Components", "Context-API"],
@@ -272,30 +297,6 @@ export const projectData = [
     status: "In progress",
     gitlink: "https://github.com/Meldy2503/nail-boutique",
     live: "https://nail-boutique.netlify.app/",
-  },
-
-  {
-    id: "6",
-
-    img: "/assets/other3.webp",
-    heading: "Windec Web App",
-    tools: ["React", "JavaScript", "Styled-Components"],
-
-    stacks: [
-      "/assets/react.svg",
-      "/assets/js.svg",
-      "/assets/sc.svg",
-      "/assets/css.svg",
-      "/assets/html.svg",
-    ],
-    brief:
-      "An innovative web application built with Reactjs and Styled-Components.",
-    description:
-      "Windec is a sophisticated web application tailored for companies specializing in digital products and marketing. This innovative platform is meticulously crafted to meet the unique needs and challenges faced by businesses operating in the dynamic landscape of digital industries.",
-    features: "Responsive Design, interactive User Interface",
-    status: "Completed",
-    gitlink: "https://github.com/Meldy2503/Windec",
-    live: "https://meldy2503.github.io/Windec/",
   },
 ];
 
@@ -357,10 +358,11 @@ export const otherProjects = [
     gitlink: "https://github.com/Meldy2503/personal-website",
     live: "https://emelder-okafor.vercel.app/",
   },
+
   {
     id: "3",
-    img: "/assets/foodie2.webp",
-    heading: "Foodie App",
+    img: "/assets/other3.webp",
+    heading: "Windec Web App",
     stacks: [
       "/assets/react.svg",
       "/assets/js.svg",
@@ -369,11 +371,12 @@ export const otherProjects = [
       "/assets/html.svg",
     ],
     brief:
-      "A simple commerce solution for restaurants and chefs built with React, JavaScript and Styled-Components.",
-    gitlink: "https://github.com/Meldy2503/foodie-app",
-    live: "https://online-foodie.netlify.app/",
+      "An innovative web application built with Reactjs and Styled-Components.",
+    gitlink: "https://github.com/Meldy2503/Windec",
+    live: "https://meldy2503.github.io/Windec/",
   },
-  
+ 
+
   {
     id: "4",
     img: "/assets/other4.webp",
@@ -392,7 +395,8 @@ export const otherProjects = [
 
   {
     id: "5",
-    img: "/assets/other5.webp",
+    img: "/assets/foodie2.webp",
+    heading: "Foodie App",
     stacks: [
       "/assets/react.svg",
       "/assets/js.svg",
@@ -400,12 +404,12 @@ export const otherProjects = [
       "/assets/css.svg",
       "/assets/html.svg",
     ],
-    heading: "Calculator App",
     brief:
-      "This is a web application created using Reactjs & Styled Components. It provides a user-friendly interface for performing basic arithmetic calculations.",
-    gitlink: "https://github.com/Meldy2503/altschool-calculator",
-    live: "https://react-calculator-altschool.netlify.app/",
+      "A simple commerce solution for restaurants and chefs built with React, JavaScript and Styled-Components.",
+    gitlink: "https://github.com/Meldy2503/foodie-app",
+    live: "https://online-foodie.netlify.app/",
   },
+
   {
     id: "6",
     img: "/assets/quiz2.webp",
