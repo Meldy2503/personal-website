@@ -158,27 +158,26 @@ export const TechStackData = [
 export const projectData = [
   {
     id: "1",
-    img: "/assets/octodoc.webp",
-    heading: "OCTODOC",
-    tools: ["React", "TypeScript", "Chakra-UI", "Nextjs", "SWR", "Redux"],
+    img: "/assets/dami-port.webp",
+    heading: "Damilola-B",
+    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
 
     stacks: [
       "/assets/react.svg",
       "/assets/ts.svg",
-      "/assets/chakra.svg",
       "/assets/css.svg",
-      "/assets/html.svg",
+      "/assets/chakra.svg",
       "/assets/nextjs.svg",
     ],
     brief:
-      "Octodoc is a robust, agile solution built for healthcare institutions which provides an efficient platform for managing hospital information, records and operations.",
+      "This is a web application which describes the journey of a UI/UX designer, showcasing her prowess and expertise in the world of design.",
     description:
-      "Octodoc is a robust, agile solution for healthcare institutions developed by Octosoft Technologies which provides an efficient platform for managing hospital information, records and operations. It features an optimized codebase for increased system performance, API integrations  for versatility and various modules like Billing, Admin, EMR, Appointment Scheduling, Laboratory, CRM, etc for flexibility. I worked with a team of developers to ensure continuous maintenance, debugging, and feature enhancements of the product. My primary task was to create a secure and user-friendly application that would provide a seamless experience for both patients and healthcare professionals.",
+      "Damilola-B is an exquisite web application specifically tailored for a UI/UX designer. It serves as a showcase for the creative endeavors of Damilola, a skilled designer. This platform provides a captivating insight into the diverse and innovative projects she has worked on, demonstrating a rich portfolio that spans various digital products. It's a testament to her talent and expertise in the dynamic realm of UI/UX design, offering visitors a delightful journey through the world of captivating and impactful digital creations.",
     features:
-      "User Management, Account Creation, Authentication Features, Tenant Onboarding Process, Teleconferencing feature.",
-    status: "Completed",
-    overview: "https://octodoc.com/providers/",
-    live: "https://app.octodoc.com/",
+      "SEO optimization, Email configurations, responsive Design, interactive User Interface",
+    status: "InProgress",
+    gitlink: "https://github.com/Meldy2503/Damilola-portfolio",
+    live: "https://damilola-portfolio.vercel.app/",
   },
   {
     id: "2",
@@ -249,54 +248,6 @@ export const projectData = [
     status: "completed",
     gitlink: "https://github.com/Meldy2503/mildred-portfolio",
     live: "https://www.milderdken.com/",
-  },
-
-
-  {
-    id: "5",
-    img: "/assets/dami-port.webp",
-    heading: "Damilola-B",
-    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
-
-    stacks: [
-      "/assets/react.svg",
-      "/assets/ts.svg",
-      "/assets/css.svg",
-      "/assets/chakra.svg",
-      "/assets/nextjs.svg",
-    ],
-    brief:
-    "This is a web application which describes the journey of a UI/UX designer, showcasing her prowess and expertise in the world of design.",
-    description:
-    "Damilola-B is an exquisite web application specifically tailored for a UI/UX designer. It serves as a showcase for the creative endeavors of Damilola, a skilled designer. This platform provides a captivating insight into the diverse and innovative projects she has worked on, demonstrating a rich portfolio that spans various digital products. It's a testament to her talent and expertise in the dynamic realm of UI/UX design, offering visitors a delightful journey through the world of captivating and impactful digital creations.",
-    features:
-    "SEO optimization, Email configurations, responsive Design, interactive User Interface",
-    status: "InProgress",
-    gitlink: "https://github.com/Meldy2503/Damilola-portfolio",
-    live: "https://damilola-portfolio.vercel.app/",
-  },
-  {
-    id: "6",
-    img: "/assets/nailB1.webp",
-    heading: "Nail Boutique App",
-    tools: ["React", "JavaScript", "Styled-Components", "Context-API"],
-
-    stacks: [
-      "/assets/react.svg",
-      "/assets/js.svg",
-      "/assets/sc.svg",
-      "/assets/css.svg",
-      "/assets/html.svg",
-    ],
-    brief:
-      "  A beauty brand website built with React, JavaScript and Styled-Components where customers can book and schedule appointments .",
-    description:
-      " Welcome to the Nail Boutique, a stunning beauty brand website built with React, JavaScript and Styled-Components. I also utilized basic React Features such as State Management using Context-API and routing using React-Router-DOM. Immerse yourself in a world of luxurious nail care services, where you can explore a wide array of services, schedule appointments and embark on a journey to pamper yourself. Please note that while the Nail Boutique application provides an immersive experience for exploring services and booking appointments, certain backend functionalities such as confirmation emails, appointment cancellation or rescheduling, and payment processing are not currently operational. The focus of this front-end project is to showcase the visual and interactive aspects of the user experience, inviting you to envision the possibilities of a comprehensive beauty brand platform.",
-    features:
-      "It provides features for selecting branch locations, exploring and selecting a wide range of services, appointment booking, appointment sheduling and viewing the booking summary.",
-    status: "In progress",
-    gitlink: "https://github.com/Meldy2503/nail-boutique",
-    live: "https://nail-boutique.netlify.app/",
   },
 ];
 
@@ -375,22 +326,22 @@ export const otherProjects = [
     gitlink: "https://github.com/Meldy2503/Windec",
     live: "https://meldy2503.github.io/Windec/",
   },
- 
 
   {
     id: "4",
-    img: "/assets/other4.webp",
-    heading: "Crud App",
+    img: "/assets/nailB1.webp",
+    heading: "Nail Boutique App",
     stacks: [
+      "/assets/react.svg",
       "/assets/js.svg",
       "/assets/sc.svg",
       "/assets/css.svg",
       "/assets/html.svg",
     ],
     brief:
-      "An web application for creating, viewing, editing and deleting employees in an establishment.",
-    gitlink: "https://github.com/Meldy2503/crud-app",
-    live: "https://oceanica-employees.netlify.app/",
+      "  A beauty brand website built with React, JavaScript and Styled-Components where customers can book and schedule appointments .",
+    gitlink: "https://github.com/Meldy2503/nail-boutique",
+    live: "https://nail-boutique.netlify.app/",
   },
 
   {
@@ -430,29 +381,29 @@ export const otherProjects = [
 
 export const reviewData = [
   {
-    image: "/assets/face4.jpg",
-    name: "Angel Smith",
-    occupation: "Product",
+    image: "/assets/ada.jpg",
+    name: "Ada Ikem",
+    occupation: "Software Engineer",
     comment:
       "Emelder's expertise in front-end development truly shines through in every project. Her attention to detail and creative approach to projects results in seamless user experiences. It's a pleasure working with someone so dedicated.",
   },
   {
-    image: "/assets/face2.jpg",
-    name: "Mark Edward",
+    image: "/assets/toni.jpg",
+    name: "Toni Animashaun",
     occupation: "Product Manager",
     comment:
       "Emelder has consistently delivered outstanding front-end solutions for our company. Her understanding of UI/UX principles, attention to details and commitment to deadlines makes her a valuable asset to any development team.",
   },
   {
-    image: "/assets/face1.jpg",
-    name: "Enabong Pius",
-    occupation: "Full-Stack Developer",
+    image: "/assets/chukwudi.jpg",
+    name: "Chukwudi Ndimneze",
+    occupation: "Software Engineer",
     comment:
       "I was amazed by the quality of Emelder's work as a front-end developer. Her ability to transform complex ideas into user-friendly interfaces is exceptional. Her code is clean and organized, making collaboration smooth and efficient.",
   },
   {
-    image: "/assets/face3.jpg",
-    name: "Elizabeth Eneh",
+    image: "/assets/bokem.jpg",
+    name: "Chibuokem Egbuchulam",
     occupation: "Software Engineer",
     comment:
       "As a fellow developer, I've had the privilege of working with Emelder on several projects. Her proficiency in front-end technologies is top-notch and her ability to share knowledge and collaborate makes her a true team player.",
