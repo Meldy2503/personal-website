@@ -32,14 +32,14 @@ const Sidebar = ({ w }: Props) => {
     <Box
       w={w}
       bg={colorMode === "dark" ? "brand.600" : "brand.250"}
-      position= {isMobile ? "sticky" : "fixed"}
+      position={isMobile ? "sticky" : "fixed"}
       minH={"100vh"}
       zIndex={"500"}
       top="10px"
-       overflow={"auto"}
+      overflow={"auto"}
       shadow={"md"}
       color={colorMode === "dark" ? "brand.350" : "brand.400"}
-     >
+    >
       <Flex
         direction={"column"}
         align={"center"}
@@ -89,6 +89,7 @@ const Sidebar = ({ w }: Props) => {
         fontSize={".9rem"}
         px="1.5rem"
         mt="1rem"
+        overflowY={"auto"}
       >
         <Box>
           {stackData.map((item, index) => {
@@ -114,7 +115,6 @@ const Sidebar = ({ w }: Props) => {
           py="1rem"
           mt="2rem"
           mb="2rem"
-        
           color={colorMode === "dark" ? "brand.350" : "brand.400"}
         >
           <ListItem>
@@ -122,7 +122,14 @@ const Sidebar = ({ w }: Props) => {
               as={BsCheckLg}
               color={colorMode === "dark" ? "brand.800" : "brand.850"}
             />
-            Figma, Zeplin
+            Figma
+          </ListItem>
+          <ListItem>
+            <ListIcon
+              as={BsCheckLg}
+              color={colorMode === "dark" ? "brand.800" : "brand.850"}
+            />
+            Jira
           </ListItem>
           <ListItem>
             <ListIcon
@@ -139,7 +146,7 @@ const Sidebar = ({ w }: Props) => {
         justify="center"
         columnGap={"1.2rem"}
         position="fixed"
-        w={{base: "100%", lg: "inherit"}}
+        w={{ base: "100%", lg: "inherit" }}
         bottom="0px"
         shadow={"md"}
         zIndex={"500"}
@@ -151,11 +158,15 @@ const Sidebar = ({ w }: Props) => {
           align={"center"}
           justify="center"
         >
-            <Box letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
-              <a href="/assets/emelder-okafor.pdf" target="_blank" rel="noreferrer">
+          <Box letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
+            <a
+              href="/assets/Emelder_Okafor.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               DOWNLOAD CV
-              </a>
-            </Box>
+            </a>
+          </Box>
           <FaDownload />
         </HStack>
       </Flex>

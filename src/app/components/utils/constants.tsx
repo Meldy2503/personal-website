@@ -59,11 +59,15 @@ export const menuData = [
 ];
 export const stackData = [
   {
-    name: "Reactjs",
+    name: "ReactJs",
     value: 95,
   },
   {
-    name: "Nextjs",
+    name: "React Native",
+    value: 93,
+  },
+  {
+    name: "NextJs",
     value: 95,
   },
   {
@@ -72,11 +76,11 @@ export const stackData = [
   },
   {
     name: "Typescript",
-    value: 92,
+    value: 93,
   },
   {
     name: "Javascript",
-    value: 95,
+    value: 94,
   },
 ];
 

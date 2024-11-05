@@ -193,22 +193,7 @@ const ProjectId = () => {
                           View live
                         </a>
                       </HStack>
-                    )}
-                    {item.overview && (
-                      <HStack justify={"space-between"} columnGap={"1rem"}>
-                        <Text>Overview:</Text>
-                        <a
-                          href={item.overview}
-                          target="_blank"
-                          style={{
-                            color: "#49dc28",
-                          }}
-                        >
-                          {" "}
-                           Preview
-                        </a>
-                      </HStack>
-                    )}
+                    )}         
                     <HStack justify={"space-between"} columnGap={"1rem"}>
                       <Text>Status:</Text>
                       <Text
