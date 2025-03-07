@@ -52,7 +52,7 @@ const AboutMe = () => {
             </a>
           </Heading>
           <HStack my=".7rem">
-            <Text color={colorMode === "dark" ? "brand.220" : "brand.980"}>
+            <Text color={colorMode === "dark" ? "brand.350" : "brand.380"}>
               LinkedIn:
             </Text>
             <a
@@ -60,7 +60,7 @@ const AboutMe = () => {
               target="_blank"
               rel="noreferrer"
               style={{
-                color: "black",
+                color: colorMode === "dark" ? "#d0d0d0" : "#333",
                 textDecoration: "underline",
               }}
             >
@@ -68,7 +68,7 @@ const AboutMe = () => {
             </a>
           </HStack>
           <HStack>
-            <Text color={colorMode === "dark" ? "brand.220" : "brand.980"}>
+            <Text color={colorMode === "dark" ? "brand.350" : "brand.380"}>
               Github:
             </Text>
             <a
@@ -76,7 +76,7 @@ const AboutMe = () => {
               target="_blank"
               rel="noreferrer"
               style={{
-                color: "black",
+                color: colorMode === "dark" ? "#d0d0d0" : "#333",
                 textDecoration: "underline",
               }}
             >
