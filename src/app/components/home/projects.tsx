@@ -40,7 +40,7 @@ const Projects = () => {
               bg={colorMode === "dark" ? "brand.450" : "brand.150"}
             >
               <Image
-                src={project.img}
+                src={project.img[0]}
                 height={500}
                 width={800}
                 alt="picture of this project"

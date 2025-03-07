@@ -21,6 +21,8 @@ import { BsPersonCircle } from "react-icons/bs";
 import Sidebar from "./sidebar";
 import { ColorModeBtn } from "./button";
 import Image from "next/image";
+import { BiArrowToBottom } from "react-icons/bi";
+import { FaAngleDoubleDown, FaAngleDown, FaAngleRight } from "react-icons/fa";
 
 export const DesktopNav = () => {
   const { colorMode } = useColorMode();
@@ -35,9 +37,9 @@ export const DesktopNav = () => {
   };
   return (
     <Flex
-       bg={colorMode === "dark" ? "brand.500" : "brand.250"}
+      bg={colorMode === "dark" ? "brand.500" : "brand.250"}
       minH={"100vh"}
-        position="sticky"
+      position="sticky"
       top="0px"
       right="0rem"
       shadow={"md"}
@@ -118,19 +120,19 @@ export const MobileNav = () => {
     <>
       <Flex
         justify={"space-between"}
-       w="100%"
+        w="100%"
         zIndex="100"
         px="1.2rem"
         py="1rem"
-         bg={colorMode === "dark" ? "brand.600" : "brand.250"}
-       position="fixed"
+        bg={colorMode === "dark" ? "brand.600" : "brand.250"}
+        position="fixed"
         top="0px"
         shadow={"md"}
         align={"center"}
       >
         {/* to open profile on mobile */}
         <>
-          <Box onClick={onProfileOpen}>
+          <Flex onClick={onProfileOpen} gap={".5rem"} align={"center"}>
             <Image
               src="/assets/meldy2.jpg"
               alt="Picture of the author"
@@ -138,13 +140,17 @@ export const MobileNav = () => {
               width={500}
               style={{
                 borderRadius: "50%",
-                height: "30px",
-                width: "30px",
+                height: "25px",
+                width: "25px",
                 backgroundSize: "cover",
                 backgroundPosition: "top",
               }}
             />
-          </Box>
+            <Icon
+              as={FaAngleRight}
+              color={colorMode === "dark" ? "brand.900" : "brand.600"}
+            />
+          </Flex>
           <Drawer
             placement="left"
             onClose={onProfileClose}

@@ -17,7 +17,7 @@ const AboutMe = () => {
         justify={"space-between"}
         direction={{ base: "column", md: "row" }}
         mt={{ base: "2rem", md: "5rem" }}
-       >
+      >
         <Box w={{ base: "100%", md: "40%" }}>
           <Heading
             fontSize={"1.3rem"}
@@ -59,6 +59,10 @@ const AboutMe = () => {
               href="https://www.linkedin.com/in/emelder-okafor-67b22122b/"
               target="_blank"
               rel="noreferrer"
+              style={{
+                color: "black",
+                textDecoration: "underline",
+              }}
             >
               Emelder Okafor{" "}
             </a>
@@ -71,6 +75,10 @@ const AboutMe = () => {
               href="https://github.com/Meldy2503 "
               target="_blank"
               rel="noreferrer"
+              style={{
+                color: "black",
+                textDecoration: "underline",
+              }}
             >
               Meldy2503
             </a>

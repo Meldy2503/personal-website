@@ -14,20 +14,15 @@ import { Title } from "./components/utils/funcs";
 export default function Home() {
   const { colorMode } = useColorMode();
 
-
   return (
     <Box
-        w="fit-content"
-
-      className="scroll-bar"
-      style={{ overflowY: "auto", scrollBehavior: "smooth" }}
+      style={{ scrollBehavior: "smooth" }}
     >
       <LandingPage />
       <Flex
         direction="column"
         color="rgb(240, 240, 246)"
         style={{ scrollBehavior: "smooth" }}
-        position={"relative"}
         px={{ base: "15px", md: "30px" }}
         bg={colorMode === "dark" ? "brand.960" : "brand.300"}
       >

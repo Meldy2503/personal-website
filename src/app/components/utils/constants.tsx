@@ -162,9 +162,67 @@ export const TechStackData = [
 export const projectData = [
   {
     id: "1",
-    img: "/assets/dami-port.webp",
+    img: [
+      "/assets/four-marketplace.png",
+      "/assets/two-marketplace.png",
+      "/assets/three-marketplace.png",
+      "/assets/six-marketplace.png",
+    ],
+    heading: "Octodoc marketplace",
+    tools: ["React.js", "Typescript", "Chakra-UI", "Nextjs", "Context-api"],
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/css.svg",
+      "/assets/chakra.svg",
+      "/assets/nextjs.svg",
+    ],
+    brief:
+      "A user-centric marketplace that enables customers to compare and purchase health plans from various providers. The platform simplifies the decision-making process through intuitive comparison tools and streamlined purchasing.",
+    description:
+      " A user-centric marketplace that enables customers to compare and purchase health plans from various providers. The platform simplifies the decision-making process through intuitive comparison tools and streamlined purchasing. Working in a two-person team, I worked on the frontend development of key marketplace features including plan comparison, advanced filtering, and purchase flow integration. Collaborated on implementing post-purchase automation for beneficiary detail collection and user onboarding.",
+    features:
+      "Flutterwave payment integration, Advanced filtering system based on price and coverage, Side-by-side plan comparison interface, Email configurations, responsive Design, User authentication and authorization",
+    status: "Completed",
+    gitlink: "",
+    live: "https://www.octodoc.com/",
+  },
+  {
+    id: "2",
+    img: [
+      "/assets/octodoc-twwo.jpg",
+      "/assets/octodoc-fourr.png",
+      "/assets/octodoc-onne.png",
+      "/assets/octodoc-threee.png",
+    ],
+    heading: "Octodoc Mobile App",
+    tools: ["React-native", "Typescript", "CSS"],
+
+    stacks: [
+      "/assets/react.svg",
+      "/assets/ts.svg",
+      "/assets/css.svg",
+    ],
+    brief:
+      "OctoDoc is a comprehensive healthcare platform that connects patients with healthcare providers through real-time communication and appointment management",
+    description:
+      "OctoDoc is a comprehensive healthcare platform that connects patients with healthcare providers through real-time communication and appointment management. The mobile app enables seamless healthcare delivery and consultation. I played a key role in enhancing the React Native application, implementing critical features like real-time native call alerts and modernizing the codebase. Led a major dependency update project that involved substantial rewriting to improve app performance and user experience.",
+    features:
+      "Major dependency updates and codebase modernization, Cross-platform compatibility for iOS and Android, Integration with backend services for real-time communication, User authentication and authorization, Email configurations",
+    status: "InProgress",
+    gitlink: "",
+    live: "https://play.google.com/store/apps/details?id=ai.octosoft.octodoc&pli=1",
+  },
+  {
+    id: "3",
+    img: [
+      "/assets/dami-port.webp",
+      "/assets/dami-twoo.png",
+      "/assets/dami.png",
+      "/assets/dami-fouur.png",
+    ],
     heading: "Damilola-B",
-    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
+    tools: ["React", "Typescript", "Chakra-UI", "Nextjs", "CSS"],
 
     stacks: [
       "/assets/react.svg",
@@ -184,8 +242,13 @@ export const projectData = [
     live: "https://damilola-portfolio.vercel.app/",
   },
   {
-    id: "2",
-    img: "/assets/chatter1.webp",
+    id: "4",
+    img: [
+      "/assets/chatter1.webp",
+      "/assets/blog-threee.png",
+      "/assets/blog-twoo.png",
+      "/assets/blog-onee.png",
+    ],
     heading: "Chatter Blog App",
     stacks: [
       "/assets/react.svg",
@@ -208,51 +271,28 @@ export const projectData = [
     live: "https://blog-app-two-psi.vercel.app/",
   },
 
-  {
-    id: "3",
-    img: "/assets/finder2.webp",
-    heading: "GitHub Finder App",
-    tools: ["Vue", "JavaScript", "Tailwind-CSS"],
-
-    stacks: [
-      "/assets/vue.svg",
-      "/assets/js.svg",
-      "/assets/tailwind.svg",
-      "/assets/css.svg",
-      "/assets/html.svg",
-    ],
-    brief:
-      "An innovative web application for exploring GitHub Profiles built with Vuejs and Tailwind CSS framwork.",
-    description:
-      "Unveiling GitHub Finder, an innovative web application crafted with the power of Vue.js and Tailwind CSS framwork, designed to provide an immersive journey into the world of GitHub profiles. This intuitive platform not only showcases my personal GitHub profile but also empowers users to explore and discover the GitHub profiles of fellow developers. With seamless integration of the GitHub API, GitHub Finder delivers a user-friendly interface, transforming raw data into meaningful insights.",
-    features:
-      "It provides features for displaying my personal GitHub profile, search, explore and view details of various GitHub profiles, utilization of GitHub API endpoints using Axios, page routing with vue-router, SEO optimization with React Helmet Async and switching the display mode from light to dark.",
-    status: "Completed",
-    gitlink: "https://github.com/Meldy2503/vue-github-profile",
-    live: "https://vue-github-profile.vercel.app/",
-  },
-  {
-    id: "4",
-    img: "/assets/mildred-port.webp",
-    heading: "YouTube Portfolio",
-    tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
-    stacks: [
-      "/assets/react.svg",
-      "/assets/ts.svg",
-      "/assets/css.svg",
-      "/assets/chakra.svg",
-      "/assets/nextjs.svg",
-    ],
-    brief:
-      "This is a delightful web application designed to elevate the viewers entertainment journey.",
-    description:
-      "This is an official website designed and built for a youtuber.It was crafted with the power of Next.js and Chakra-UI CSS framwork delivering an engaging and user-friendly interface.",
-    features:
-      "SEO optimization, Email configurations, responsive Design, interactive User Interface",
-    status: "completed",
-    gitlink: "https://github.com/Meldy2503/mildred-portfolio",
-    live: "https://www.milderdken.com/",
-  },
+  // {
+  //   id: "6",
+  //   img: ["/assets/mildred-port.webp", "/assets/finder2.webp"],
+  //   heading: "YouTube Portfolio",
+  //   tools: ["React", "Typescript", "Chakra-UI", "Nextjs, CSS"],
+  //   stacks: [
+  //     "/assets/react.svg",
+  //     "/assets/ts.svg",
+  //     "/assets/css.svg",
+  //     "/assets/chakra.svg",
+  //     "/assets/nextjs.svg",
+  //   ],
+  //   brief:
+  //     "This is a delightful web application designed to elevate the viewers entertainment journey.",
+  //   description:
+  //     "This is an official website designed and built for a youtuber.It was crafted with the power of Next.js and Chakra-UI CSS framwork delivering an engaging and user-friendly interface.",
+  //   features:
+  //     "SEO optimization, Email configurations, responsive Design, interactive User Interface",
+  //   status: "completed",
+  //   gitlink: "https://github.com/Meldy2503/mildred-portfolio",
+  //   live: "https://www.milderdken.com/",
+  // },
 ];
 
 export const links = [
@@ -281,6 +321,22 @@ export const links = [
 export const otherProjects = [
   {
     id: "1",
+    img: "/assets/finder2.webp",
+    heading: "GitHub Finder App",
+    stacks: [
+      "/assets/vue.svg",
+      "/assets/js.svg",
+      "/assets/tailwind.svg",
+      "/assets/css.svg",
+      "/assets/html.svg",
+    ],
+    brief:
+      "An innovative web application for exploring GitHub Profiles built with Vuejs and Tailwind CSS framwork.",
+    gitlink: "https://github.com/Meldy2503/vue-github-profile",
+    live: "https://vue-github-profile.vercel.app/",
+  },
+  {
+    id: "2",
     img: "/assets/other1.webp",
     heading: "Crypto Web App",
     stacks: [
@@ -294,24 +350,6 @@ export const otherProjects = [
       "A crypto app built with React and CSS. It utilizes a crypto API to display different cryptocurrencies with their symbols, volume, and price.",
     gitlink: "https://github.com/Meldy2503/crypto-app",
     live: "https://coinic-crypto.netlify.app/",
-  },
-
-  {
-    id: "2",
-    img: "/assets/other2.webp",
-    heading: "My Portfolio App",
-    stacks: [
-      "/assets/react.svg",
-      "/assets/ts.svg",
-      "/assets/chakra.svg",
-      "/assets/css.svg",
-      "/assets/html.svg",
-      "/assets/nextjs.svg",
-    ],
-    brief:
-      "A portfolio built with Nextjs and TypeScript which showcases a collection of projects that highlights my expertise in front-end development.",
-    gitlink: "https://github.com/Meldy2503/personal-website",
-    live: "https://emelder-okafor.vercel.app/",
   },
 
   {

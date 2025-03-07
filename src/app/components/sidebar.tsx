@@ -25,7 +25,6 @@ interface Props {
 
 const Sidebar = ({ w }: Props) => {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
-
   const { colorMode } = useColorMode();
 
   return (
@@ -35,7 +34,6 @@ const Sidebar = ({ w }: Props) => {
       position={isMobile ? "sticky" : "fixed"}
       minH={"100vh"}
       zIndex={"500"}
-      top="10px"
       overflow={"auto"}
       shadow={"md"}
       color={colorMode === "dark" ? "brand.350" : "brand.400"}
@@ -64,7 +62,7 @@ const Sidebar = ({ w }: Props) => {
           Emelder Okafor
         </Heading>
         <Text>
-          Front-end Developer <br />
+          Web & Mobile App Developer <br />
           UI/UX Designer
         </Text>
         <Flex align={"center"} justify="center" pt="1rem" columnGap={"1.2rem"}>
@@ -122,14 +120,14 @@ const Sidebar = ({ w }: Props) => {
               as={BsCheckLg}
               color={colorMode === "dark" ? "brand.800" : "brand.850"}
             />
-            Figma
+            Figma / Zeplin / Canva
           </ListItem>
           <ListItem>
             <ListIcon
               as={BsCheckLg}
               color={colorMode === "dark" ? "brand.800" : "brand.850"}
             />
-            Jira
+            Jira / Trello / Kanban
           </ListItem>
           <ListItem>
             <ListIcon
@@ -160,7 +158,7 @@ const Sidebar = ({ w }: Props) => {
         >
           <Box letterSpacing={".1rem"} fontWeight={"bold"} fontSize={".8rem"}>
             <a
-              href="/assets/Emelder_Okafor.pdf"
+              href="/assets/Emelder.Okafor.pdf"
               target="_blank"
               rel="noreferrer"
             >
